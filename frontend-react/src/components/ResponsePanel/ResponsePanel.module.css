@@ -1,0 +1,39 @@
+/* ── Emergency response plan (MISC-04 Phase 2) ──────────── */
+.section { padding: 10px 2px 14px; border-bottom: 1px solid var(--border); }
+.lead { margin: 6px 0 8px; font-size: 12px; color: var(--text-dim); line-height: 1.45; }
+.row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.small { padding: 2px 8px; font-size: 11px; }
+.hint { margin-top: 6px; font-size: 11.5px; color: var(--text-faint); }
+.muted { font-size: 11px; color: var(--text-faint); }
+.bad { margin-top: 6px; font-size: 11.5px; color: var(--sev-critical); }
+.subhead { margin-top: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-dim); }
+.tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 8px; }
+.tiles > div { padding: 6px 4px; text-align: center; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-surface); }
+.tiles b { display: block; font-size: 16px; }
+.tiles span { font-size: 11px; color: var(--text-faint); }
+.tileBad { border-color: var(--sev-critical) !important; }
+.tileBad b { color: var(--sev-critical); }
+.chip { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border: 1px solid; border-radius: 999px; font-size: 11.5px; font-weight: 700; line-height: 18px; text-transform: capitalize; }
+.staleBand { margin-top: 8px; padding: 8px 10px; border: 1px solid rgba(184,135,74,.6); background: var(--amber-dim); border-radius: var(--radius-sm); font-size: 12.5px; color: var(--text); }
+.list { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 12px; }
+.alist { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.assignment { padding: 6px 8px; border: 1px solid var(--border); border-left-width: 4px; border-radius: var(--radius-sm); background: var(--bg-panel); font-size: 12px; }
+.aHead { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.legs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 3px; font-size: 11px; color: var(--text-dim); }
+.attention { margin-top: 4px; font-size: 11.5px; color: #b45309; }
+.why { margin-top: 3px; font-size: 12px; color: var(--text-dim); }
+.unmet { margin-top: 3px; font-size: 12px; color: var(--sev-critical-text); }
+.input { width: 100%; margin-top: 6px; padding: 5px 8px; font-size: 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-input); color: var(--text); }
+.details { margin-top: 6px; font-size: 11.5px; color: var(--text-dim); }
+.details summary { cursor: pointer; }
+.log { margin: 4px 0 0; padding-left: 16px; font-family: var(--mono); font-size: 11px; line-height: 1.5; word-break: break-word; }
+.caveat { margin: 8px 0 0; font-size: 11px; line-height: 1.45; color: var(--text-faint); }
+.good { color: #15803d; font-weight: 600; }
+.table { width: 100%; margin-top: 6px; border-collapse: collapse; font-size: 11.5px; }
+.table th, .table td { padding: 3px 4px; text-align: right; border-bottom: 1px solid var(--border); }
+.table th:first-child, .table td:first-child { text-align: left; color: var(--text-dim); }
+.table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-dim); }
+
+.evalForm { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+.evalForm label { display: flex; flex-direction: column; min-width: 0; }
+@media (max-width: 1100px) { .evalForm { grid-template-columns: 1fr; } }

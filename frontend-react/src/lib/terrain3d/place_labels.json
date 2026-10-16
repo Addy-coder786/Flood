@@ -1,0 +1,320 @@
+{
+ "provenance": {
+  "tag": "REAL",
+  "source": "OpenStreetMap via Overpass API",
+  "licence": "ODbL 1.0",
+  "attribution": "(c) OpenStreetMap contributors",
+  "osm_timestamp": "2026-09-21T11:32:35Z",
+  "query": "[out:json][timeout:60];\n(\n  nwr[\"place\"~\"^(suburb|neighbourhood|quarter|locality|village|hamlet)$\"][\"name\"](19.0034,72.8283,19.0367,72.8618);\n  nwr[\"leisure\"~\"^(park|garden|stadium|pitch)$\"][\"name\"](19.0034,72.8283,19.0367,72.8618);\n  nwr[\"railway\"~\"^(station|halt)$\"][\"name\"](19.0034,72.8283,19.0367,72.8618);\n  nwr[\"public_transport\"=\"station\"][\"name\"](19.0034,72.8283,19.0367,72.8618);\n);\nout center tags;",
+  "clipped_to_dem_bbox": [
+   72.83329779322314,
+   19.00839549961619,
+   72.85676394891016,
+   19.031695399908493
+  ],
+  "inset_deg": 0.0004,
+  "note": "Names verbatim from OSM, except 'Five Gardens' = common suffix of the five 'Garden A..E, Five Gardens' features. Roads/junctions are labelled from GET /api/roads in the frontend."
+ },
+ "labels": [
+  {
+   "name": "Matunga East",
+   "tier": "primary",
+   "kind": "suburb",
+   "rank": 100,
+   "lon": 72.852085,
+   "lat": 19.026158,
+   "osm": [
+    "node/1288965355",
+    "node/4264457295"
+   ]
+  },
+  {
+   "name": "Dadar West",
+   "tier": "primary",
+   "kind": "suburb",
+   "rank": 100,
+   "lon": 72.838224,
+   "lat": 19.023889,
+   "osm": [
+    "node/631537707"
+   ]
+  },
+  {
+   "name": "Dadar Hindu Colony",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.848184,
+   "lat": 19.020417,
+   "osm": [
+    "way/1149339606",
+    "node/1288965373"
+   ]
+  },
+  {
+   "name": "Bhavanishankar",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.835657,
+   "lat": 19.022237,
+   "osm": [
+    "node/1640461315"
+   ]
+  },
+  {
+   "name": "Wadala Village",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.855073,
+   "lat": 19.015878,
+   "osm": [
+    "node/1288965326"
+   ]
+  },
+  {
+   "name": "Shivaji Park",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.839161,
+   "lat": 19.028745,
+   "osm": [
+    "node/1640461328",
+    "node/11430420743",
+    "way/113711205"
+   ]
+  },
+  {
+   "name": "Shindewadi",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.843607,
+   "lat": 19.011684,
+   "osm": [
+    "node/3766935667",
+    "way/1247541998"
+   ]
+  },
+  {
+   "name": "Kasarwadi",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.842575,
+   "lat": 19.025537,
+   "osm": [
+    "node/631537718",
+    "node/14124408629"
+   ]
+  },
+  {
+   "name": "Rao Wadi",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.841445,
+   "lat": 19.031244,
+   "osm": [
+    "node/11294890322"
+   ]
+  },
+  {
+   "name": "Naigaon",
+   "tier": "locality",
+   "kind": "neighbourhood",
+   "rank": 80,
+   "lon": 72.845815,
+   "lat": 19.010716,
+   "osm": [
+    "node/3806743196",
+    "node/10271314339"
+   ]
+  },
+  {
+   "name": "Dadar Parsee Colony",
+   "tier": "locality",
+   "kind": "locality",
+   "rank": 60,
+   "lon": 72.851457,
+   "lat": 19.018822,
+   "osm": [
+    "node/1288965278"
+   ]
+  },
+  {
+   "name": "Sahakar Nagar",
+   "tier": "locality",
+   "kind": "locality",
+   "rank": 60,
+   "lon": 72.851632,
+   "lat": 19.012668,
+   "osm": [
+    "node/700687999"
+   ]
+  },
+  {
+   "name": "Brhmanwada",
+   "tier": "locality",
+   "kind": "locality",
+   "rank": 60,
+   "lon": 72.854611,
+   "lat": 19.031196,
+   "osm": [
+    "node/2446180073"
+   ]
+  },
+  {
+   "name": "SBI-Dadar Metro",
+   "tier": "landmark",
+   "kind": "station",
+   "rank": 58,
+   "lon": 72.839928,
+   "lat": 19.024655,
+   "osm": [
+    "node/14144295508"
+   ]
+  },
+  {
+   "name": "Matunga Road",
+   "tier": "landmark",
+   "kind": "station",
+   "rank": 58,
+   "lon": 72.846681,
+   "lat": 19.027815,
+   "osm": [
+    "node/4264462833"
+   ]
+  },
+  {
+   "name": "Dadar East",
+   "tier": "landmark",
+   "kind": "station",
+   "rank": 58,
+   "lon": 72.852227,
+   "lat": 19.016253,
+   "osm": [
+    "node/3806743192"
+   ]
+  },
+  {
+   "name": "Dadar",
+   "tier": "landmark",
+   "kind": "station",
+   "rank": 58,
+   "lon": 72.843026,
+   "lat": 19.017376,
+   "osm": [
+    "node/2630075003",
+    "node/2630075004",
+    "node/12855459845"
+   ]
+  },
+  {
+   "name": "Parel",
+   "tier": "landmark",
+   "kind": "station",
+   "rank": 58,
+   "lon": 72.837661,
+   "lat": 19.009482,
+   "osm": [
+    "node/3501418212"
+   ]
+  },
+  {
+   "name": "Dnyaneshwar Udhyodhan Park",
+   "tier": "landmark",
+   "kind": "park",
+   "rank": 48,
+   "lon": 72.844193,
+   "lat": 19.028377,
+   "osm": [
+    "way/1354879489",
+    "way/1354880129"
+   ]
+  },
+  {
+   "name": "Kedarnath Guruju Udyan",
+   "tier": "landmark",
+   "kind": "park",
+   "rank": 48,
+   "lon": 72.853522,
+   "lat": 19.026921,
+   "osm": [
+    "way/115840000"
+   ]
+  },
+  {
+   "name": "Veer Baji Prabhu Udyan",
+   "tier": "landmark",
+   "kind": "park",
+   "rank": 48,
+   "lon": 72.83538,
+   "lat": 19.026634,
+   "osm": [
+    "node/11451948926"
+   ]
+  },
+  {
+   "name": "B.N. Maheshwari Udyan",
+   "tier": "landmark",
+   "kind": "park",
+   "rank": 48,
+   "lon": 72.855406,
+   "lat": 19.026856,
+   "osm": [
+    "way/152242147"
+   ]
+  },
+  {
+   "name": "King Circle Udyan",
+   "tier": "landmark",
+   "kind": "park",
+   "rank": 48,
+   "lon": 72.855395,
+   "lat": 19.026875,
+   "osm": [
+    "way/1554738480"
+   ]
+  },
+  {
+   "name": "Veer Kotwal Udyan",
+   "tier": "landmark",
+   "kind": "park",
+   "rank": 48,
+   "lon": 72.842461,
+   "lat": 19.021381,
+   "osm": [
+    "way/113696486"
+   ]
+  },
+  {
+   "name": "Five Gardens",
+   "tier": "landmark",
+   "kind": "park",
+   "rank": 47,
+   "lon": 72.853731,
+   "lat": 19.02018,
+   "osm": [
+    "way/112675802",
+    "way/646194701",
+    "way/956192794",
+    "way/956192851",
+    "way/956193101"
+   ]
+  },
+  {
+   "name": "Purandare Stadium",
+   "tier": "landmark",
+   "kind": "stadium",
+   "rank": 46,
+   "lon": 72.845536,
+   "lat": 19.013053,
+   "osm": [
+    "way/76281335"
+   ]
+  }
+ ]
+}

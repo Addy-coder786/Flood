@@ -1,0 +1,3130 @@
+{
+ "tag": "SIMULATED replay on the cloudburst run; demo numbers, not emergency-service data",
+ "run_id": "d5edcb73e1",
+ "steps": {
+  "v1_T0_first_plan": {
+   "plan_version": 1,
+   "sim_t_min": 0.0,
+   "mode": "arrival",
+   "unmet": {
+    "S4": {
+     "people": 5,
+     "reasons": [
+      {
+       "reason": "shelter capacity exhausted",
+       "count": 1,
+       "detail": ""
+      }
+     ]
+    }
+   },
+   "changes": [
+    {
+     "assignment_id": "A1",
+     "change": "proposed",
+     "reason": "critical priority; earliest completion T+18 among feasible team/vehicle/shelter combinations; 25 of 60 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A2",
+     "change": "proposed",
+     "reason": "critical priority; earliest completion T+22 among feasible team/vehicle/shelter combinations; 20 of 35 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A3",
+     "change": "proposed",
+     "reason": "critical priority; earliest completion T+36 among feasible team/vehicle/shelter combinations; 15 of 15 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A4",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+44 among feasible team/vehicle/shelter combinations; 20 of 90 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A5",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+59 among feasible team/vehicle/shelter combinations; 25 of 70 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A6",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+65 among feasible team/vehicle/shelter combinations; 20 of 45 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A7",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+79 among feasible team/vehicle/shelter combinations; 25 of 25 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A8",
+     "change": "proposed",
+     "reason": "medium priority; earliest completion T+91 among feasible team/vehicle/shelter combinations; 20 of 40 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A9",
+     "change": "proposed",
+     "reason": "medium priority; earliest completion T+105 among feasible team/vehicle/shelter combinations; 20 of 20 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A10",
+     "change": "proposed",
+     "reason": "low priority; earliest completion T+112 among feasible team/vehicle/shelter combinations; 20 of 25 remaining people fit the vehicle and shelter"
+    }
+   ],
+   "log": [
+    "A1 proposed: T1+V1 take 25 from S1 to SH1, done T+18",
+    "A2 proposed: T2+V2 take 20 from S1 to SH1, done T+22",
+    "A3 proposed: T1+V1 take 15 from S1 to SH1, done T+36",
+    "A4 proposed: T2+V2 take 20 from S2 to SH2, done T+44",
+    "A5 proposed: T1+V1 take 25 from S2 to SH2, done T+59",
+    "A6 proposed: T2+V2 take 20 from S2 to SH2, done T+65",
+    "A7 proposed: T1+V1 take 25 from S2 to SH2, done T+79",
+    "A8 proposed: T2+V2 take 20 from S3 to SH2, done T+91",
+    "A9 proposed: T1+V1 take 20 from S3 to SH2, done T+105",
+    "A10 proposed: T2+V2 take 20 from S4 to SH2, done T+112"
+   ],
+   "invariant_violations": [],
+   "summary": {
+    "people_needing_help": 215,
+    "served": 0,
+    "covered_committed": 0,
+    "covered_proposed": 210,
+    "unmet": 5,
+    "assignments_proposed": 10,
+    "assignments_cancelled_now": 0,
+    "utilisation": {
+     "T1": 0.59,
+     "T2": 0.62,
+     "V1": 0.59,
+     "V2": 0.62
+    },
+    "shelter_free_after_plan": {
+     "SH1": 0,
+     "SH2": 0
+    },
+    "replan_ms": 359.1
+   },
+   "assignments": [
+    {
+     "assignment_id": "A1",
+     "status": "PROPOSED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH1",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 1.62,
+       "done_t_min": 11.62,
+       "status_counts": {
+        "USABLE": 16,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 11.62,
+       "arrive_t_min": 13.12,
+       "done_t_min": 18.12,
+       "status_counts": {
+        "USABLE": 12,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A2",
+     "status": "PROPOSED",
+     "settlement_id": "S1",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH1",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 5.61,
+       "done_t_min": 15.61,
+       "status_counts": {
+        "USABLE": 50,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 15.61,
+       "arrive_t_min": 17.11,
+       "done_t_min": 22.11,
+       "status_counts": {
+        "USABLE": 12,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A3",
+     "status": "PROPOSED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH1",
+     "people": 15,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 18.12,
+       "arrive_t_min": 19.95,
+       "done_t_min": 29.95,
+       "status_counts": {
+        "USABLE": 19,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 29.95,
+       "arrive_t_min": 31.45,
+       "done_t_min": 36.45,
+       "status_counts": {
+        "USABLE": 12,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A4",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 22.11,
+       "arrive_t_min": 26.55,
+       "done_t_min": 36.55,
+       "status_counts": {
+        "USABLE": 37,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 36.55,
+       "arrive_t_min": 39.22,
+       "done_t_min": 44.22,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A5",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 36.45,
+       "arrive_t_min": 40.89,
+       "done_t_min": 50.89,
+       "status_counts": {
+        "USABLE": 37,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 50.89,
+       "arrive_t_min": 53.56,
+       "done_t_min": 58.56,
+       "status_counts": {
+        "USABLE": 12,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A6",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 44.22,
+       "arrive_t_min": 46.96,
+       "done_t_min": 56.96,
+       "status_counts": {
+        "USABLE": 16,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 56.96,
+       "arrive_t_min": 59.87,
+       "done_t_min": 64.87,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A7",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 58.56,
+       "arrive_t_min": 61.53,
+       "done_t_min": 71.53,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 71.53,
+       "arrive_t_min": 74.47,
+       "done_t_min": 79.47,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A8",
+     "status": "PROPOSED",
+     "settlement_id": "S3",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Shakkar Panchayat, R.A. Kidwai Road",
+       "depart_t_min": 64.87,
+       "arrive_t_min": 70.7,
+       "done_t_min": 80.7,
+       "status_counts": {
+        "USABLE": 46,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 80.7,
+       "arrive_t_min": 85.62,
+       "done_t_min": 90.62,
+       "status_counts": {
+        "USABLE": 31,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A9",
+     "status": "PROPOSED",
+     "settlement_id": "S3",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Shakkar Panchayat, R.A. Kidwai Road",
+       "depart_t_min": 79.47,
+       "arrive_t_min": 85.46,
+       "done_t_min": 95.46,
+       "status_counts": {
+        "USABLE": 36,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 95.46,
+       "arrive_t_min": 100.38,
+       "done_t_min": 105.38,
+       "status_counts": {
+        "USABLE": 32,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A10",
+     "status": "PROPOSED",
+     "settlement_id": "S4",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar Railway Station area",
+       "depart_t_min": 90.62,
+       "arrive_t_min": 93.66,
+       "done_t_min": 103.66,
+       "status_counts": {
+        "USABLE": 9,
+        "UNCERTAIN": 3,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 103.66,
+       "arrive_t_min": 106.64,
+       "done_t_min": 111.64,
+       "status_counts": {
+        "USABLE": 10,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    }
+   ],
+   "state": {
+    "settlements": [
+     {
+      "id": "S1",
+      "name": "Dadar TT / Khodad Circle",
+      "lonlat": [
+       72.848752,
+       19.017141
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 359"
+      },
+      "people_needing_help": 60,
+      "priority": "critical",
+      "priority_reason": "SIMULATED: low-lying junction, residents with limited mobility reported",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 60,
+      "remaining": 0
+     },
+     {
+      "id": "S2",
+      "name": "Vaccharaj Lane, Matunga East",
+      "lonlat": [
+       72.852454,
+       19.027101
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 373"
+      },
+      "people_needing_help": 90,
+      "priority": "high",
+      "priority_reason": "SIMULATED declaration; MCGM attribute lists 30 affected huts",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "REAL",
+       "source": "MCGM attributes AFFECT_POPULATION=90, AFFECTED_HUT=30",
+       "note": "an MCGM planning attribute, not a live headcount"
+      },
+      "served": 0,
+      "covered": 90,
+      "remaining": 0
+     },
+     {
+      "id": "S3",
+      "name": "Shakkar Panchayat, R.A. Kidwai Road",
+      "lonlat": [
+       72.85441,
+       19.011698
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2033"
+      },
+      "people_needing_help": 40,
+      "priority": "medium",
+      "priority_reason": "SIMULATED",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 40,
+      "remaining": 0
+     },
+     {
+      "id": "S4",
+      "name": "Dadar Railway Station area",
+      "lonlat": [
+       72.843691,
+       19.017613
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2035"
+      },
+      "people_needing_help": 25,
+      "priority": "low",
+      "priority_reason": "SIMULATED: stranded commuters",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 20,
+      "remaining": 5
+     }
+    ],
+    "shelters": [
+     {
+      "id": "SH1",
+      "name": "Sharda Mangal Karyalaya (community hall)",
+      "lonlat": [
+       72.846461,
+       19.013704
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072869"
+      },
+      "total_capacity": 80,
+      "occupancy": 20,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 60,
+      "free": 0
+     },
+     {
+      "id": "SH2",
+      "name": "IES V N Sule Guruji school",
+      "lonlat": [
+       72.848666,
+       19.021967
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/685548839"
+      },
+      "total_capacity": 150,
+      "occupancy": 0,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 150,
+      "free": 0
+     }
+    ],
+    "vehicles": [
+     {
+      "id": "V1",
+      "name": "Fire brigade truck",
+      "type": "truck",
+      "passenger_capacity": 25,
+      "lonlat": [
+       72.845747,
+       19.014145
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072855"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": true,
+      "unavailable_reason": "",
+      "free_at_t_min": 105.4,
+      "position_lonlat": [
+       72.8484847,
+       19.0222724
+      ]
+     },
+     {
+      "id": "V2",
+      "name": "Police truck",
+      "type": "truck",
+      "passenger_capacity": 20,
+      "lonlat": [
+       72.835465,
+       19.015061
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/354066127"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": true,
+      "unavailable_reason": "",
+      "free_at_t_min": 111.6,
+      "position_lonlat": [
+       72.8484847,
+       19.0222724
+      ]
+     }
+    ],
+    "events_used": []
+   }
+  },
+  "v2_T10_after_closure": {
+   "plan_version": 2,
+   "sim_t_min": 10.0,
+   "mode": "arrival",
+   "unmet": {
+    "S4": {
+     "people": 5,
+     "reasons": [
+      {
+       "reason": "shelter capacity exhausted",
+       "count": 1,
+       "detail": ""
+      }
+     ]
+    }
+   },
+   "changes": [
+    {
+     "assignment_id": "A1",
+     "change": "re-routed",
+     "reason": "closures or forecast changed on the remaining legs"
+    },
+    {
+     "assignment_id": "A2",
+     "change": "re-routed",
+     "reason": "closures or forecast changed on the remaining legs"
+    }
+   ],
+   "log": [
+    "A1 re-routed from the estimated position at T+10",
+    "A2 re-routed from the estimated position at T+10",
+    "A3 proposed: T1+V1 take 15 from S1 to SH1, done T+40",
+    "A4 proposed: T2+V2 take 20 from S2 to SH2, done T+46",
+    "A5 proposed: T1+V1 take 25 from S2 to SH2, done T+62",
+    "A6 proposed: T2+V2 take 20 from S2 to SH2, done T+66",
+    "A7 proposed: T1+V1 take 25 from S2 to SH2, done T+83",
+    "A8 proposed: T2+V2 take 20 from S3 to SH2, done T+94",
+    "A9 proposed: T1+V1 take 20 from S3 to SH2, done T+111",
+    "A10 proposed: T2+V2 take 20 from S4 to SH2, done T+115"
+   ],
+   "invariant_violations": [],
+   "summary": {
+    "people_needing_help": 215,
+    "served": 0,
+    "covered_committed": 45,
+    "covered_proposed": 165,
+    "unmet": 5,
+    "assignments_proposed": 8,
+    "assignments_cancelled_now": 0,
+    "utilisation": {
+     "T1": 0.59,
+     "T2": 0.61,
+     "V1": 0.59,
+     "V2": 0.61
+    },
+    "shelter_free_after_plan": {
+     "SH1": 0,
+     "SH2": 0
+    },
+    "replan_ms": 227.7
+   },
+   "assignments": [
+    {
+     "assignment_id": "A1",
+     "status": "DISPATCHED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH1",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      },
+      {
+       "status": "ACCEPTED",
+       "t_min": 1
+      },
+      {
+       "status": "DISPATCHED",
+       "t_min": 2
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 1.62,
+       "done_t_min": 11.62,
+       "status_counts": {
+        "USABLE": 16,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 11.62,
+       "arrive_t_min": 14.66,
+       "done_t_min": 19.66,
+       "status_counts": {
+        "USABLE": 23,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A2",
+     "status": "DISPATCHED",
+     "settlement_id": "S1",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH1",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      },
+      {
+       "status": "ACCEPTED",
+       "t_min": 1
+      },
+      {
+       "status": "DISPATCHED",
+       "t_min": 2
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 5.61,
+       "done_t_min": 15.61,
+       "status_counts": {
+        "USABLE": 50,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 15.61,
+       "arrive_t_min": 18.65,
+       "done_t_min": 23.65,
+       "status_counts": {
+        "USABLE": 23,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A3",
+     "status": "PROPOSED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH1",
+     "people": 15,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 19.66,
+       "arrive_t_min": 21.72,
+       "done_t_min": 31.72,
+       "status_counts": {
+        "USABLE": 21,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 31.72,
+       "arrive_t_min": 34.76,
+       "done_t_min": 39.76,
+       "status_counts": {
+        "USABLE": 23,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A4",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 23.65,
+       "arrive_t_min": 28.09,
+       "done_t_min": 38.09,
+       "status_counts": {
+        "USABLE": 37,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 38.09,
+       "arrive_t_min": 40.76,
+       "done_t_min": 45.76,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A5",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 39.76,
+       "arrive_t_min": 44.2,
+       "done_t_min": 54.2,
+       "status_counts": {
+        "USABLE": 37,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 54.2,
+       "arrive_t_min": 57.11,
+       "done_t_min": 62.11,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A6",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 45.76,
+       "arrive_t_min": 48.5,
+       "done_t_min": 58.5,
+       "status_counts": {
+        "USABLE": 16,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 58.5,
+       "arrive_t_min": 61.44,
+       "done_t_min": 66.44,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A7",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 62.11,
+       "arrive_t_min": 65.08,
+       "done_t_min": 75.08,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 75.08,
+       "arrive_t_min": 78.02,
+       "done_t_min": 83.02,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A8",
+     "status": "PROPOSED",
+     "settlement_id": "S3",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Shakkar Panchayat, R.A. Kidwai Road",
+       "depart_t_min": 66.44,
+       "arrive_t_min": 72.48,
+       "done_t_min": 82.48,
+       "status_counts": {
+        "USABLE": 46,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 82.48,
+       "arrive_t_min": 88.53,
+       "done_t_min": 93.53,
+       "status_counts": {
+        "USABLE": 36,
+        "UNCERTAIN": 5,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A9",
+     "status": "PROPOSED",
+     "settlement_id": "S3",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Shakkar Panchayat, R.A. Kidwai Road",
+       "depart_t_min": 83.02,
+       "arrive_t_min": 90.05,
+       "done_t_min": 100.05,
+       "status_counts": {
+        "USABLE": 48,
+        "UNCERTAIN": 3,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 100.05,
+       "arrive_t_min": 106.1,
+       "done_t_min": 111.1,
+       "status_counts": {
+        "USABLE": 36,
+        "UNCERTAIN": 5,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A10",
+     "status": "PROPOSED",
+     "settlement_id": "S4",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar Railway Station area",
+       "depart_t_min": 93.53,
+       "arrive_t_min": 96.57,
+       "done_t_min": 106.57,
+       "status_counts": {
+        "USABLE": 9,
+        "UNCERTAIN": 3,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 106.57,
+       "arrive_t_min": 109.55,
+       "done_t_min": 114.55,
+       "status_counts": {
+        "USABLE": 10,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    }
+   ],
+   "state": {
+    "settlements": [
+     {
+      "id": "S1",
+      "name": "Dadar TT / Khodad Circle",
+      "lonlat": [
+       72.848752,
+       19.017141
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 359"
+      },
+      "people_needing_help": 60,
+      "priority": "critical",
+      "priority_reason": "SIMULATED: low-lying junction, residents with limited mobility reported",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 60,
+      "remaining": 0
+     },
+     {
+      "id": "S2",
+      "name": "Vaccharaj Lane, Matunga East",
+      "lonlat": [
+       72.852454,
+       19.027101
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 373"
+      },
+      "people_needing_help": 90,
+      "priority": "high",
+      "priority_reason": "SIMULATED declaration; MCGM attribute lists 30 affected huts",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "REAL",
+       "source": "MCGM attributes AFFECT_POPULATION=90, AFFECTED_HUT=30",
+       "note": "an MCGM planning attribute, not a live headcount"
+      },
+      "served": 0,
+      "covered": 90,
+      "remaining": 0
+     },
+     {
+      "id": "S3",
+      "name": "Shakkar Panchayat, R.A. Kidwai Road",
+      "lonlat": [
+       72.85441,
+       19.011698
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2033"
+      },
+      "people_needing_help": 40,
+      "priority": "medium",
+      "priority_reason": "SIMULATED",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 40,
+      "remaining": 0
+     },
+     {
+      "id": "S4",
+      "name": "Dadar Railway Station area",
+      "lonlat": [
+       72.843691,
+       19.017613
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2035"
+      },
+      "people_needing_help": 25,
+      "priority": "low",
+      "priority_reason": "SIMULATED: stranded commuters",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 20,
+      "remaining": 5
+     }
+    ],
+    "shelters": [
+     {
+      "id": "SH1",
+      "name": "Sharda Mangal Karyalaya (community hall)",
+      "lonlat": [
+       72.846461,
+       19.013704
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072869"
+      },
+      "total_capacity": 80,
+      "occupancy": 20,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 60,
+      "free": 0
+     },
+     {
+      "id": "SH2",
+      "name": "IES V N Sule Guruji school",
+      "lonlat": [
+       72.848666,
+       19.021967
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/685548839"
+      },
+      "total_capacity": 150,
+      "occupancy": 0,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 150,
+      "free": 0
+     }
+    ],
+    "vehicles": [
+     {
+      "id": "V1",
+      "name": "Fire brigade truck",
+      "type": "truck",
+      "passenger_capacity": 25,
+      "lonlat": [
+       72.845747,
+       19.014145
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072855"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": true,
+      "unavailable_reason": "",
+      "free_at_t_min": 111.1,
+      "position_lonlat": [
+       72.8484847,
+       19.0222724
+      ]
+     },
+     {
+      "id": "V2",
+      "name": "Police truck",
+      "type": "truck",
+      "passenger_capacity": 20,
+      "lonlat": [
+       72.835465,
+       19.015061
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/354066127"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": true,
+      "unavailable_reason": "",
+      "free_at_t_min": 114.5,
+      "position_lonlat": [
+       72.8484847,
+       19.0222724
+      ]
+     }
+    ],
+    "events_used": []
+   }
+  },
+  "v3_T30_after_vehicle_loss_and_shelter_full": {
+   "plan_version": 3,
+   "sim_t_min": 30.0,
+   "mode": "arrival",
+   "unmet": {
+    "S3": {
+     "people": 15,
+     "reasons": [
+      {
+       "reason": "travel time too long: mission runs past the forecast horizon",
+       "count": 2,
+       "detail": "IES V N Sule Guruji school reached at T+185, horizon T+180"
+      }
+     ]
+    },
+    "S4": {
+     "people": 5,
+     "reasons": [
+      {
+       "reason": "shelter capacity exhausted",
+       "count": 1,
+       "detail": ""
+      }
+     ]
+    }
+   },
+   "changes": [
+    {
+     "assignment_id": "A11",
+     "change": "proposed",
+     "reason": "critical priority; earliest completion T+52 among feasible team/vehicle/shelter combinations; 15 of 15 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A12",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+115 among feasible team/vehicle/shelter combinations; 25 of 40 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A13",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+135 among feasible team/vehicle/shelter combinations; 15 of 15 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A14",
+     "change": "proposed",
+     "reason": "medium priority; earliest completion T+163 among feasible team/vehicle/shelter combinations; 25 of 40 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A15",
+     "change": "proposed",
+     "reason": "low priority; earliest completion T+184 among feasible team/vehicle/shelter combinations; 20 of 25 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A3",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A4",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A6",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A8",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A9",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A10",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    }
+   ],
+   "log": [
+    "A11 proposed: T1+V1 take 15 from S1 to SH2, done T+52",
+    "A5 proposed: T1+V1 take 25 from S2 to SH2, done T+73",
+    "A7 proposed: T1+V1 take 25 from S2 to SH2, done T+94",
+    "A12 proposed: T1+V1 take 25 from S2 to SH2, done T+115",
+    "A13 proposed: T1+V1 take 15 from S2 to SH2, done T+135",
+    "A14 proposed: T1+V1 take 25 from S3 to SH2, done T+163",
+    "A15 proposed: T1+V1 take 20 from S4 to SH2, done T+184"
+   ],
+   "invariant_violations": [],
+   "summary": {
+    "people_needing_help": 215,
+    "served": 45,
+    "covered_committed": 0,
+    "covered_proposed": 150,
+    "unmet": 20,
+    "assignments_proposed": 7,
+    "assignments_cancelled_now": 0,
+    "utilisation": {
+     "T1": 1.0,
+     "T2": 0.0,
+     "V1": 1.0,
+     "V2": 0.0
+    },
+    "shelter_free_after_plan": {
+     "SH1": -45,
+     "SH2": 0
+    },
+    "replan_ms": 119.3
+   },
+   "assignments": [
+    {
+     "assignment_id": "A1",
+     "status": "COMPLETED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH1",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      },
+      {
+       "status": "ACCEPTED",
+       "t_min": 1
+      },
+      {
+       "status": "DISPATCHED",
+       "t_min": 2
+      },
+      {
+       "status": "IN_PROGRESS",
+       "t_min": 1.62
+      },
+      {
+       "status": "COMPLETED",
+       "t_min": 19.66
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 1.62,
+       "done_t_min": 11.62,
+       "status_counts": {
+        "USABLE": 16,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 11.62,
+       "arrive_t_min": 14.66,
+       "done_t_min": 19.66,
+       "status_counts": {
+        "USABLE": 23,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A2",
+     "status": "COMPLETED",
+     "settlement_id": "S1",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH1",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      },
+      {
+       "status": "ACCEPTED",
+       "t_min": 1
+      },
+      {
+       "status": "DISPATCHED",
+       "t_min": 2
+      },
+      {
+       "status": "IN_PROGRESS",
+       "t_min": 5.61
+      },
+      {
+       "status": "COMPLETED",
+       "t_min": 23.65
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 5.61,
+       "done_t_min": 15.61,
+       "status_counts": {
+        "USABLE": 50,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 15.61,
+       "arrive_t_min": 18.65,
+       "done_t_min": 23.65,
+       "status_counts": {
+        "USABLE": 23,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A11",
+     "status": "PROPOSED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 15,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 30.0,
+       "arrive_t_min": 32.06,
+       "done_t_min": 42.06,
+       "status_counts": {
+        "USABLE": 21,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 42.06,
+       "arrive_t_min": 47.08,
+       "done_t_min": 52.08,
+       "status_counts": {
+        "USABLE": 29,
+        "UNCERTAIN": 3,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A5",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 52.08,
+       "arrive_t_min": 54.82,
+       "done_t_min": 64.82,
+       "status_counts": {
+        "USABLE": 15,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 64.82,
+       "arrive_t_min": 67.76,
+       "done_t_min": 72.76,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A7",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 72.76,
+       "arrive_t_min": 75.73,
+       "done_t_min": 85.73,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 85.73,
+       "arrive_t_min": 88.67,
+       "done_t_min": 93.67,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A12",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 93.67,
+       "arrive_t_min": 96.64,
+       "done_t_min": 106.64,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 106.64,
+       "arrive_t_min": 109.58,
+       "done_t_min": 114.58,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A13",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 15,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 114.58,
+       "arrive_t_min": 117.55,
+       "done_t_min": 127.55,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 127.55,
+       "arrive_t_min": 130.49,
+       "done_t_min": 135.49,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A14",
+     "status": "PROPOSED",
+     "settlement_id": "S3",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Shakkar Panchayat, R.A. Kidwai Road",
+       "depart_t_min": 135.49,
+       "arrive_t_min": 141.69,
+       "done_t_min": 151.69,
+       "status_counts": {
+        "USABLE": 37,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 151.69,
+       "arrive_t_min": 157.74,
+       "done_t_min": 162.74,
+       "status_counts": {
+        "USABLE": 36,
+        "UNCERTAIN": 5,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A15",
+     "status": "PROPOSED",
+     "settlement_id": "S4",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar Railway Station area",
+       "depart_t_min": 162.74,
+       "arrive_t_min": 165.78,
+       "done_t_min": 175.78,
+       "status_counts": {
+        "USABLE": 9,
+        "UNCERTAIN": 3,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 175.78,
+       "arrive_t_min": 178.76,
+       "done_t_min": 183.76,
+       "status_counts": {
+        "USABLE": 10,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    }
+   ],
+   "state": {
+    "settlements": [
+     {
+      "id": "S1",
+      "name": "Dadar TT / Khodad Circle",
+      "lonlat": [
+       72.848752,
+       19.017141
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 359"
+      },
+      "people_needing_help": 60,
+      "priority": "critical",
+      "priority_reason": "SIMULATED: low-lying junction, residents with limited mobility reported",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 45,
+      "covered": 15,
+      "remaining": 0
+     },
+     {
+      "id": "S2",
+      "name": "Vaccharaj Lane, Matunga East",
+      "lonlat": [
+       72.852454,
+       19.027101
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 373"
+      },
+      "people_needing_help": 90,
+      "priority": "high",
+      "priority_reason": "SIMULATED declaration; MCGM attribute lists 30 affected huts",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "REAL",
+       "source": "MCGM attributes AFFECT_POPULATION=90, AFFECTED_HUT=30",
+       "note": "an MCGM planning attribute, not a live headcount"
+      },
+      "served": 0,
+      "covered": 90,
+      "remaining": 0
+     },
+     {
+      "id": "S3",
+      "name": "Shakkar Panchayat, R.A. Kidwai Road",
+      "lonlat": [
+       72.85441,
+       19.011698
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2033"
+      },
+      "people_needing_help": 40,
+      "priority": "medium",
+      "priority_reason": "SIMULATED",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 25,
+      "remaining": 15
+     },
+     {
+      "id": "S4",
+      "name": "Dadar Railway Station area",
+      "lonlat": [
+       72.843691,
+       19.017613
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2035"
+      },
+      "people_needing_help": 25,
+      "priority": "low",
+      "priority_reason": "SIMULATED: stranded commuters",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 20,
+      "remaining": 5
+     }
+    ],
+    "shelters": [
+     {
+      "id": "SH1",
+      "name": "Sharda Mangal Karyalaya (community hall)",
+      "lonlat": [
+       72.846461,
+       19.013704
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072869"
+      },
+      "total_capacity": 80,
+      "occupancy": 125,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 0,
+      "free": -45
+     },
+     {
+      "id": "SH2",
+      "name": "IES V N Sule Guruji school",
+      "lonlat": [
+       72.848666,
+       19.021967
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/685548839"
+      },
+      "total_capacity": 150,
+      "occupancy": 0,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 150,
+      "free": 0
+     }
+    ],
+    "vehicles": [
+     {
+      "id": "V1",
+      "name": "Fire brigade truck",
+      "type": "truck",
+      "passenger_capacity": 25,
+      "lonlat": [
+       72.845747,
+       19.014145
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072855"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": true,
+      "unavailable_reason": "",
+      "free_at_t_min": 183.8,
+      "position_lonlat": [
+       72.8484847,
+       19.0222724
+      ]
+     },
+     {
+      "id": "V2",
+      "name": "Police truck",
+      "type": "truck",
+      "passenger_capacity": 20,
+      "lonlat": [
+       72.835465,
+       19.015061
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/354066127"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": false,
+      "unavailable_reason": "breakdown (SIMULATED)",
+      "free_at_t_min": 23.6,
+      "position_lonlat": [
+       72.8465403,
+       19.0138196
+      ]
+     }
+    ],
+    "events_used": [
+     {
+      "event_id": "rev1",
+      "kind": "vehicle_unavailable",
+      "received_t_min": 30.0,
+      "applies_from_t_min": 30.0,
+      "reason": "breakdown (SIMULATED)",
+      "source": "operator report (SIMULATED)",
+      "vehicle_id": "V2"
+     },
+     {
+      "event_id": "rev2",
+      "kind": "shelter_update",
+      "received_t_min": 30.0,
+      "applies_from_t_min": 30.0,
+      "reason": "reported full",
+      "source": "operator report (SIMULATED)",
+      "shelter_id": "SH1",
+      "occupancy": 80
+     }
+    ]
+   }
+  },
+  "v3_baseline_current_status_mode": {
+   "plan_version": 3,
+   "sim_t_min": 30.0,
+   "mode": "current",
+   "unmet": {
+    "S3": {
+     "people": 15,
+     "reasons": [
+      {
+       "reason": "travel time too long: mission runs past the forecast horizon",
+       "count": 2,
+       "detail": "IES V N Sule Guruji school reached at T+185, horizon T+180"
+      }
+     ]
+    },
+    "S4": {
+     "people": 5,
+     "reasons": [
+      {
+       "reason": "shelter capacity exhausted",
+       "count": 1,
+       "detail": ""
+      }
+     ]
+    }
+   },
+   "changes": [
+    {
+     "assignment_id": "A11",
+     "change": "proposed",
+     "reason": "critical priority; earliest completion T+52 among feasible team/vehicle/shelter combinations; 15 of 15 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A12",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+115 among feasible team/vehicle/shelter combinations; 25 of 40 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A13",
+     "change": "proposed",
+     "reason": "high priority; earliest completion T+135 among feasible team/vehicle/shelter combinations; 15 of 15 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A14",
+     "change": "proposed",
+     "reason": "medium priority; earliest completion T+163 among feasible team/vehicle/shelter combinations; 25 of 40 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A15",
+     "change": "proposed",
+     "reason": "low priority; earliest completion T+184 among feasible team/vehicle/shelter combinations; 20 of 25 remaining people fit the vehicle and shelter"
+    },
+    {
+     "assignment_id": "A3",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A4",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A6",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A8",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A9",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    },
+    {
+     "assignment_id": "A10",
+     "change": "proposal withdrawn",
+     "reason": "no longer the best feasible use of the resources"
+    }
+   ],
+   "log": [
+    "A11 proposed: T1+V1 take 15 from S1 to SH2, done T+52",
+    "A5 proposed: T1+V1 take 25 from S2 to SH2, done T+73",
+    "A7 proposed: T1+V1 take 25 from S2 to SH2, done T+94",
+    "A12 proposed: T1+V1 take 25 from S2 to SH2, done T+115",
+    "A13 proposed: T1+V1 take 15 from S2 to SH2, done T+135",
+    "A14 proposed: T1+V1 take 25 from S3 to SH2, done T+163",
+    "A15 proposed: T1+V1 take 20 from S4 to SH2, done T+184"
+   ],
+   "invariant_violations": [],
+   "summary": {
+    "people_needing_help": 215,
+    "served": 45,
+    "covered_committed": 0,
+    "covered_proposed": 150,
+    "unmet": 20,
+    "assignments_proposed": 7,
+    "assignments_cancelled_now": 0,
+    "utilisation": {
+     "T1": 1.0,
+     "T2": 0.0,
+     "V1": 1.0,
+     "V2": 0.0
+    },
+    "shelter_free_after_plan": {
+     "SH1": -45,
+     "SH2": 0
+    },
+    "replan_ms": 120.5
+   },
+   "assignments": [
+    {
+     "assignment_id": "A1",
+     "status": "COMPLETED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH1",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      },
+      {
+       "status": "ACCEPTED",
+       "t_min": 1
+      },
+      {
+       "status": "DISPATCHED",
+       "t_min": 2
+      },
+      {
+       "status": "IN_PROGRESS",
+       "t_min": 1.62
+      },
+      {
+       "status": "COMPLETED",
+       "t_min": 19.66
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 1.62,
+       "done_t_min": 11.62,
+       "status_counts": {
+        "USABLE": 16,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 11.62,
+       "arrive_t_min": 14.66,
+       "done_t_min": 19.66,
+       "status_counts": {
+        "USABLE": 23,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A2",
+     "status": "COMPLETED",
+     "settlement_id": "S1",
+     "team_id": "T2",
+     "vehicle_id": "V2",
+     "shelter_id": "SH1",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      },
+      {
+       "status": "ACCEPTED",
+       "t_min": 1
+      },
+      {
+       "status": "DISPATCHED",
+       "t_min": 2
+      },
+      {
+       "status": "IN_PROGRESS",
+       "t_min": 5.61
+      },
+      {
+       "status": "COMPLETED",
+       "t_min": 23.65
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 0.0,
+       "arrive_t_min": 5.61,
+       "done_t_min": 15.61,
+       "status_counts": {
+        "USABLE": 50,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "Sharda Mangal Karyalaya (community hall)",
+       "depart_t_min": 15.61,
+       "arrive_t_min": 18.65,
+       "done_t_min": 23.65,
+       "status_counts": {
+        "USABLE": 23,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A11",
+     "status": "PROPOSED",
+     "settlement_id": "S1",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 15,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar TT / Khodad Circle",
+       "depart_t_min": 30.0,
+       "arrive_t_min": 32.06,
+       "done_t_min": 42.06,
+       "status_counts": {
+        "USABLE": 21,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 42.06,
+       "arrive_t_min": 47.08,
+       "done_t_min": 52.08,
+       "status_counts": {
+        "USABLE": 29,
+        "UNCERTAIN": 3,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A5",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 52.08,
+       "arrive_t_min": 54.82,
+       "done_t_min": 64.82,
+       "status_counts": {
+        "USABLE": 15,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 64.82,
+       "arrive_t_min": 67.76,
+       "done_t_min": 72.76,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A7",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 0.0,
+       "reason": "plan v1",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 72.76,
+       "arrive_t_min": 75.73,
+       "done_t_min": 85.73,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 85.73,
+       "arrive_t_min": 88.67,
+       "done_t_min": 93.67,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A12",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 93.67,
+       "arrive_t_min": 96.64,
+       "done_t_min": 106.64,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 106.64,
+       "arrive_t_min": 109.58,
+       "done_t_min": 114.58,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A13",
+     "status": "PROPOSED",
+     "settlement_id": "S2",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 15,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Vaccharaj Lane, Matunga East",
+       "depart_t_min": 114.58,
+       "arrive_t_min": 117.55,
+       "done_t_min": 127.55,
+       "status_counts": {
+        "USABLE": 14,
+        "UNCERTAIN": 0,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 127.55,
+       "arrive_t_min": 130.49,
+       "done_t_min": 135.49,
+       "status_counts": {
+        "USABLE": 13,
+        "UNCERTAIN": 2,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A14",
+     "status": "PROPOSED",
+     "settlement_id": "S3",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 25,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Shakkar Panchayat, R.A. Kidwai Road",
+       "depart_t_min": 135.49,
+       "arrive_t_min": 141.69,
+       "done_t_min": 151.69,
+       "status_counts": {
+        "USABLE": 37,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 151.69,
+       "arrive_t_min": 157.74,
+       "done_t_min": 162.74,
+       "status_counts": {
+        "USABLE": 36,
+        "UNCERTAIN": 5,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    },
+    {
+     "assignment_id": "A15",
+     "status": "PROPOSED",
+     "settlement_id": "S4",
+     "team_id": "T1",
+     "vehicle_id": "V1",
+     "shelter_id": "SH2",
+     "people": 20,
+     "history": [
+      {
+       "status": "PROPOSED",
+       "t_min": 30.0,
+       "reason": "plan v3",
+       "by": "planner"
+      }
+     ],
+     "attention": null,
+     "legs": [
+      {
+       "kind": "to_settlement",
+       "to": "Dadar Railway Station area",
+       "depart_t_min": 162.74,
+       "arrive_t_min": 165.78,
+       "done_t_min": 175.78,
+       "status_counts": {
+        "USABLE": 9,
+        "UNCERTAIN": 3,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      },
+      {
+       "kind": "to_shelter",
+       "to": "IES V N Sule Guruji school",
+       "depart_t_min": 175.78,
+       "arrive_t_min": 178.76,
+       "done_t_min": 183.76,
+       "status_counts": {
+        "USABLE": 10,
+        "UNCERTAIN": 1,
+        "UNKNOWN": 0,
+        "AT_RISK": 0,
+        "CLOSED": 0
+       }
+      }
+     ]
+    }
+   ],
+   "state": {
+    "settlements": [
+     {
+      "id": "S1",
+      "name": "Dadar TT / Khodad Circle",
+      "lonlat": [
+       72.848752,
+       19.017141
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 359"
+      },
+      "people_needing_help": 60,
+      "priority": "critical",
+      "priority_reason": "SIMULATED: low-lying junction, residents with limited mobility reported",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 45,
+      "covered": 15,
+      "remaining": 0
+     },
+     {
+      "id": "S2",
+      "name": "Vaccharaj Lane, Matunga East",
+      "lonlat": [
+       72.852454,
+       19.027101
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 373"
+      },
+      "people_needing_help": 90,
+      "priority": "high",
+      "priority_reason": "SIMULATED declaration; MCGM attribute lists 30 affected huts",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "REAL",
+       "source": "MCGM attributes AFFECT_POPULATION=90, AFFECTED_HUT=30",
+       "note": "an MCGM planning attribute, not a live headcount"
+      },
+      "served": 0,
+      "covered": 90,
+      "remaining": 0
+     },
+     {
+      "id": "S3",
+      "name": "Shakkar Panchayat, R.A. Kidwai Road",
+      "lonlat": [
+       72.85441,
+       19.011698
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2033"
+      },
+      "people_needing_help": 40,
+      "priority": "medium",
+      "priority_reason": "SIMULATED",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 25,
+      "remaining": 15
+     },
+     {
+      "id": "S4",
+      "name": "Dadar Railway Station area",
+      "lonlat": [
+       72.843691,
+       19.017613
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "MCGM Flooding Spots layer 344 (snapshot 2026-09-08), polygon centroid",
+       "ref": "OBJECTID 2035"
+      },
+      "people_needing_help": 25,
+      "priority": "low",
+      "priority_reason": "SIMULATED: stranded commuters",
+      "need": "evacuation to shelter",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "served": 0,
+      "covered": 20,
+      "remaining": 5
+     }
+    ],
+    "shelters": [
+     {
+      "id": "SH1",
+      "name": "Sharda Mangal Karyalaya (community hall)",
+      "lonlat": [
+       72.846461,
+       19.013704
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072869"
+      },
+      "total_capacity": 80,
+      "occupancy": 125,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 0,
+      "free": -45
+     },
+     {
+      "id": "SH2",
+      "name": "IES V N Sule Guruji school",
+      "lonlat": [
+       72.848666,
+       19.021967
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/685548839"
+      },
+      "total_capacity": 150,
+      "occupancy": 0,
+      "status": "open",
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "reserved": 150,
+      "free": 0
+     }
+    ],
+    "vehicles": [
+     {
+      "id": "V1",
+      "name": "Fire brigade truck",
+      "type": "truck",
+      "passenger_capacity": 25,
+      "lonlat": [
+       72.845747,
+       19.014145
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/116072855"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": true,
+      "unavailable_reason": "",
+      "free_at_t_min": 183.8,
+      "position_lonlat": [
+       72.8484847,
+       19.0222724
+      ]
+     },
+     {
+      "id": "V2",
+      "name": "Police truck",
+      "type": "truck",
+      "passenger_capacity": 20,
+      "lonlat": [
+       72.835465,
+       19.015061
+      ],
+      "location_provenance": {
+       "tag": "REAL",
+       "source": "OpenStreetMap way centroid, (c) OpenStreetMap contributors, ODbL",
+       "ref": "way/354066127"
+      },
+      "numbers_provenance": {
+       "tag": "SIMULATED"
+      },
+      "available": false,
+      "unavailable_reason": "breakdown (SIMULATED)",
+      "free_at_t_min": 23.6,
+      "position_lonlat": [
+       72.8465403,
+       19.0138196
+      ]
+     }
+    ],
+    "events_used": [
+     {
+      "event_id": "rev1",
+      "kind": "vehicle_unavailable",
+      "received_t_min": 30.0,
+      "applies_from_t_min": 30.0,
+      "reason": "breakdown (SIMULATED)",
+      "source": "operator report (SIMULATED)",
+      "vehicle_id": "V2"
+     },
+     {
+      "event_id": "rev2",
+      "kind": "shelter_update",
+      "received_t_min": 30.0,
+      "applies_from_t_min": 30.0,
+      "reason": "reported full",
+      "source": "operator report (SIMULATED)",
+      "shelter_id": "SH1",
+      "occupancy": 80
+     }
+    ]
+   }
+  }
+ }
+}

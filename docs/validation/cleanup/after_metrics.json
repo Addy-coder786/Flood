@@ -1,0 +1,370 @@
+{
+ "phase": "after",
+ "pages": {
+  "empty_overview_1440": {
+   "words": 135,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 300
+  },
+  "empty_forecast_1440": {
+   "words": 90,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 245
+  },
+  "empty_access_1440": {
+   "words": 146,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 301
+  },
+  "empty_response_1440": {
+   "words": 39,
+   "paragraphs": 2,
+   "longParagraphs": 1,
+   "bodyWords": 194
+  },
+  "empty_trips_1440": {
+   "words": 31,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 186
+  },
+  "empty_resources_1440": {
+   "words": 174,
+   "paragraphs": 14,
+   "longParagraphs": 1,
+   "bodyWords": 329
+  },
+  "empty_reports_1440": {
+   "words": 95,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 250
+  },
+  "empty_alerts_1440": {
+   "words": 264,
+   "paragraphs": 9,
+   "longParagraphs": 0,
+   "bodyWords": 419
+  },
+  "empty_replay_1440": {
+   "words": 78,
+   "paragraphs": 3,
+   "longParagraphs": 1,
+   "bodyWords": 233
+  },
+  "empty_overview_390": {
+   "words": 135,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 276
+  },
+  "empty_forecast_390": {
+   "words": 90,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 231
+  },
+  "empty_access_390": {
+   "words": 146,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 287
+  },
+  "empty_response_390": {
+   "words": 39,
+   "paragraphs": 2,
+   "longParagraphs": 1,
+   "bodyWords": 180
+  },
+  "empty_trips_390": {
+   "words": 31,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 172
+  },
+  "empty_resources_390": {
+   "words": 174,
+   "paragraphs": 14,
+   "longParagraphs": 1,
+   "bodyWords": 315
+  },
+  "empty_reports_390": {
+   "words": 95,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 236
+  },
+  "empty_alerts_390": {
+   "words": 264,
+   "paragraphs": 9,
+   "longParagraphs": 0,
+   "bodyWords": 405
+  },
+  "empty_replay_390": {
+   "words": 78,
+   "paragraphs": 3,
+   "longParagraphs": 1,
+   "bodyWords": 219
+  },
+  "run_overview_1440": {
+   "words": 250,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 434
+  },
+  "run_forecast_1440": {
+   "words": 109,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 283
+  },
+  "run_access_1440": {
+   "words": 152,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 326
+  },
+  "run_response_1440": {
+   "words": 34,
+   "paragraphs": 2,
+   "longParagraphs": 1,
+   "bodyWords": 208
+  },
+  "run_trips_1440": {
+   "words": 23,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 197
+  },
+  "run_resources_1440": {
+   "words": 174,
+   "paragraphs": 14,
+   "longParagraphs": 1,
+   "bodyWords": 348
+  },
+  "run_reports_1440": {
+   "words": 95,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 269
+  },
+  "run_alerts_1440": {
+   "words": 424,
+   "paragraphs": 8,
+   "longParagraphs": 0,
+   "bodyWords": 598
+  },
+  "run_replay_1440": {
+   "words": 73,
+   "paragraphs": 3,
+   "longParagraphs": 1,
+   "bodyWords": 247
+  },
+  "run_overview_390": {
+   "words": 250,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 410
+  },
+  "run_forecast_390": {
+   "words": 109,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 269
+  },
+  "run_access_390": {
+   "words": 152,
+   "paragraphs": 1,
+   "longParagraphs": 0,
+   "bodyWords": 312
+  },
+  "run_response_390": {
+   "words": 34,
+   "paragraphs": 2,
+   "longParagraphs": 1,
+   "bodyWords": 194
+  },
+  "run_trips_390": {
+   "words": 23,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 183
+  },
+  "run_resources_390": {
+   "words": 174,
+   "paragraphs": 14,
+   "longParagraphs": 1,
+   "bodyWords": 334
+  },
+  "run_reports_390": {
+   "words": 95,
+   "paragraphs": 3,
+   "longParagraphs": 0,
+   "bodyWords": 255
+  },
+  "run_alerts_390": {
+   "words": 424,
+   "paragraphs": 8,
+   "longParagraphs": 0,
+   "bodyWords": 584
+  },
+  "run_replay_390": {
+   "words": 73,
+   "paragraphs": 3,
+   "longParagraphs": 1,
+   "bodyWords": 233
+  },
+  "landing_1440": {
+   "words": 558,
+   "paragraphs": 22,
+   "longParagraphs": 3
+  },
+  "landing_390": {
+   "words": 542,
+   "paragraphs": 22,
+   "longParagraphs": 3
+  },
+  "public_390": {
+   "words": 471,
+   "paragraphs": 38
+  },
+  "driver_390": {
+   "words": 162,
+   "paragraphs": 10
+  },
+  "public_1440": {
+   "words": 471,
+   "paragraphs": 38
+  },
+  "driver_1440": {
+   "words": 162,
+   "paragraphs": 10
+  }
+ },
+ "overflow": {
+  "empty_overview": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_forecast": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_access": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_response": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_trips": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_resources": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_reports": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_alerts": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "empty_replay": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_overview": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_forecast": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_access": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_response": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_trips": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_resources": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_reports": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_alerts": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "run_replay": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "landing_1440": {
+   "scrollWidth": 1440,
+   "inner": 1440,
+   "offenders": []
+  },
+  "landing_390": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "public_390": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "driver_390": {
+   "scrollWidth": 390,
+   "inner": 390,
+   "offenders": []
+  },
+  "public_1440": {
+   "scrollWidth": 1440,
+   "inner": 1440,
+   "offenders": []
+  },
+  "driver_1440": {
+   "scrollWidth": 1440,
+   "inner": 1440,
+   "offenders": []
+  }
+ },
+ "errors": []
+}

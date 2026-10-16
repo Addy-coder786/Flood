@@ -1,0 +1,1926 @@
+{
+ "generated": "2026-09-09 00:09",
+ "commit": "bf92843",
+ "horizon_min": 180,
+ "pilot": "Hindmata / Dadar pilot",
+ "runs": [
+  {
+   "scenario": "heavy",
+   "scenario_name": "Heavy steady rain (50 mm/h x 2 h)",
+   "horizon_min": 180.0,
+   "blockage": {
+    "mode": "none"
+   },
+   "mass_balance_error_pct": -2.301676369524409e-12,
+   "thresholds_cm": {
+    "detected": 15.0,
+    "marginal": 5.0
+   },
+   "base_rate": {
+    "threshold_cm": 15.0,
+    "n_cells": 48900,
+    "frac_cells_ge_threshold_envelope": 0.20012269938650307,
+    "frac_cells_ge_threshold_peak_frame": 0.18717791411042944,
+    "peak_frame_t_min": 125.0,
+    "frac_cells_ge_5cm_envelope": 0.35245398773006137,
+    "envelope_percentiles_cm": {
+     "50": 1.4410139322280884,
+     "75": 11.282320022583008,
+     "90": 25.65664291381836,
+     "95": 35.99070358276367,
+     "99": 63.92411422729492
+    }
+   },
+   "active_counts": {
+    "DETECTED": 3,
+    "MARGINAL": 0,
+    "MISSED": 2
+   },
+   "n_active": 5,
+   "n_total": 21,
+   "uninformative": false,
+   "spots": [
+    {
+     "name": "Parel Station East J B Road, Elphinstone East/W ",
+     "active": true,
+     "ward": "F/S",
+     "location": "Jagannath Batankar Road,Opp Parel Station East,Parel East,Mumbai,400012",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 40.0,
+     "footprint": "polygon",
+     "footprint_cells": 721,
+     "footprint_building_cells": 237,
+     "footprint_z_min_m": 16.14130210876465,
+     "footprint_z_max_m": 29.200000762939453,
+     "local_relief_m": null,
+     "max_depth_cm": 245.6080436706543,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 5.0,
+      "15cm": 15.0,
+      "30cm": 15.0
+     },
+     "cell_depth_percentile": 99.99386503067484,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172030109",
+      "dist_m": 310.9660261695597,
+      "ground_m": 27.5310001373291,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "658365063_0",
+      "name": "Balasheth Mandurkar Marg",
+      "highway": "residential",
+      "dist_m": 201.67456823675394,
+      "max_depth_cm": 0.17630665221873737
+     }
+    },
+    {
+     "name": "Dadar TT Near BEST Office Tilak road junction",
+     "active": true,
+     "ward": "F/N",
+     "location": "Tilak Road, Behiend BEST Office Oppsite Light Pol No MJJ 1, Dadar TT, Mumbai, 400014",
+     "affect_road": "Jamejamshed Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 18,
+     "footprint_building_cells": 2,
+     "footprint_z_min_m": 28.909624099731445,
+     "footprint_z_max_m": 29.200000762939453,
+     "local_relief_m": -0.2903766632080078,
+     "max_depth_cm": 36.67365610599518,
+     "t_of_max_min": 140.0,
+     "onset_min": {
+      "5cm": 15.0,
+      "15cm": 60.0,
+      "30cm": 100.0
+     },
+     "cell_depth_percentile": 95.18609406952964,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173045105",
+      "dist_m": 8.374129249318655,
+      "ground_m": 28.902000427246094,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 9.28395938873291,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848254_0",
+      "name": "Jam-e-Jamshed Lane",
+      "highway": "residential",
+      "dist_m": 2.279737511136241,
+      "max_depth_cm": 47.443701115753036
+     }
+    },
+    {
+     "name": "Matunga Yard Road (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Matunga Yard Road, In Frontside of Matunga yard, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 29.005117416381836,
+     "footprint_z_max_m": 29.26358413696289,
+     "local_relief_m": 0.18963050842285156,
+     "max_depth_cm": 6.1447832733392715,
+     "t_of_max_min": 115.0,
+     "onset_min": {
+      "5cm": 40.0,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 66.89366053169734,
+     "class": "MARGINAL",
+     "nearest_node": {
+      "id": "2173044601",
+      "dist_m": 26.510080373322587,
+      "ground_m": 29.101999282836914,
+      "surcharges": true,
+      "first_surcharge_min": 85.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 69.46611603460042,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "150409372_0",
+      "name": "Khareghat Road",
+      "highway": "residential",
+      "dist_m": 1.1742835630458388,
+      "max_depth_cm": 31.494595027990357
+     }
+    },
+    {
+     "name": "Devdhar Road  (Tackled)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Devdhar Road, Behiend Ravi Kiran Building Polt No 321 A, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 70.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 29.890907287597656,
+     "footprint_z_max_m": 29.95392417907715,
+     "local_relief_m": -0.3090934753417969,
+     "max_depth_cm": 0.3276125295087695,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": null,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 20.519427402862984,
+     "class": "MISSED",
+     "nearest_node": {
+      "id": "2173049905",
+      "dist_m": 4.789727659788573,
+      "ground_m": 29.614999771118164,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848914_0",
+      "name": "Deodhar Road",
+      "highway": "residential",
+      "dist_m": 0.14325463275290615,
+      "max_depth_cm": 5.124937747227662
+     }
+    },
+    {
+     "name": "803 Laxumi Buvan (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Dr Ambedkar Road, In Frontside Of Laxumi Bhuvan Near Light Pol no BAK 22, 1, Dadar TT, Mumbai, 400014",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 70.0,
+     "footprint": "polygon",
+     "footprint_cells": 13,
+     "footprint_building_cells": 4,
+     "footprint_z_min_m": 28.637958526611328,
+     "footprint_z_max_m": 28.97905158996582,
+     "local_relief_m": -0.5233116149902344,
+     "max_depth_cm": 54.75621819496155,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 15.0,
+      "15cm": 45.0,
+      "30cm": 85.0
+     },
+     "cell_depth_percentile": 98.30879345603272,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173046301",
+      "dist_m": 19.45722392502888,
+      "ground_m": 28.909000396728516,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "788506119_0",
+      "name": "(unnamed)",
+      "highway": "service",
+      "dist_m": 24.898301654593403,
+      "max_depth_cm": 54.29262637375708
+     }
+    },
+    {
+     "name": "opp kalpataru lokmanya tilak Coloney (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Tilak Road No 3, Opp Kalpataru Chs In Front Side Of State Investigetion Depat Building Mumbai Police Near Light Pol No LNR 61, 5, Dadar East, Mumbai, 400014",
+     "affect_road": "Lokmanya Tilak Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 9,
+     "footprint_building_cells": 3,
+     "footprint_z_min_m": 28.42041778564453,
+     "footprint_z_max_m": 28.828489303588867,
+     "local_relief_m": -0.4399452209472656,
+     "max_depth_cm": 39.58859443664551,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 20.0,
+      "30cm": 65.0
+     },
+     "cell_depth_percentile": 96.09815950920245,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173042202",
+      "dist_m": 13.412618904096904,
+      "ground_m": 28.37299919128418,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "22848157_0",
+      "name": "Marg No 2",
+      "highway": "residential",
+      "dist_m": 0.03551065336928864,
+      "max_depth_cm": 39.58859518690544
+     }
+    },
+    {
+     "name": "83 Hindu Coloney Dadar (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "DR chandrkant Kamble Chwok, D V Pradhan Road, In Frontside Of 56 Vasant bhuvan, Dadar East, Mumbai, 400014",
+     "affect_road": "Lkhamshi Napoo Raod",
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 200.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.200000762939453,
+     "footprint_z_max_m": 28.2994327545166,
+     "local_relief_m": -0.4077472686767578,
+     "max_depth_cm": 40.38863480091095,
+     "t_of_max_min": 150.0,
+     "onset_min": {
+      "5cm": 25.0,
+      "15cm": 60.0,
+      "30cm": 105.0
+     },
+     "cell_depth_percentile": 96.280163599182,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173042402",
+      "dist_m": 12.459050028401377,
+      "ground_m": 29.22599983215332,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "22848295_5",
+      "name": "D.V. Pradhan Road",
+      "highway": "residential",
+      "dist_m": 6.0998257643066465,
+      "max_depth_cm": 41.149685094442404
+     }
+    },
+    {
+     "name": "kabutar khana central matungaa near bharat bank (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "lakhamshi Napoo Road, In Frontside Of Bharat Bank Kabuta khana Central Matung, Matunga West, Mumbai, 400019",
+     "affect_road": "Bhadarkar road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 200.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 1,
+     "footprint_z_min_m": 28.600000381469727,
+     "footprint_z_max_m": 28.913068771362305,
+     "local_relief_m": -0.5676822662353516,
+     "max_depth_cm": 72.09621667861938,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 30.0,
+      "15cm": 40.0,
+      "30cm": 55.0
+     },
+     "cell_depth_percentile": 99.3517382413088,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173058306",
+      "dist_m": 9.752312804096817,
+      "ground_m": 28.722000122070312,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848943_2",
+      "name": "Laxmi Narayan Lane",
+      "highway": "residential",
+      "dist_m": 5.766850669853201,
+      "max_depth_cm": 72.09621848952091
+     }
+    },
+    {
+     "name": "Ruiya Collage  (Tackled)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Lakhamshi Nupoo Road, In Frontside Of Ruiya Collage, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.799999237060547,
+     "footprint_z_max_m": 28.799999237060547,
+     "local_relief_m": -0.1557140350341797,
+     "max_depth_cm": 9.686977416276932,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 25.0,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 72.719836400818,
+     "class": "MARGINAL",
+     "nearest_node": {
+      "id": "2173047802",
+      "dist_m": 68.294080589217,
+      "ground_m": 28.933000564575195,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1443620248_16",
+      "name": "Lakhamasi Nappu Road",
+      "highway": "tertiary",
+      "dist_m": 0.048604689010217826,
+      "max_depth_cm": 55.16658294809128
+     }
+    },
+    {
+     "name": "89 Vaccharaj Lane",
+     "active": true,
+     "ward": "F/N",
+     "location": "Vaccharaj Lane, Behinend Matunga Central Railway Line Station, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 2468,
+     "footprint_building_cells": 714,
+     "footprint_z_min_m": 28.529481887817383,
+     "footprint_z_max_m": 33.599998474121094,
+     "local_relief_m": -1.1302471160888672,
+     "max_depth_cm": 72.09621667861938,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 15.0,
+      "30cm": 40.0
+     },
+     "cell_depth_percentile": 99.3517382413088,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173059104",
+      "dist_m": 8.197468041168008,
+      "ground_m": 29.92300033569336,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "1139171829_0",
+      "name": "Chandavarkar Marg",
+      "highway": "residential",
+      "dist_m": 1.7963534143892528,
+      "max_depth_cm": 28.473040571687243
+     }
+    },
+    {
+     "name": "Indian Bank Matunga Bazar Barnch (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Devdhar Road, In Frontside Of Indian Bank Matunga Bazar Barnch Tempal Avenue Chs, Matunga East, Mumbai, 400019",
+     "affect_road": "Lakhmshi noopu Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 60.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 1,
+     "footprint_z_min_m": 29.0,
+     "footprint_z_max_m": 29.05685806274414,
+     "local_relief_m": -0.11355018615722656,
+     "max_depth_cm": 5.804676562547684,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 55.0,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 66.26993865030674,
+     "class": "MARGINAL",
+     "nearest_node": {
+      "id": "2173058004",
+      "dist_m": 63.44493066832771,
+      "ground_m": 29.250999450683594,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "1381946613_0",
+      "name": "Deodhar Road",
+      "highway": "residential",
+      "dist_m": 5.037528041505856,
+      "max_depth_cm": 12.690870483484188
+     }
+    },
+    {
+     "name": "Macherji Joshi Udyan (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Ledy Jahangir Road, In Middal Side Of Mancheji Joshi Udyan, Dadar West, Mumbai, 400014",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 10,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 33.193363189697266,
+     "footprint_z_max_m": 33.64185333251953,
+     "local_relief_m": -0.03154754638671875,
+     "max_depth_cm": 1.0734320618212223,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": null,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 45.29243353783231,
+     "class": "MISSED",
+     "nearest_node": {
+      "id": "2174041305",
+      "dist_m": 3.8310459494090923,
+      "ground_m": 33.06700134277344,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848210_23",
+      "name": "Lady Jehangir Road",
+      "highway": "residential",
+      "dist_m": 1.3516122308588132,
+      "max_depth_cm": 1.073432106504563
+     }
+    },
+    {
+     "name": "Shindewadi Bus Stop (Tackled)",
+     "active": false,
+     "ward": "F/S",
+     "location": "Abaji Marge, In Front of Shindewadi Cort Main Gate, Dadar East, Mumbai, 400014",
+     "affect_road": "Hindamata Road",
+     "mcgm_depth_attr": 1.5,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.393449783325195,
+     "footprint_z_max_m": 28.558565139770508,
+     "local_relief_m": -0.2675819396972656,
+     "max_depth_cm": 0.6817517802119255,
+     "t_of_max_min": 65.0,
+     "onset_min": {
+      "5cm": null,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 36.67484662576687,
+     "class": "MISSED",
+     "nearest_node": {
+      "id": "2172039502",
+      "dist_m": 15.571879334162128,
+      "ground_m": 28.236000061035156,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848467_0",
+      "name": "Shankar Abaji Palav Marg",
+      "highway": "residential",
+      "dist_m": 4.435004880246681,
+      "max_depth_cm": 29.207423445460336
+     }
+    },
+    {
+     "name": "Senapati Bapat Roda (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Senapati Bapat Road, Near Mama Kane Hotel, Dadar (W), Mumbai, 400028",
+     "affect_road": "Senapati Bapat Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 16,
+     "footprint_building_cells": 8,
+     "footprint_z_min_m": 28.0,
+     "footprint_z_max_m": 28.399999618530273,
+     "local_relief_m": -0.7898578643798828,
+     "max_depth_cm": 53.68655323982239,
+     "t_of_max_min": 175.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 20.0,
+      "30cm": 70.0
+     },
+     "cell_depth_percentile": 98.18200408997954,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172048202",
+      "dist_m": 28.987267292425884,
+      "ground_m": 28.225000381469727,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1139120823_6",
+      "name": "(unnamed)",
+      "highway": "primary",
+      "dist_m": 0.23177952912314362,
+      "max_depth_cm": 41.78471390444602
+     }
+    },
+    {
+     "name": "Shivaji Park Road No 2 (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Shivaji Park Road No 2, Cafe Trofima Near, Mahim, Mumbai, 400016",
+     "affect_road": "Shivaji Park Road No 2",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 2,
+     "footprint_z_min_m": 29.600000381469727,
+     "footprint_z_max_m": 29.914037704467773,
+     "local_relief_m": -0.16448593139648438,
+     "max_depth_cm": 24.278800189495087,
+     "t_of_max_min": 155.0,
+     "onset_min": {
+      "5cm": 50.0,
+      "15cm": 80.0,
+      "30cm": null
+     },
+     "cell_depth_percentile": 89.13496932515338,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172057307",
+      "dist_m": 34.086596112552165,
+      "ground_m": 30.21299934387207,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1139163618_1",
+      "name": "Lady Jamshedji Road",
+      "highway": "primary",
+      "dist_m": 7.5249928358565255,
+      "max_depth_cm": 34.465329383117485
+     }
+    },
+    {
+     "name": "Ganesh Paethlem Shah Sadan Star Mall (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Ganesh Patethlem Shah Sadan Road, Near Star Mall, Dadar (W ), Mumbai, 400028",
+     "affect_road": null,
+     "mcgm_depth_attr": 1.5,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 30.200000762939453,
+     "footprint_z_max_m": 30.200000762939453,
+     "local_relief_m": -0.0229034423828125,
+     "max_depth_cm": 15.073733031749725,
+     "t_of_max_min": 130.0,
+     "onset_min": {
+      "5cm": 50.0,
+      "15cm": 125.0,
+      "30cm": null
+     },
+     "cell_depth_percentile": 80.12269938650307,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172046803!",
+      "dist_m": 207.7608842910436,
+      "ground_m": 30.215999603271484,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22849635_0",
+      "name": "Ganesh Peth Lane",
+      "highway": "residential",
+      "dist_m": 3.1204740669596847,
+      "max_depth_cm": 15.685603660766281
+     }
+    },
+    {
+     "name": "Manish Market Beside Kohinoor Institute (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Senapati Bapat Road, Manish Market Kohinoor Institute Near, Dadar, Mumbai, 400028",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 12,
+     "footprint_building_cells": 4,
+     "footprint_z_min_m": 28.235546112060547,
+     "footprint_z_max_m": 28.530275344848633,
+     "local_relief_m": -0.4804039001464844,
+     "max_depth_cm": 12.670177221298218,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 35.0,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 76.90593047034766,
+     "class": "MARGINAL",
+     "nearest_node": {
+      "id": "2172047101",
+      "dist_m": 26.329385346794947,
+      "ground_m": 28.128000259399414,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "658365065_13",
+      "name": "Senapati Bapat Marg",
+      "highway": "primary",
+      "dist_m": 2.840494628413124,
+      "max_depth_cm": 30.295846330277936
+     }
+    },
+    {
+     "name": "D L Vaidya Marg (Tackled)",
+     "active": false,
+     "ward": "G/N",
+     "location": "D L Vaidya Marg, Dadar West, Mumbai 400028",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 5,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 30.200000762939453,
+     "footprint_z_max_m": 30.3032283782959,
+     "local_relief_m": 0.0,
+     "max_depth_cm": 16.603274643421173,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 20.0,
+      "15cm": 75.0,
+      "30cm": null
+     },
+     "cell_depth_percentile": 82.18609406952964,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172046806",
+      "dist_m": 52.8138153764877,
+      "ground_m": 30.39900016784668,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22849640_7",
+      "name": "D L Vaidya Marg",
+      "highway": "residential",
+      "dist_m": 2.5680378445846084,
+      "max_depth_cm": 16.603274310435722
+     }
+    },
+    {
+     "name": "Vijay Manjrekar Road (Tackled)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Vijay Manjrekar Road, Dharavi (W)",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 30.200000762939453,
+     "footprint_z_max_m": 30.21097183227539,
+     "local_relief_m": 0.40000152587890625,
+     "max_depth_cm": 1.1090504005551338,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": null,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 45.86912065439673,
+     "class": "MISSED",
+     "nearest_node": {
+      "id": "2172042403",
+      "dist_m": 96.10676819137755,
+      "ground_m": 29.87700080871582,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1139147206_0",
+      "name": "(unnamed)",
+      "highway": "living_street",
+      "dist_m": 6.452845049962771,
+      "max_depth_cm": 1.959415526848581
+     }
+    },
+    {
+     "name": "Shakkar panchyayat R.A.Kidwai",
+     "active": true,
+     "ward": "F/N",
+     "location": "Shakkar panchyayat R.A.Kidwai, Mumbai",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 7,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 29.95502471923828,
+     "footprint_z_max_m": 30.059833526611328,
+     "local_relief_m": -0.04497528076171875,
+     "max_depth_cm": 3.0145537108182907,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": null,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 59.64417177914111,
+     "class": "MISSED",
+     "nearest_node": {
+      "id": "2174031409",
+      "dist_m": 28.38831353665488,
+      "ground_m": 29.788999557495117,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "1305685433_0",
+      "name": "R.A. Kidwai Marg",
+      "highway": "tertiary",
+      "dist_m": 3.4271859822698754,
+      "max_depth_cm": 16.81413102567334
+     }
+    },
+    {
+     "name": "Dadar Railway Station",
+     "active": true,
+     "ward": "F/N",
+     "location": "Dadar Railway Station",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 19,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.94282341003418,
+     "footprint_z_max_m": 29.141948699951172,
+     "local_relief_m": -0.06239509582519531,
+     "max_depth_cm": 0.9724069386720657,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": null,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 43.52351738241309,
+     "class": "MISSED",
+     "nearest_node": {
+      "id": "2173040101",
+      "dist_m": 40.72213120171574,
+      "ground_m": 28.660999298095703,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "739718531_0",
+      "name": "Dadasaheb Phalke Marg",
+      "highway": "tertiary",
+      "dist_m": 27.781967538073403,
+      "max_depth_cm": 11.691421430109388
+     }
+    }
+   ]
+  },
+  {
+   "scenario": "july2005",
+   "scenario_name": "26 July 2005 replay (Santacruz gauge, hourly)",
+   "horizon_min": 180.0,
+   "blockage": {
+    "mode": "none"
+   },
+   "mass_balance_error_pct": 9.59801281578181e-13,
+   "thresholds_cm": {
+    "detected": 15.0,
+    "marginal": 5.0
+   },
+   "base_rate": {
+    "threshold_cm": 15.0,
+    "n_cells": 48900,
+    "frac_cells_ge_threshold_envelope": 0.6002453987730061,
+    "frac_cells_ge_threshold_peak_frame": 0.5699795501022495,
+    "peak_frame_t_min": 180.0,
+    "frac_cells_ge_5cm_envelope": 0.7088548057259714,
+    "envelope_percentiles_cm": {
+     "50": 26.066387176513672,
+     "75": 54.613494873046875,
+     "90": 77.81993103027344,
+     "95": 95.90676879882812,
+     "99": 162.54525756835938
+    }
+   },
+   "active_counts": {
+    "DETECTED": 5,
+    "MARGINAL": 0,
+    "MISSED": 0
+   },
+   "n_active": 5,
+   "n_total": 21,
+   "uninformative": true,
+   "spots": [
+    {
+     "name": "Parel Station East J B Road, Elphinstone East/W ",
+     "active": true,
+     "ward": "F/S",
+     "location": "Jagannath Batankar Road,Opp Parel Station East,Parel East,Mumbai,400012",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 40.0,
+     "footprint": "polygon",
+     "footprint_cells": 721,
+     "footprint_building_cells": 237,
+     "footprint_z_min_m": 16.14130210876465,
+     "footprint_z_max_m": 29.200000762939453,
+     "local_relief_m": null,
+     "max_depth_cm": 689.2879009246826,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 5.0,
+      "15cm": 10.0,
+      "30cm": 10.0
+     },
+     "cell_depth_percentile": 99.97750511247445,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172030109",
+      "dist_m": 310.9660261695597,
+      "ground_m": 27.5310001373291,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "658365063_0",
+      "name": "Balasheth Mandurkar Marg",
+      "highway": "residential",
+      "dist_m": 201.67456823675394,
+      "max_depth_cm": 0.4007456153904044
+     }
+    },
+    {
+     "name": "Dadar TT Near BEST Office Tilak road junction",
+     "active": true,
+     "ward": "F/N",
+     "location": "Tilak Road, Behiend BEST Office Oppsite Light Pol No MJJ 1, Dadar TT, Mumbai, 400014",
+     "affect_road": "Jamejamshed Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 18,
+     "footprint_building_cells": 2,
+     "footprint_z_min_m": 28.909624099731445,
+     "footprint_z_max_m": 29.200000762939453,
+     "local_relief_m": -0.2903766632080078,
+     "max_depth_cm": 100.39273500442505,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 30.0,
+      "30cm": 50.0
+     },
+     "cell_depth_percentile": 95.85071574642127,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173045105",
+      "dist_m": 8.374129249318655,
+      "ground_m": 28.902000427246094,
+      "surcharges": true,
+      "first_surcharge_min": 35.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 436.29567539691925,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848254_0",
+      "name": "Jam-e-Jamshed Lane",
+      "highway": "residential",
+      "dist_m": 2.279737511136241,
+      "max_depth_cm": 115.22611837109903
+     }
+    },
+    {
+     "name": "Matunga Yard Road (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Matunga Yard Road, In Frontside of Matunga yard, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 29.005117416381836,
+     "footprint_z_max_m": 29.26358413696289,
+     "local_relief_m": 0.18963050842285156,
+     "max_depth_cm": 23.94452691078186,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 20.0,
+      "15cm": 150.0,
+      "30cm": null
+     },
+     "cell_depth_percentile": 47.95501022494887,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173044601",
+      "dist_m": 26.510080373322587,
+      "ground_m": 29.101999282836914,
+      "surcharges": true,
+      "first_surcharge_min": 30.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 417.99946801923215,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "150409372_0",
+      "name": "Khareghat Road",
+      "highway": "residential",
+      "dist_m": 1.1742835630458388,
+      "max_depth_cm": 66.18761782984477
+     }
+    },
+    {
+     "name": "Devdhar Road  (Tackled)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Devdhar Road, Behiend Ravi Kiran Building Polt No 321 A, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 70.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 29.890907287597656,
+     "footprint_z_max_m": 29.95392417907715,
+     "local_relief_m": -0.3090934753417969,
+     "max_depth_cm": 64.74133729934692,
+     "t_of_max_min": 135.0,
+     "onset_min": {
+      "5cm": 60.0,
+      "15cm": 70.0,
+      "30cm": 85.0
+     },
+     "cell_depth_percentile": 83.39672801635992,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173049905",
+      "dist_m": 4.789727659788573,
+      "ground_m": 29.614999771118164,
+      "surcharges": true,
+      "first_surcharge_min": 60.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 344.88809779286385,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848914_0",
+      "name": "Deodhar Road",
+      "highway": "residential",
+      "dist_m": 0.14325463275290615,
+      "max_depth_cm": 82.05126826765245
+     }
+    },
+    {
+     "name": "803 Laxumi Buvan (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Dr Ambedkar Road, In Frontside Of Laxumi Bhuvan Near Light Pol no BAK 22, 1, Dadar TT, Mumbai, 400014",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 70.0,
+     "footprint": "polygon",
+     "footprint_cells": 13,
+     "footprint_building_cells": 4,
+     "footprint_z_min_m": 28.637958526611328,
+     "footprint_z_max_m": 28.97905158996582,
+     "local_relief_m": -0.5233116149902344,
+     "max_depth_cm": 119.59563493728638,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 25.0,
+      "30cm": 45.0
+     },
+     "cell_depth_percentile": 97.69120654396728,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173046301",
+      "dist_m": 19.45722392502888,
+      "ground_m": 28.909000396728516,
+      "surcharges": true,
+      "first_surcharge_min": 65.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 351.28034687042236,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "788506119_0",
+      "name": "(unnamed)",
+      "highway": "service",
+      "dist_m": 24.898301654593403,
+      "max_depth_cm": 115.82215596423246
+     }
+    },
+    {
+     "name": "opp kalpataru lokmanya tilak Coloney (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Tilak Road No 3, Opp Kalpataru Chs In Front Side Of State Investigetion Depat Building Mumbai Police Near Light Pol No LNR 61, 5, Dadar East, Mumbai, 400014",
+     "affect_road": "Lokmanya Tilak Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 9,
+     "footprint_building_cells": 3,
+     "footprint_z_min_m": 28.42041778564453,
+     "footprint_z_max_m": 28.828489303588867,
+     "local_relief_m": -0.4399452209472656,
+     "max_depth_cm": 83.49776864051819,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 15.0,
+      "30cm": 35.0
+     },
+     "cell_depth_percentile": 91.88343558282209,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173042202",
+      "dist_m": 13.412618904096904,
+      "ground_m": 28.37299919128418,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "22848157_0",
+      "name": "Marg No 2",
+      "highway": "residential",
+      "dist_m": 0.03551065336928864,
+      "max_depth_cm": 83.49776594412417
+     }
+    },
+    {
+     "name": "83 Hindu Coloney Dadar (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "DR chandrkant Kamble Chwok, D V Pradhan Road, In Frontside Of 56 Vasant bhuvan, Dadar East, Mumbai, 400014",
+     "affect_road": "Lkhamshi Napoo Raod",
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 200.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.200000762939453,
+     "footprint_z_max_m": 28.2994327545166,
+     "local_relief_m": -0.4077472686767578,
+     "max_depth_cm": 95.92647552490234,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 15.0,
+      "15cm": 35.0,
+      "30cm": 55.0
+     },
+     "cell_depth_percentile": 95.0,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173042402",
+      "dist_m": 12.459050028401377,
+      "ground_m": 29.22599983215332,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "22848295_5",
+      "name": "D.V. Pradhan Road",
+      "highway": "residential",
+      "dist_m": 6.0998257643066465,
+      "max_depth_cm": 98.21886040028889
+     }
+    },
+    {
+     "name": "kabutar khana central matungaa near bharat bank (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "lakhamshi Napoo Road, In Frontside Of Bharat Bank Kabuta khana Central Matung, Matunga West, Mumbai, 400019",
+     "affect_road": "Bhadarkar road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 200.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 1,
+     "footprint_z_min_m": 28.600000381469727,
+     "footprint_z_max_m": 28.913068771362305,
+     "local_relief_m": -0.5676822662353516,
+     "max_depth_cm": 96.18598818778992,
+     "t_of_max_min": 135.0,
+     "onset_min": {
+      "5cm": 15.0,
+      "15cm": 15.0,
+      "30cm": 25.0
+     },
+     "cell_depth_percentile": 95.05521472392638,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173058306",
+      "dist_m": 9.752312804096817,
+      "ground_m": 28.722000122070312,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848943_2",
+      "name": "Laxmi Narayan Lane",
+      "highway": "residential",
+      "dist_m": 5.766850669853201,
+      "max_depth_cm": 96.18598876150071
+     }
+    },
+    {
+     "name": "Ruiya Collage  (Tackled)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Lakhamshi Nupoo Road, In Frontside Of Ruiya Collage, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.799999237060547,
+     "footprint_z_max_m": 28.799999237060547,
+     "local_relief_m": -0.1557140350341797,
+     "max_depth_cm": 63.71692419052124,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 15.0,
+      "15cm": 70.0,
+      "30cm": 100.0
+     },
+     "cell_depth_percentile": 82.7321063394683,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173047802",
+      "dist_m": 68.294080589217,
+      "ground_m": 28.933000564575195,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1443620248_16",
+      "name": "Lakhamasi Nappu Road",
+      "highway": "tertiary",
+      "dist_m": 0.048604689010217826,
+      "max_depth_cm": 106.05107792078113
+     }
+    },
+    {
+     "name": "89 Vaccharaj Lane",
+     "active": true,
+     "ward": "F/N",
+     "location": "Vaccharaj Lane, Behinend Matunga Central Railway Line Station, Matunga East, Mumbai, 400019",
+     "affect_road": null,
+     "mcgm_depth_attr": 3.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 2468,
+     "footprint_building_cells": 714,
+     "footprint_z_min_m": 28.529481887817383,
+     "footprint_z_max_m": 33.599998474121094,
+     "local_relief_m": -1.1302471160888672,
+     "max_depth_cm": 179.7376036643982,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 5.0,
+      "15cm": 10.0,
+      "30cm": 20.0
+     },
+     "cell_depth_percentile": 99.27402862985684,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173059104",
+      "dist_m": 8.197468041168008,
+      "ground_m": 29.92300033569336,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "1139171829_0",
+      "name": "Chandavarkar Marg",
+      "highway": "residential",
+      "dist_m": 1.7963534143892528,
+      "max_depth_cm": 54.63549762232189
+     }
+    },
+    {
+     "name": "Indian Bank Matunga Bazar Barnch (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Devdhar Road, In Frontside Of Indian Bank Matunga Bazar Barnch Tempal Avenue Chs, Matunga East, Mumbai, 400019",
+     "affect_road": "Lakhmshi noopu Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 60.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 1,
+     "footprint_z_min_m": 29.0,
+     "footprint_z_max_m": 29.05685806274414,
+     "local_relief_m": -0.11355018615722656,
+     "max_depth_cm": 51.469916105270386,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 20.0,
+      "15cm": 80.0,
+      "30cm": 110.0
+     },
+     "cell_depth_percentile": 72.32719836400818,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173058004",
+      "dist_m": 63.44493066832771,
+      "ground_m": 29.250999450683594,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "1381946613_0",
+      "name": "Deodhar Road",
+      "highway": "residential",
+      "dist_m": 5.037528041505856,
+      "max_depth_cm": 63.725878867902416
+     }
+    },
+    {
+     "name": "Macherji Joshi Udyan (Delete)",
+     "active": false,
+     "ward": "F/N",
+     "location": "Ledy Jahangir Road, In Middal Side Of Mancheji Joshi Udyan, Dadar West, Mumbai, 400014",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 10,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 33.193363189697266,
+     "footprint_z_max_m": 33.64185333251953,
+     "local_relief_m": -0.03154754638671875,
+     "max_depth_cm": 7.579387724399567,
+     "t_of_max_min": 95.0,
+     "onset_min": {
+      "5cm": 65.0,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 32.8200408997955,
+     "class": "MARGINAL",
+     "nearest_node": {
+      "id": "2174041305",
+      "dist_m": 3.8310459494090923,
+      "ground_m": 33.06700134277344,
+      "surcharges": true,
+      "first_surcharge_min": 65.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 177.85927426815033,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848210_23",
+      "name": "Lady Jehangir Road",
+      "highway": "residential",
+      "dist_m": 1.3516122308588132,
+      "max_depth_cm": 7.579388092187636
+     }
+    },
+    {
+     "name": "Shindewadi Bus Stop (Tackled)",
+     "active": false,
+     "ward": "F/S",
+     "location": "Abaji Marge, In Front of Shindewadi Cort Main Gate, Dadar East, Mumbai, 400014",
+     "affect_road": "Hindamata Road",
+     "mcgm_depth_attr": 1.5,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 3,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.393449783325195,
+     "footprint_z_max_m": 28.558565139770508,
+     "local_relief_m": -0.2675819396972656,
+     "max_depth_cm": 64.4854187965393,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 70.0,
+      "15cm": 75.0,
+      "30cm": 90.0
+     },
+     "cell_depth_percentile": 83.22903885480572,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172039502",
+      "dist_m": 15.571879334162128,
+      "ground_m": 28.236000061035156,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22848467_0",
+      "name": "Shankar Abaji Palav Marg",
+      "highway": "residential",
+      "dist_m": 4.435004880246681,
+      "max_depth_cm": 94.49187005898409
+     }
+    },
+    {
+     "name": "Senapati Bapat Roda (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Senapati Bapat Road, Near Mama Kane Hotel, Dadar (W), Mumbai, 400028",
+     "affect_road": "Senapati Bapat Road",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 16,
+     "footprint_building_cells": 8,
+     "footprint_z_min_m": 28.0,
+     "footprint_z_max_m": 28.399999618530273,
+     "local_relief_m": -0.7898578643798828,
+     "max_depth_cm": 115.05105495452881,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 15.0,
+      "30cm": 35.0
+     },
+     "cell_depth_percentile": 97.41308793456032,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172048202",
+      "dist_m": 28.987267292425884,
+      "ground_m": 28.225000381469727,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1139120823_6",
+      "name": "(unnamed)",
+      "highway": "primary",
+      "dist_m": 0.23177952912314362,
+      "max_depth_cm": 105.22853092014692
+     }
+    },
+    {
+     "name": "Shivaji Park Road No 2 (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Shivaji Park Road No 2, Cafe Trofima Near, Mahim, Mumbai, 400016",
+     "affect_road": "Shivaji Park Road No 2",
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 2,
+     "footprint_z_min_m": 29.600000381469727,
+     "footprint_z_max_m": 29.914037704467773,
+     "local_relief_m": -0.16448593139648438,
+     "max_depth_cm": 52.82886624336243,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 30.0,
+      "15cm": 45.0,
+      "30cm": 75.0
+     },
+     "cell_depth_percentile": 73.48261758691207,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172057307",
+      "dist_m": 34.086596112552165,
+      "ground_m": 30.21299934387207,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1139163618_1",
+      "name": "Lady Jamshedji Road",
+      "highway": "primary",
+      "dist_m": 7.5249928358565255,
+      "max_depth_cm": 65.07344958419091
+     }
+    },
+    {
+     "name": "Ganesh Paethlem Shah Sadan Star Mall (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Ganesh Patethlem Shah Sadan Road, Near Star Mall, Dadar (W ), Mumbai, 400028",
+     "affect_road": null,
+     "mcgm_depth_attr": 1.5,
+     "mcgm_stretch_m": 100.0,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 30.200000762939453,
+     "footprint_z_max_m": 30.200000762939453,
+     "local_relief_m": -0.0229034423828125,
+     "max_depth_cm": 34.518709778785706,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": 25.0,
+      "15cm": 60.0,
+      "30cm": 105.0
+     },
+     "cell_depth_percentile": 57.95705521472393,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172046803!",
+      "dist_m": 207.7608842910436,
+      "ground_m": 30.215999603271484,
+      "surcharges": true,
+      "first_surcharge_min": 55.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 59.739431232213974,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22849635_0",
+      "name": "Ganesh Peth Lane",
+      "highway": "residential",
+      "dist_m": 3.1204740669596847,
+      "max_depth_cm": 34.55903239163445
+     }
+    },
+    {
+     "name": "Manish Market Beside Kohinoor Institute (Delete)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Senapati Bapat Road, Manish Market Kohinoor Institute Near, Dadar, Mumbai, 400028",
+     "affect_road": null,
+     "mcgm_depth_attr": 2.0,
+     "mcgm_stretch_m": 50.0,
+     "footprint": "polygon",
+     "footprint_cells": 12,
+     "footprint_building_cells": 4,
+     "footprint_z_min_m": 28.235546112060547,
+     "footprint_z_max_m": 28.530275344848633,
+     "local_relief_m": -0.4804039001464844,
+     "max_depth_cm": 67.99825429916382,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 20.0,
+      "15cm": 45.0,
+      "30cm": 85.0
+     },
+     "cell_depth_percentile": 85.40286298568506,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172047101",
+      "dist_m": 26.329385346794947,
+      "ground_m": 28.128000259399414,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "658365065_13",
+      "name": "Senapati Bapat Marg",
+      "highway": "primary",
+      "dist_m": 2.840494628413124,
+      "max_depth_cm": 87.8778876736431
+     }
+    },
+    {
+     "name": "D L Vaidya Marg (Tackled)",
+     "active": false,
+     "ward": "G/N",
+     "location": "D L Vaidya Marg, Dadar West, Mumbai 400028",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 5,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 30.200000762939453,
+     "footprint_z_max_m": 30.3032283782959,
+     "local_relief_m": 0.0,
+     "max_depth_cm": 31.802484393119812,
+     "t_of_max_min": 130.0,
+     "onset_min": {
+      "5cm": 10.0,
+      "15cm": 35.0,
+      "30cm": 115.0
+     },
+     "cell_depth_percentile": 55.30674846625767,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2172046806",
+      "dist_m": 52.8138153764877,
+      "ground_m": 30.39900016784668,
+      "surcharges": true,
+      "first_surcharge_min": 50.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 400.9575386047363,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "22849640_7",
+      "name": "D L Vaidya Marg",
+      "highway": "residential",
+      "dist_m": 2.5680378445846084,
+      "max_depth_cm": 33.359088824732076
+     }
+    },
+    {
+     "name": "Vijay Manjrekar Road (Tackled)",
+     "active": false,
+     "ward": "G/N",
+     "location": "Vijay Manjrekar Road, Dharavi (W)",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 4,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 30.200000762939453,
+     "footprint_z_max_m": 30.21097183227539,
+     "local_relief_m": 0.40000152587890625,
+     "max_depth_cm": 2.1100668236613274,
+     "t_of_max_min": 120.0,
+     "onset_min": {
+      "5cm": null,
+      "15cm": null,
+      "30cm": null
+     },
+     "cell_depth_percentile": 21.537832310838446,
+     "class": "MISSED",
+     "nearest_node": {
+      "id": "2172042403",
+      "dist_m": 96.10676819137755,
+      "ground_m": 29.87700080871582,
+      "surcharges": true,
+      "first_surcharge_min": 70.0,
+      "cause": "downstream",
+      "surcharge_volume_m3": 337.19415283203125,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "1139147206_0",
+      "name": "(unnamed)",
+      "highway": "living_street",
+      "dist_m": 6.452845049962771,
+      "max_depth_cm": 4.136284157738741
+     }
+    },
+    {
+     "name": "Shakkar panchyayat R.A.Kidwai",
+     "active": true,
+     "ward": "F/N",
+     "location": "Shakkar panchyayat R.A.Kidwai, Mumbai",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 7,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 29.95502471923828,
+     "footprint_z_max_m": 30.059833526611328,
+     "local_relief_m": -0.04497528076171875,
+     "max_depth_cm": 21.800588071346283,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 65.0,
+      "15cm": 135.0,
+      "30cm": null
+     },
+     "cell_depth_percentile": 46.02862985685071,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2174031409",
+      "dist_m": 28.38831353665488,
+      "ground_m": 29.788999557495117,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": true
+     },
+     "nearest_road": {
+      "seg_id": "1305685433_0",
+      "name": "R.A. Kidwai Marg",
+      "highway": "tertiary",
+      "dist_m": 3.4271859822698754,
+      "max_depth_cm": 47.501327103142955
+     }
+    },
+    {
+     "name": "Dadar Railway Station",
+     "active": true,
+     "ward": "F/N",
+     "location": "Dadar Railway Station",
+     "affect_road": null,
+     "mcgm_depth_attr": null,
+     "mcgm_stretch_m": null,
+     "footprint": "polygon",
+     "footprint_cells": 19,
+     "footprint_building_cells": 0,
+     "footprint_z_min_m": 28.94282341003418,
+     "footprint_z_max_m": 29.141948699951172,
+     "local_relief_m": -0.06239509582519531,
+     "max_depth_cm": 23.147380352020264,
+     "t_of_max_min": 180.0,
+     "onset_min": {
+      "5cm": 90.0,
+      "15cm": 140.0,
+      "30cm": null
+     },
+     "cell_depth_percentile": 47.239263803680984,
+     "class": "DETECTED",
+     "nearest_node": {
+      "id": "2173040101",
+      "dist_m": 40.72213120171574,
+      "ground_m": 28.660999298095703,
+      "surcharges": false,
+      "first_surcharge_min": null,
+      "cause": "",
+      "surcharge_volume_m3": 0.0,
+      "is_outfall": false
+     },
+     "nearest_road": {
+      "seg_id": "739718531_0",
+      "name": "Dadasaheb Phalke Marg",
+      "highway": "tertiary",
+      "dist_m": 27.781967538073403,
+      "max_depth_cm": 74.89140952664593
+     }
+    }
+   ]
+  }
+ ],
+ "chitale": {
+  "scenario": "july2005",
+  "matches": [
+   {
+    "term": "hindmata",
+    "n_segments": 4,
+    "names": [
+     "Hindmata Flyover"
+    ],
+    "max_depth_cm": 277.4755045370677,
+    "median_depth_cm": 77.17786919672653,
+    "frac_segments_ge_15cm": 1.0,
+    "class": "DETECTED"
+   },
+   {
+    "term": "ambedkar",
+    "n_segments": 105,
+    "names": [
+     "Dr Babasaheb Ambedkar Marg (Vincent Road)",
+     "G.D. Ambedkar Marg"
+    ],
+    "max_depth_cm": 143.561599727628,
+    "median_depth_cm": 48.222042064805386,
+    "frac_segments_ge_15cm": 0.638095238095238,
+    "class": "DETECTED"
+   },
+   {
+    "term": "lakhamsi",
+    "n_segments": 6,
+    "names": [
+     "Lakhamsi Nappu Road"
+    ],
+    "max_depth_cm": 107.09563488220999,
+    "median_depth_cm": 47.2686173947831,
+    "frac_segments_ge_15cm": 1.0,
+    "class": "DETECTED"
+   },
+   {
+    "term": "napoo",
+    "n_segments": 0,
+    "names": [],
+    "max_depth_cm": null,
+    "class": "NO_ROAD_MATCH"
+   },
+   {
+    "term": "king",
+    "n_segments": 14,
+    "names": [
+     "King's Circle",
+     "King's Circle Flyover"
+    ],
+    "max_depth_cm": 155.37722260077598,
+    "median_depth_cm": 25.033732138927476,
+    "frac_segments_ge_15cm": 0.5,
+    "class": "DETECTED"
+   },
+   {
+    "term": "tilak",
+    "n_segments": 41,
+    "names": [
+     "Lokmanya Tilak Vasahat Road No. 1",
+     "Tilak Bridge",
+     "Tilak Road",
+     "Tilak Road Extension"
+    ],
+    "max_depth_cm": 106.49945363770254,
+    "median_depth_cm": 33.46078305772441,
+    "frac_segments_ge_15cm": 0.6341463414634146,
+    "class": "DETECTED"
+   },
+   {
+    "term": "senapati bapat",
+    "n_segments": 59,
+    "names": [
+     "Senapati Bapat Marg"
+    ],
+    "max_depth_cm": 127.51971803416767,
+    "median_depth_cm": 77.06602291272216,
+    "frac_segments_ge_15cm": 0.9661016949152542,
+    "class": "DETECTED"
+   },
+   {
+    "term": "parel",
+    "n_segments": 5,
+    "names": [
+     "Shankar Rao H. Parelkar Marg"
+    ],
+    "max_depth_cm": 55.73716093561983,
+    "median_depth_cm": 44.551490272712016,
+    "frac_segments_ge_15cm": 1.0,
+    "class": "DETECTED"
+   },
+   {
+    "term": "matunga",
+    "n_segments": 5,
+    "names": [
+     "Matunga Road",
+     "Matunga Station Road"
+    ],
+    "max_depth_cm": 124.16354296964568,
+    "median_depth_cm": 47.1248373186955,
+    "frac_segments_ge_15cm": 1.0,
+    "class": "DETECTED"
+   },
+   {
+    "term": "dadar",
+    "n_segments": 6,
+    "names": [
+     "Dadar TT flyover",
+     "Jaganath Shankur Seth (Dadar TT) Flyover"
+    ],
+    "max_depth_cm": 124.25476363854754,
+    "median_depth_cm": 101.10269909498632,
+    "frac_segments_ge_15cm": 0.6666666666666666,
+    "class": "DETECTED"
+   }
+  ],
+  "n_segments_total": 2978,
+  "frac_all_segments_ge_15cm": 0.6873740765614507
+ }
+}

@@ -1,0 +1,43 @@
+{
+  "laptop 1 preview buttons": [
+    "Start navigation with V1",
+    "Dispatch to a driver instead"
+  ],
+  "laptop 1 traffic row": "TRAFFIC UNAVAILABLE\nLive traffic unavailable — using estimated travel time.\nRefresh\n\nLive traffic unavailable — TOMTOM_API_KEY not configured; using estimated travel time",
+  "laptop 1 head chip": "checked at arrival time · TRAFFIC NOT INCLUDED",
+  "laptop 2 nav first screen": "IN 60 M\n\nHead west on Swami Gyan Jiwandas Marg\n\nThen: Keep slight left onto unnamed road\n\nREMAINING\n2 min\nDISTANCE\n480 m\nTO\nDadar TT Circle\nGPS 0 s ago ±9 m\nRisk from a SIMULATED flood forecast, route checked at T+0 min.\nTraffic not included\nStart driving\nDetails\nExit navigation",
+  "laptop 2 work panel closed": true,
+  "laptop 3 gps chip": "GPS 0 s ago ±7 m",
+  "laptop 4 closure sync status": 200,
+  "laptop 4 warning": "Road ahead blocked or flooded – safer route found: remaining route blocked for truck: unnamed road 1493649080_16: CLOSED (confirmed closure C935347 (received T+0 min, in force from T+0 min))",
+  "laptop 5 after accept": "IN 230 M\n\nHead east on Swami Gyan Jiwandas Marg\n\nThen: Turn left onto Dr Babasaheb Ambedkar Marg (Vincent Road)\n\nREMAINING\n4 min\nDISTANCE\n1.3 km\nTO\nDadar TT Circle\nGPS 9 s ago ±7 m\nRisk from a SIMULATED flood forecast, route checked at T+0 min.\nTraffic not included\nStart driving\nDetails\nExit navigation",
+  "laptop 6 details": "no details section: heb Ambedkar Marg (Vincent Road) – 21 m\nTurn left onto Khareghat Road – 101 m\nTurn left onto unnamed road – 22 m\nTurn left onto Sir Bhalchandra Road – 53 m\nTurn right onto Scheme 5 Road no.5 – 172 m\n\nDecision support only. A route is a candidate with lower modelled flood exposure at the expected arrival time, never a guarantee of safety. Follow what you see on the ground and official instructions.",
+  "laptop 7 arrived": "You have reached Dadar TT Circle",
+  "laptop 8 overlay gone, panel back": {
+    "overlay": 0,
+    "inert": null
+  },
+  "laptop 8 trip card": "TR1 · Hindmata Junction → Dadar TT Circle\nNavigate\nShown on map\nPlanned\n(done)\nAccepted\n(done)\nEn route\n(done)\nArrived\n(current)\nCompleted\n(not yet)\nVehicle\nV1 Fire brigade truck (truck)\nLocation\nGPS ",
+  "laptop overflow": false,
+  "phone 1 preview buttons": [
+    "Start navigation with V2",
+    "Dispatch to a driver instead"
+  ],
+  "phone 1 traffic row": "TRAFFIC UNAVAILABLE\nLive traffic unavailable — using estimated travel time.\nRefresh\n\nLive traffic unavailable — TOMTOM_API_KEY not configured; using estimated travel time",
+  "phone 1 head chip": "checked at arrival time · TRAFFIC NOT INCLUDED",
+  "phone 2 nav first screen": "IN 230 M\n\nHead east on Swami Gyan Jiwandas Marg\n\nThen: Turn left onto Dr Babasaheb Ambedkar Marg (Vincent Road)\n\nREMAINING\n4 min\nDISTANCE\n1.3 km\nTO\nDadar TT Circle\nGPS 0 s ago ±9 m\nRisk from a SIMULATED flood forecast, route checked at T+0 min.\nTraffic not included\nStart driving\nDetails\nExit navigation",
+  "phone 2 work panel closed": true,
+  "phone 3 gps chip": "GPS 0 s ago ±7 m",
+  "phone 4 closure sync status": 200,
+  "phone 4 warning": "Road ahead blocked or flooded – safer route found: remaining route blocked for truck: Swami Gyan Jiwandas Marg: CLOSED (confirmed closure C956097 (received T+0 min, in force from T+0 min))",
+  "phone 5 after accept": "IN 130 M\n\nHead northeast on unnamed road\n\nThen: Turn right onto Lokmanya Tilak Vasahat Road No. 1\n\nREMAINING\n5 min\nDISTANCE\n1.4 km\nTO\nDadar TT Circle\nGPS 4 s ago ±7 m\nRisk from a SIMULATED flood forecast, route checked at T+0 min.\nTraffic not included\nStart driving\nDetails\nExit navigation",
+  "phone 6 details": "no details section: ak Road – 162 m\nContinue onto Tilak Bridge – 197 m\nTurn right onto unnamed road – 6 m\nTurn right onto Tilak Bridge – 197 m\nContinue onto Tilak Road – 163 m\nTurn left onto Sir Bhalchandra Road – 93 m\n\nDecision support only. A route is a candidate with lower modelled flood exposure at the expected arrival time, never a guarantee of safety. Follow what you see on the ground and official instructions.",
+  "phone 7 arrived": "You have reached Dadar TT Circle",
+  "phone 8 overlay gone, panel back": {
+    "overlay": 0,
+    "inert": null
+  },
+  "phone 8 trip card": "TR2 · Hindmata Junction → Dadar TT Circle\nNavigate\nShown on map\nPlanned\n(done)\nAccepted\n(done)\nEn route\n(done)\nArrived\n(current)\nCompleted\n(not yet)\nVehicle\nV2 Police truck (truck)\nLocation\nGPS 16 s o",
+  "phone overflow": false,
+  "errors": []
+}

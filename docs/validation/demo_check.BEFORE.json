@@ -1,0 +1,139 @@
+{
+ "horizon_min": 60,
+ "results": {
+  "moderate": {
+   "scenario": "moderate",
+   "blockage": {
+    "mode": "none"
+   },
+   "rain_in_m3": 124439.99999999872,
+   "runoff_in_m3": 100651.20079565072,
+   "surface_stored_m3": 78900.60960853248,
+   "network_stored_m3": 19.2523993959098,
+   "outfall_out_m3": 19013.243701102583,
+   "boundary_out_m3": 2718.095086619719,
+   "mass_error_pct": 2.891553228045673e-14,
+   "total_surcharge_m3": 35.758140563964844,
+   "peak_surcharging_nodes": 2,
+   "peak_flooded_segments_15cm": 184,
+   "max_cell_depth_m": 0.8567260503768921,
+   "peak_edge_util": 1.0,
+   "runtime_s": 8.688228368759155
+  },
+  "heavy": {
+   "scenario": "heavy",
+   "blockage": {
+    "mode": "none"
+   },
+   "rain_in_m3": 311100.0000000002,
+   "runoff_in_m3": 251628.00198912882,
+   "surface_stored_m3": 194035.3756784966,
+   "network_stored_m3": 534.8155763557288,
+   "outfall_out_m3": 48152.516622933144,
+   "boundary_out_m3": 8905.294111341076,
+   "mass_error_pct": 9.021646071502427e-13,
+   "total_surcharge_m3": 5839.724609375,
+   "peak_surcharging_nodes": 87,
+   "peak_flooded_segments_15cm": 707,
+   "max_cell_depth_m": 1.8514010906219482,
+   "peak_edge_util": 1.0,
+   "runtime_s": 10.67845368385315
+  },
+  "cloudburst": {
+   "scenario": "cloudburst",
+   "blockage": {
+    "mode": "none"
+   },
+   "rain_in_m3": 373390.13511945156,
+   "runoff_in_m3": 302010.3299985762,
+   "surface_stored_m3": 251593.04347454145,
+   "network_stored_m3": 951.7931268329583,
+   "outfall_out_m3": 39543.71303120273,
+   "boundary_out_m3": 9921.78036600157,
+   "mass_error_pct": -8.28756228070377e-13,
+   "total_surcharge_m3": 9811.83984375,
+   "peak_surcharging_nodes": 218,
+   "peak_flooded_segments_15cm": 933,
+   "max_cell_depth_m": 1.9160659313201904,
+   "peak_edge_util": 1.0,
+   "runtime_s": 10.133027791976929
+  },
+  "july2005": {
+   "scenario": "july2005",
+   "blockage": {
+    "mode": "none"
+   },
+   "rain_in_m3": 623444.4000000063,
+   "runoff_in_m3": 504262.5159862053,
+   "surface_stored_m3": 404331.72704916896,
+   "network_stored_m3": 1142.3923501620852,
+   "outfall_out_m3": 74866.21670388788,
+   "boundary_out_m3": 23922.179882992732,
+   "mass_error_pct": -1.269743932475158e-12,
+   "total_surcharge_m3": 27294.857421875,
+   "peak_surcharging_nodes": 274,
+   "peak_flooded_segments_15cm": 1271,
+   "max_cell_depth_m": 2.3309261798858643,
+   "peak_edge_util": 1.0,
+   "runtime_s": 13.924067258834839
+  },
+  "heavy_blocked70": {
+   "scenario": "heavy",
+   "blockage": {
+    "mode": "fraction",
+    "fraction": 0.7
+   },
+   "rain_in_m3": 311100.0000000002,
+   "runoff_in_m3": 251628.00198912882,
+   "surface_stored_m3": 203210.4532739121,
+   "network_stored_m3": 1223.1395909166274,
+   "outfall_out_m3": 38246.1593106586,
+   "boundary_out_m3": 8948.24981363868,
+   "mass_error_pct": 1.1103564395695294e-12,
+   "total_surcharge_m3": 24285.08203125,
+   "peak_surcharging_nodes": 298,
+   "peak_flooded_segments_15cm": 767,
+   "max_cell_depth_m": 1.8586598634719849,
+   "peak_edge_util": 1.0,
+   "runtime_s": 10.685070276260376
+  },
+  "routing_probe_note": "unexpected",
+  "routing_probe": {
+   "deepest_segment": "102171414_0",
+   "name": "Hindmata Flyover",
+   "depth_cm": 185.1,
+   "origin": [
+    72.836,
+    19.0091018
+   ],
+   "dest": [
+    72.8477608,
+    19.0091018
+   ],
+   "dry_length_m": null,
+   "wet_length_m": null,
+   "wet_reachable": false,
+   "avoided": 0,
+   "max_depth_on_wet_route_cm": null
+  }
+ },
+ "checks": {
+  "runoff_increases_with_rain": true,
+  "surface_water_increases_with_rain": true,
+  "surcharge_increases_with_rain": true,
+  "flooded_segments_increase_with_rain": true,
+  "drainage_responds": true,
+  "surcharge_where_capacity_exceeded": true,
+  "mass_balance_all_below_0.1pct": true,
+  "blocked_more_surcharge": true,
+  "blocked_more_surface_water": true,
+  "blocked_less_outfall": true,
+  "blocked_more_flooded_segments": true,
+  "route_avoids_flooded_segments": false,
+  "api_meta_ok": true,
+  "frontend_loads": true,
+  "api_simulate_ok": true,
+  "api_route_ok": true
+ },
+ "all_passed": false
+}

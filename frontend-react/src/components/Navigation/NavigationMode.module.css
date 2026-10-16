@@ -1,0 +1,83 @@
+/* Navigation mode over the map (2026-10-11). Existing theme tokens only; large targets for a phone in a vehicle. */
+.nav {
+  position: absolute;
+  inset: 0;
+  z-index: 950;                 /* above Leaflet controls and the map legends */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 12px 132px;        /* the forecast timeline sits along the bottom of the map */
+  pointer-events: none;         /* the map stays draggable between the cards */
+  animation: navIn 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes navIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.top, .bottom { display: flex; flex-direction: column; gap: 8px; pointer-events: auto; }
+.top { max-width: 560px; }
+.bottom { max-width: 640px; }
+
+.card {
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-glass);
+}
+.distance { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
+.turn { margin: 2px 0 0; font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; line-height: 1.2; color: var(--text); }
+.then { margin: 6px 0 0; font-size: 14px; color: var(--text-dim); }
+.muted { margin: 0; font-size: 12.5px; color: var(--text-dim); line-height: 1.45; }
+
+.banner {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 10px 14px; border-radius: var(--radius-md); font-size: 14px; line-height: 1.45; font-weight: 600;
+  border: 1px solid var(--border); border-left-width: 5px; background: var(--bg-glass); color: var(--text);
+  backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); box-shadow: var(--shadow-glass);
+}
+.banner_hazard { border-left-color: var(--amber); }
+.banner_reroute { border-left-color: #2F6BFF; }
+.banner_escalated { border-left-color: var(--danger-text); background: var(--danger-bg); color: var(--danger-text); }
+.bannerActions { display: flex; flex-wrap: wrap; gap: 8px; }
+.sm { min-height: 40px; font-size: 13.5px; }
+
+.stats {
+  display: grid; grid-template-columns: auto auto minmax(0, 1fr); gap: 16px; align-items: end;
+  padding: 10px 14px; border-radius: var(--radius-lg); background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); border: 1px solid var(--border); box-shadow: var(--shadow-glass);
+}
+.stats > div { display: flex; flex-direction: column; min-width: 0; }
+.stats strong { font-size: 20px; font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; }
+.dest { font-size: 15px !important; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.statLabel { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-dim); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 700; border: 1px solid var(--border-strong); background: var(--bg-glass); color: var(--text);
+}
+.chip_ok { border-color: rgba(17, 126, 57, 0.5); color: #117E39; }
+.chip_warn { border-color: rgba(184, 135, 74, 0.8); background: var(--amber-dim); color: #6E4A1E; }
+.chip_error { border-color: rgba(163, 30, 48, 0.6); background: var(--danger-bg); color: var(--danger-text); }
+.chip_info { color: var(--text-dim); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.actions :global(.btn) { min-height: 44px; font-size: 14.5px; font-weight: 700; }
+.exit { margin-left: auto; }
+
+.details {
+  padding: 12px 14px; border-radius: var(--radius-md); background: var(--bg-glass); border: 1px solid var(--border);
+  backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); max-height: 38vh; overflow: auto; font-size: 13px;
+}
+.detailsHead { margin: 0 0 4px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-dim); }
+.list { margin: 0 0 10px; padding-left: 18px; line-height: 1.5; }
+
+@media (max-width: 720px) {
+  .nav { padding: 8px 8px 128px; }
+  .top, .bottom { max-width: none; }
+  .turn { font-size: 20px; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stats > div:last-child { grid-column: 1 / -1; }
+  .exit { margin-left: 0; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .nav { animation: none; } }

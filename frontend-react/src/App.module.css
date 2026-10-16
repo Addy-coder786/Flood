@@ -1,0 +1,231 @@
+.dashboardContainer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--bg-app);
+}
+
+.landingContainer {
+  width: 100%;
+  min-height: 100vh;
+  /* the page (body) scrolls; clip -- not hidden/auto -- so this is not a scroll container and the landing
+     navbar can stay sticky */
+  overflow-x: clip;
+  position: relative;
+  background: var(--bg-app);
+}
+
+/* ── Control-centre shell (DECISIONS D-37) ───────────────────────────────────
+   [sidebar | top context bar          ]
+   [sidebar | map stage | page panel   ]
+   The map is one mounted Leaflet instance shared by every page; the page panel shows one task page. */
+.shell {
+  --sidebar-w: 236px;
+  --panel-w: clamp(400px, 34vw, 500px);
+  --topbar-h: 60px;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  grid-template-rows: var(--topbar-h) minmax(0, 1fr);
+  grid-template-areas:
+    'side top'
+    'side main';
+  animation: fadeIn 0.2s ease-out;
+  /* D-47: panels slide; the map takes the space. 240 ms, a standard deceleration curve, no bounce. */
+  --panel-ease: cubic-bezier(0.2, 0, 0, 1);
+  --panel-ms: 240ms;
+  transition: grid-template-columns var(--panel-ms) var(--panel-ease);
+}
+.shell[data-nav='collapsed'] { --sidebar-w: 64px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.skip {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 3000;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: var(--text-inverse);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+.skip:focus { top: 8px; }
+
+.main {
+  grid-area: main;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--panel-w);
+  min-height: 0;
+  min-width: 0;
+  transition: grid-template-columns var(--panel-ms) var(--panel-ease);
+}
+.shell[data-work='closed'] .main { grid-template-columns: minmax(0, 1fr) 0px; }
+
+/* The stage is the positioning context for every map overlay (timeline, legend, 2D/3D, notices). */
+.stage {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #EFE9DC;
+}
+.mapFill { position: absolute; inset: 0; }
+.mapLoading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-app);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.pagePanel {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-elevated);
+  border-left: 1px solid var(--border);
+  box-shadow: -6px 0 18px rgba(58, 32, 20, 0.05);
+  z-index: 950;
+}
+/* The page keeps its own width while the panel slides, so text does not reflow during the animation. */
+.pageInner {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: var(--panel-w);
+  display: flex;
+  flex-direction: column;
+  transition: opacity var(--panel-ms) var(--panel-ease);
+}
+.shell[data-work='closed'] .pageInner { opacity: 0; }
+.pageBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: var(--space-5) var(--space-5) var(--space-6);
+}
+.pageBody:focus { outline: none; }
+.pageBody[hidden] { display: none; }
+.anchor { display: block; height: 0; width: 0; overflow: hidden; }
+
+/* Laptops: narrower page panel, tighter padding. */
+@media (max-width: 1380px) {
+  .shell { --panel-w: clamp(360px, 36vw, 420px); }
+  .pageBody { padding: var(--space-4) var(--space-4) var(--space-5); }
+}
+
+/* ── Panel toggles (D-47) ─────────────────────────────────────────────────────
+   The work-panel tab sits on the map's right edge, so a closed panel is always one click away. */
+.workToggle {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+  z-index: 960;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 10px 8px 8px;
+  margin-right: 0;
+  border: 1px solid var(--border-control);
+  border-right: 0;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: -4px 0 12px rgba(58, 32, 20, 0.10);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.workToggle:hover { background: var(--accent-subtle); }
+.workToggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.workToggleText { white-space: nowrap; }
+.shell[data-work='open'] .workToggleText { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.menuBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--accent);
+}
+.menuBtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1090;
+  border: 0;
+  background: rgba(43, 33, 24, 0.32);
+  animation: fadeIn var(--panel-ms) var(--panel-ease);
+}
+
+/* ── Narrow screens (≤960 px, D-47): the map fills the screen; the navigation is an off-canvas drawer and the page
+   is a bottom sheet over the map. Both slide; nothing scrolls sideways. ───────────────────────────── */
+.shell[data-layout='narrow'] {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'top'
+    'main';
+}
+.shell[data-layout='narrow'] > aside:first-of-type {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: min(280px, 86vw);
+  transform: translateX(-102%);
+  transition: transform var(--panel-ms) var(--panel-ease);
+  box-shadow: 8px 0 24px rgba(58, 32, 20, 0.18);
+}
+.shell[data-layout='narrow'][data-nav='expanded'] > aside:first-of-type { transform: translateX(0); }
+.shell[data-layout='narrow'] .main,
+.shell[data-layout='narrow'][data-work='closed'] .main { grid-template-columns: minmax(0, 1fr); }
+.shell[data-layout='narrow'] .pagePanel {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  height: min(62%, 620px);
+  border-left: 0;
+  border-top: 1px solid var(--border-control);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  box-shadow: 0 -8px 24px rgba(58, 32, 20, 0.14);
+  transform: translateY(0);
+  transition: transform var(--panel-ms) var(--panel-ease);
+}
+.shell[data-layout='narrow'][data-work='closed'] .pagePanel { transform: translateY(100%); }
+.shell[data-layout='narrow'] .pageInner { width: 100%; }
+.shell[data-layout='narrow'] .workToggle {
+  align-self: end;
+  justify-self: center;
+  margin-bottom: calc(min(62%, 620px) - 1px);
+  border: 1px solid var(--border-control);
+  border-bottom: 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  transition: margin-bottom var(--panel-ms) var(--panel-ease);
+}
+.shell[data-layout='narrow'][data-work='closed'] .workToggle { margin-bottom: 0; }
+.shell[data-layout='narrow'] .workToggleText { position: static; width: auto; height: auto; clip: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .shell, .main, .pagePanel, .pageInner, .workToggle, .scrim,
+  .shell[data-layout='narrow'] > aside:first-of-type { transition: none; animation: none; }
+}

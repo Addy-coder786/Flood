@@ -1,0 +1,226 @@
+/* ── Forecast metrics KPI section ──────────────────────
+   Contrast note: --text-faint (#9C9184) measures ~3.0:1 on the ivory panel surface, below the 4.5:1
+   needed for body text. Anything an operator has to actually READ (values, units, trends, captions,
+   the notes sentence, empty-state instructions) uses --text-dim (~5.8:1) instead. Purely decorative
+   chrome (.frameLabel, .peakKpiBadge) stays faint so the visual hierarchy is unchanged. */
+.section {
+  padding: 10px 2px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tMin {
+  font-family: var(--mono);
+  color: var(--accent-bright);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: none;
+}
+
+.empty {
+  margin-top: 7px;
+  padding: 12px;
+  border-radius: var(--radius-xs);
+  background: rgba(255,255,255,0.025);
+  border: 1px dashed var(--border);
+  color: var(--text-dim);
+  font-size: 11px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+/* ── Dominant KPI — peak depth ────────────────────────── */
+.dominantKpi {
+  padding: 11px 13px;
+  border-radius: var(--radius-xs);
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+}
+
+.dominantHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+.dominantLabel { color: var(--text-dim); }
+
+.dominantValueRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dominantValue {
+  font-family: var(--mono);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.dominantUnit {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  font-family: var(--font);
+  margin-left: 3px;
+}
+
+.dominantMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.severityTag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.dominantTrend {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* Secondary metrics footer */
+.secondaryRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding: 8px 13px;
+  margin: 4px -13px -11px -13px;
+  background: rgba(255,255,255,0.015);
+}
+
+.secondaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.secondaryLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  font-weight: 700;
+}
+
+.secondaryValue {
+  font-family: var(--mono);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.secondaryUnit {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.secondarySub {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.valueCaption {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.frameLabel {
+  font-size: 11px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* ── Peak forecast box ────────────────────────────────── */
+.peakKpiBox {
+  padding: 10px 12px;
+  border-radius: var(--radius-xs);
+  background: rgba(122,34,49,0.06);
+  border: 1px solid var(--accent-line);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.peakKpiHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.peakKpiTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-weight: 800;
+  color: var(--accent-bright);
+}
+
+.peakKpiBadge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-faint);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+}
+
+.peakKpiBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.peakKpiValue {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.peakKpiTime {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-bright);
+}
+
+.peakKpiNote {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}

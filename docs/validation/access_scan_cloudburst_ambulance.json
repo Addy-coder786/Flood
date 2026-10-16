@@ -1,0 +1,249 @@
+{
+  "generated_at": "2026-10-10T08:38:06+00:00",
+  "tag": "SIMULATED",
+  "scenario": "cloudburst",
+  "run_id": "b1520e93a2",
+  "vehicle": "ambulance",
+  "pairs": 150,
+  "seed": 7,
+  "dispatch_t_min": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    90,
+    120
+  ],
+  "counts": {
+    "cases": 1050,
+    "same_route": 835,
+    "arrival_unreachable": 68,
+    "current_unreachable": 56,
+    "current_invalid_at_arrival": 91,
+    "current_invalid_arrival_ok": 79
+  },
+  "examples": [
+    {
+      "origin_lonlat": [
+        72.836558,
+        19.01502
+      ],
+      "dest_lonlat": [
+        72.844758,
+        19.011599
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+1.9 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1239082661_0",
+          "name": "Dr Babasaheb Ambedkar Marg (Vincent Road)",
+          "status": "AT_RISK",
+          "depth_cm": 41.5,
+          "enter_t_min": 50.35,
+          "reason": "forecast depth 41 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.836558,
+        19.01502
+      ],
+      "dest_lonlat": [
+        72.844758,
+        19.011599
+      ],
+      "dispatch_t_min": 60,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+1.2 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "22848492_12",
+          "name": "S M Jadhav Road (Road No 2)",
+          "status": "AT_RISK",
+          "depth_cm": 40.1,
+          "enter_t_min": 68.91,
+          "reason": "forecast depth 40 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.855425,
+        19.024207
+      ],
+      "dest_lonlat": [
+        72.843045,
+        19.02427
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+1.2 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "102161759_14",
+          "name": "Dr Babasaheb Ambedkar Marg (Vincent Road)",
+          "status": "AT_RISK",
+          "depth_cm": 42.2,
+          "enter_t_min": 47.02,
+          "reason": "forecast depth 42 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.838298,
+        19.016008
+      ],
+      "dest_lonlat": [
+        72.848318,
+        19.012896
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.6 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1239082661_0",
+          "name": "Dr Babasaheb Ambedkar Marg (Vincent Road)",
+          "status": "AT_RISK",
+          "depth_cm": 41.5,
+          "enter_t_min": 49.95,
+          "reason": "forecast depth 41 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.838298,
+        19.016008
+      ],
+      "dest_lonlat": [
+        72.848318,
+        19.012896
+      ],
+      "dispatch_t_min": 60,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.7 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139122581_0",
+          "name": "Moreshwar Chintaman Jawle Marg",
+          "status": "AT_RISK",
+          "depth_cm": 50.7,
+          "enter_t_min": 62.62,
+          "reason": "forecast depth 51 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.836396,
+        19.015669
+      ],
+      "dest_lonlat": [
+        72.836944,
+        19.016426
+      ],
+      "dispatch_t_min": 60,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+2.3 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "236625361_9",
+          "name": "Baburao Parulekar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 40.7,
+          "enter_t_min": 60.19,
+          "reason": "forecast depth 41 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.851788,
+        19.012427
+      ],
+      "dest_lonlat": [
+        72.837199,
+        19.018313
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+2.1 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139113098_1",
+          "name": "N C Kelkar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 41.4,
+          "enter_t_min": 50.75,
+          "reason": "forecast depth 41 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.8527,
+        19.023892
+      ],
+      "dest_lonlat": [
+        72.856562,
+        19.014532
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+1.8 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "102161759_14",
+          "name": "Dr Babasaheb Ambedkar Marg (Vincent Road)",
+          "status": "AT_RISK",
+          "depth_cm": 42.2,
+          "enter_t_min": 45.07,
+          "reason": "forecast depth 42 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.835781,
+        19.015234
+      ],
+      "dest_lonlat": [
+        72.85616,
+        19.014832
+      ],
+      "dispatch_t_min": 60,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+1.0 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "150457720_1",
+          "name": "Tilak Road",
+          "status": "AT_RISK",
+          "depth_cm": 42.1,
+          "enter_t_min": 66.25,
+          "reason": "forecast depth 42 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.841036,
+        19.020308
+      ],
+      "dest_lonlat": [
+        72.835443,
+        19.025645
+      ],
+      "dispatch_t_min": 60,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.1 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "658401966_4",
+          "name": "Ranade Road",
+          "status": "AT_RISK",
+          "depth_cm": 41.5,
+          "enter_t_min": 62.05,
+          "reason": "forecast depth 41 cm reaches the 40 cm vehicle limit"
+        }
+      ]
+    }
+  ],
+  "caveat": "forecast and outcome are the same simulated run; this shows where the two methods disagree, not real-world accuracy"
+}

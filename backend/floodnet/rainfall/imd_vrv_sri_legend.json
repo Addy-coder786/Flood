@@ -1,0 +1,432 @@
+{
+ "product": "IMD Mumbai-Veravali DWR Surface Rainfall Intensity (SRI), https://mausam.imd.gov.in/Radar/sri_vrv.gif",
+ "extracted_from": "official image observed 2026-09-18 03:51:28 UTC (GIF comment 2026-09-18T09:21:28 IST)",
+ "method": "colour runs along the image's own colour bar at x=2700, y=715..2430; bin edges from the linear legend scale through tick marks y=2433 (0.1 mm/hr) and y=859 (45.9 mm/hr); top bin is open-ended (arrow) and capped",
+ "units": "mm/hr",
+ "status": "RADAR_IMAGE_DERIVED_ESTIMATE -- derived from a rendered image, not IMD numerical data",
+ "bins": [
+  {
+   "rgb": "fb0301",
+   "lo_mm_h": 49.028,
+   "hi_mm_h": null,
+   "legend_y": [
+    715,
+    751
+   ]
+  },
+  {
+   "rgb": "fd1603",
+   "lo_mm_h": 48.068,
+   "hi_mm_h": 49.028,
+   "legend_y": [
+    752,
+    784
+   ]
+  },
+  {
+   "rgb": "fe2600",
+   "lo_mm_h": 47.078,
+   "hi_mm_h": 48.068,
+   "legend_y": [
+    785,
+    818
+   ]
+  },
+  {
+   "rgb": "fe3700",
+   "lo_mm_h": 46.089,
+   "hi_mm_h": 47.078,
+   "legend_y": [
+    819,
+    852
+   ]
+  },
+  {
+   "rgb": "fe4700",
+   "lo_mm_h": 45.129,
+   "hi_mm_h": 46.089,
+   "legend_y": [
+    853,
+    885
+   ]
+  },
+  {
+   "rgb": "fe5700",
+   "lo_mm_h": 44.14,
+   "hi_mm_h": 45.129,
+   "legend_y": [
+    886,
+    919
+   ]
+  },
+  {
+   "rgb": "fe6700",
+   "lo_mm_h": 43.15,
+   "hi_mm_h": 44.14,
+   "legend_y": [
+    920,
+    953
+   ]
+  },
+  {
+   "rgb": "fe7700",
+   "lo_mm_h": 42.19,
+   "hi_mm_h": 43.15,
+   "legend_y": [
+    954,
+    986
+   ]
+  },
+  {
+   "rgb": "fe8700",
+   "lo_mm_h": 41.201,
+   "hi_mm_h": 42.19,
+   "legend_y": [
+    987,
+    1020
+   ]
+  },
+  {
+   "rgb": "fe9800",
+   "lo_mm_h": 40.24,
+   "hi_mm_h": 41.201,
+   "legend_y": [
+    1021,
+    1053
+   ]
+  },
+  {
+   "rgb": "fea800",
+   "lo_mm_h": 38.873,
+   "hi_mm_h": 40.24,
+   "legend_y": [
+    1054,
+    1100
+   ]
+  },
+  {
+   "rgb": "feb700",
+   "lo_mm_h": 37.302,
+   "hi_mm_h": 38.873,
+   "legend_y": [
+    1101,
+    1154
+   ]
+  },
+  {
+   "rgb": "fec600",
+   "lo_mm_h": 35.73,
+   "hi_mm_h": 37.302,
+   "legend_y": [
+    1155,
+    1208
+   ]
+  },
+  {
+   "rgb": "fed70a",
+   "lo_mm_h": 33.781,
+   "hi_mm_h": 35.73,
+   "legend_y": [
+    1209,
+    1275
+   ]
+  },
+  {
+   "rgb": "fedd2a",
+   "lo_mm_h": 32.791,
+   "hi_mm_h": 33.781,
+   "legend_y": [
+    1276,
+    1309
+   ]
+  },
+  {
+   "rgb": "ffe03b",
+   "lo_mm_h": 32.413,
+   "hi_mm_h": 32.791,
+   "legend_y": [
+    1310,
+    1322
+   ]
+  },
+  {
+   "rgb": "fee350",
+   "lo_mm_h": 31.22,
+   "hi_mm_h": 32.413,
+   "legend_y": [
+    1323,
+    1363
+   ]
+  },
+  {
+   "rgb": "fee86e",
+   "lo_mm_h": 30.26,
+   "hi_mm_h": 31.22,
+   "legend_y": [
+    1364,
+    1396
+   ]
+  },
+  {
+   "rgb": "feec8b",
+   "lo_mm_h": 28.892,
+   "hi_mm_h": 30.26,
+   "legend_y": [
+    1397,
+    1443
+   ]
+  },
+  {
+   "rgb": "fff09e",
+   "lo_mm_h": 28.689,
+   "hi_mm_h": 28.892,
+   "legend_y": [
+    1444,
+    1450
+   ]
+  },
+  {
+   "rgb": "fef2af",
+   "lo_mm_h": 27.525,
+   "hi_mm_h": 28.689,
+   "legend_y": [
+    1451,
+    1490
+   ]
+  },
+  {
+   "rgb": "fef7d0",
+   "lo_mm_h": 26.332,
+   "hi_mm_h": 27.525,
+   "legend_y": [
+    1491,
+    1531
+   ]
+  },
+  {
+   "rgb": "fefefe",
+   "lo_mm_h": 23.8,
+   "hi_mm_h": 26.332,
+   "legend_y": [
+    1532,
+    1618
+   ]
+  },
+  {
+   "rgb": "d2f3fe",
+   "lo_mm_h": 22.811,
+   "hi_mm_h": 23.8,
+   "legend_y": [
+    1619,
+    1652
+   ]
+  },
+  {
+   "rgb": "d9e2e6",
+   "lo_mm_h": 22.636,
+   "hi_mm_h": 22.811,
+   "legend_y": [
+    1653,
+    1658
+   ]
+  },
+  {
+   "rgb": "afeafe",
+   "lo_mm_h": 21.443,
+   "hi_mm_h": 22.636,
+   "legend_y": [
+    1659,
+    1699
+   ]
+  },
+  {
+   "rgb": "90e3fe",
+   "lo_mm_h": 20.076,
+   "hi_mm_h": 21.443,
+   "legend_y": [
+    1700,
+    1746
+   ]
+  },
+  {
+   "rgb": "82defd",
+   "lo_mm_h": 19.872,
+   "hi_mm_h": 20.076,
+   "legend_y": [
+    1747,
+    1753
+   ]
+  },
+  {
+   "rgb": "6edafe",
+   "lo_mm_h": 18.912,
+   "hi_mm_h": 19.872,
+   "legend_y": [
+    1754,
+    1786
+   ]
+  },
+  {
+   "rgb": "50d3fe",
+   "lo_mm_h": 17.748,
+   "hi_mm_h": 18.912,
+   "legend_y": [
+    1787,
+    1826
+   ]
+  },
+  {
+   "rgb": "30cafe",
+   "lo_mm_h": 16.351,
+   "hi_mm_h": 17.748,
+   "legend_y": [
+    1827,
+    1874
+   ]
+  },
+  {
+   "rgb": "11c3fe",
+   "lo_mm_h": 15.187,
+   "hi_mm_h": 16.351,
+   "legend_y": [
+    1875,
+    1914
+   ]
+  },
+  {
+   "rgb": "00b7f9",
+   "lo_mm_h": 14.023,
+   "hi_mm_h": 15.187,
+   "legend_y": [
+    1915,
+    1954
+   ]
+  },
+  {
+   "rgb": "00a7f0",
+   "lo_mm_h": 12.656,
+   "hi_mm_h": 14.023,
+   "legend_y": [
+    1955,
+    2001
+   ]
+  },
+  {
+   "rgb": "0097e6",
+   "lo_mm_h": 11.463,
+   "hi_mm_h": 12.656,
+   "legend_y": [
+    2002,
+    2042
+   ]
+  },
+  {
+   "rgb": "008ce0",
+   "lo_mm_h": 11.084,
+   "hi_mm_h": 11.463,
+   "legend_y": [
+    2043,
+    2055
+   ]
+  },
+  {
+   "rgb": "0185db",
+   "lo_mm_h": 10.299,
+   "hi_mm_h": 11.084,
+   "legend_y": [
+    2056,
+    2082
+   ]
+  },
+  {
+   "rgb": "0077d3",
+   "lo_mm_h": 8.931,
+   "hi_mm_h": 10.299,
+   "legend_y": [
+    2083,
+    2129
+   ]
+  },
+  {
+   "rgb": "0067c9",
+   "lo_mm_h": 7.767,
+   "hi_mm_h": 8.931,
+   "legend_y": [
+    2130,
+    2169
+   ]
+  },
+  {
+   "rgb": "005bc2",
+   "lo_mm_h": 6.982,
+   "hi_mm_h": 7.767,
+   "legend_y": [
+    2170,
+    2196
+   ]
+  },
+  {
+   "rgb": "0153bc",
+   "lo_mm_h": 6.4,
+   "hi_mm_h": 6.982,
+   "legend_y": [
+    2197,
+    2216
+   ]
+  },
+  {
+   "rgb": "0047b5",
+   "lo_mm_h": 5.207,
+   "hi_mm_h": 6.4,
+   "legend_y": [
+    2217,
+    2257
+   ]
+  },
+  {
+   "rgb": "0037ac",
+   "lo_mm_h": 4.043,
+   "hi_mm_h": 5.207,
+   "legend_y": [
+    2258,
+    2297
+   ]
+  },
+  {
+   "rgb": "0029a4",
+   "lo_mm_h": 2.879,
+   "hi_mm_h": 4.043,
+   "legend_y": [
+    2298,
+    2337
+   ]
+  },
+  {
+   "rgb": "02219c",
+   "lo_mm_h": 2.675,
+   "hi_mm_h": 2.879,
+   "legend_y": [
+    2338,
+    2344
+   ]
+  },
+  {
+   "rgb": "001798",
+   "lo_mm_h": 1.511,
+   "hi_mm_h": 2.675,
+   "legend_y": [
+    2345,
+    2384
+   ]
+  },
+  {
+   "rgb": "00078f",
+   "lo_mm_h": 0.1,
+   "hi_mm_h": 1.511,
+   "legend_y": [
+    2385,
+    2430
+   ]
+  }
+ ]
+}

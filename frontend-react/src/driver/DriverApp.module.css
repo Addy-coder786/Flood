@@ -1,0 +1,255 @@
+/* Driver trip page: phone first, large targets (>= 48 px), existing design tokens only (index.css). */
+
+.page {
+  min-height: 100%;
+  background: var(--bg-app);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.strip {
+  background: var(--accent-dim);
+  color: var(--text-inverse);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 6px var(--space-4);
+}
+
+.main {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4) var(--space-6);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.0625rem;
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.h2 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.small {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.card > * + * { margin-top: var(--space-2); }
+
+/* ---------------------------------------------------------------- next instruction */
+.next {
+  background: var(--accent);
+  color: var(--text-inverse);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-1);
+}
+
+.nextLabel {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.nextText {
+  font-size: 1.625rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.nextDist { font-size: 1.25rem; font-weight: 700; }
+
+.nextThen { font-size: 1rem; }
+
+.next .btn {
+  margin-top: var(--space-2);
+  justify-self: start;
+  background: var(--bg-elevated);
+  color: var(--accent);
+  border-color: var(--bg-elevated);
+}
+
+.next .btn:focus-visible { outline-color: var(--text-inverse); }
+
+.dest { font-size: 1.25rem; font-weight: 700; }
+
+/* ---------------------------------------------------------------- banners */
+.banner {
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  border: 2px solid var(--accent);
+  background: var(--bg-elevated);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.bannerStop { border-width: 3px; background: var(--danger-bg); color: var(--danger-text); }
+.bannerChange { border-color: var(--accent); }
+
+.offline {
+  border-left: 6px solid var(--teal);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  font-weight: 700;
+}
+
+.ok { color: var(--real-text); font-weight: 600; }
+.warn { color: var(--danger-text); font-weight: 600; }
+
+/* ---------------------------------------------------------------- lists */
+.list {
+  padding-left: 1.25rem;
+  display: grid;
+  gap: var(--space-2);
+}
+
+ul.list { list-style: none; padding-left: 0; }
+
+.hazard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.hazGlyph {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-control);
+  background: var(--bg-surface);
+  font-weight: 800;
+}
+
+/* ---------------------------------------------------------------- buttons and forms */
+.btn {
+  min-height: 48px;
+  padding: 10px var(--space-4);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--accent);
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.btn:hover:not(:disabled) { background: var(--bg-hover); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btnPrimary { background: var(--accent); color: var(--text-inverse); }
+.btnPrimary:hover:not(:disabled) { background: var(--accent-bright); }
+
+.btnPressed { background: var(--accent-subtle); box-shadow: inset 0 0 0 2px var(--accent); }
+
+.btnBlock { width: 100%; }
+
+.btnSmall { min-height: 44px; font-size: 0.9375rem; }
+
+.page button:focus-visible,
+.page a:focus-visible,
+.page select:focus-visible,
+.page textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.stageGrid,
+.reportGrid {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.reportGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.form {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.label {
+  display: grid;
+  gap: var(--space-1);
+  font-weight: 600;
+}
+
+/* 16 px inputs: smaller text makes iOS zoom the page on focus (index.css sets 13 px globally). */
+.page .input {
+  font-size: 1rem;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-input);
+}
+
+.page select.input { padding-right: 30px; }
+
+/* ---------------------------------------------------------------- route sketch */
+.sketchFigure { margin: 0; display: grid; gap: var(--space-2); }
+
+.sketch {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+}
+
+.sketchBg { fill: var(--bg-surface); }
+
+.legNow,
+.legLater {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.legLater { stroke: var(--text-dim); stroke-width: 3; stroke-dasharray: 8 6; stroke-linecap: butt; }
+
+.stop { fill: var(--accent); stroke: var(--bg-elevated); stroke-width: 2; }
+
+.here { fill: none; stroke: var(--text); stroke-width: 3; }
+
+.footer {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-strong);
+  padding-top: var(--space-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page * { transition: none !important; animation: none !important; }
+}

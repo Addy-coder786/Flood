@@ -1,0 +1,242 @@
+/* ── Operator console section ─────────────────────────── */
+.section {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2px;
+}
+
+.desc {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-top: 7px;
+  line-height: 1.5;
+}
+
+.tagRow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.field { margin-top: 10px; }
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+/* ── What-if (blockage) — collapsed by default; secondary to the
+   rainfall -> forecast primary path ─────────────────────── */
+.whatIf {
+  margin-top: 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+.whatIfSummary {
+  cursor: pointer;
+  padding: 8px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-faint);
+  transition: color var(--transition-fast);
+}
+.whatIfSummary:hover { color: var(--text-dim); }
+.whatIfBody {
+  padding: 0 9px 9px;
+}
+.whatIfActions { margin-top: 8px; }
+
+/* Loading spinner */
+.btnSpinner {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex: 0 0 auto;
+}
+
+/* Error box */
+.errBox {
+  margin-top: 7px;
+  padding: 7px 9px;
+  border-radius: var(--radius-xs);
+  background: rgba(239,68,68,0.10);
+  border: 1px solid rgba(239,68,68,0.25);
+  color: #EF4444;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ── Source status indicators ─────────────────────────── */
+.statusRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 7px;
+  padding: 7px 9px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 3px;
+  flex: 0 0 auto;
+  background: var(--text-faint);
+  transition: background var(--transition-base);
+}
+.statusRow_ok   .statusDot { background: var(--real);        box-shadow: 0 0 4px rgba(34,197,94,0.4); }
+.statusRow_bad  .statusDot { background: var(--sev-critical); }
+.statusRow_idle .statusDot { background: var(--accent);       box-shadow: 0 0 4px rgba(122,34,49,0.4); }
+
+.statusTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.statusRow_ok   .statusTitle { color: var(--real); }
+.statusRow_bad  .statusTitle { color: var(--sev-critical); }
+.statusRow_idle .statusTitle { color: var(--accent-bright); }
+
+.statusSub {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-top: 1px;
+  line-height: 1.4;
+}
+
+/* ── Provenance blocks ────────────────────────────────── */
+.provBlock {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-xs);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+}
+.provHeadline {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-bright);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.provRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 0;
+}
+.provLabel {
+  color: var(--text-faint);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 0 0 auto;
+}
+.provValue {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-align: right;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.provNote {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-faint);
+  line-height: 1.5;
+}
+
+/* ── Run summary grid ─────────────────────────────────── */
+.runSummary {
+  margin-top: 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  overflow: hidden;
+}
+.compareNote {
+  padding: 6px 9px;
+  background: rgba(234,88,12,0.10);
+  border-bottom: 1px solid var(--border);
+  font-size: 11px;
+  color: #F97316;
+  line-height: 1.4;
+}
+.compareNote strong { color: #F97316; }
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.summaryCell {
+  padding: 9px 10px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.summaryCell:nth-child(even) { border-right: none; }
+.summaryCell:last-child {
+  border-bottom: none;
+  border-right: none;
+  grid-column: 1 / -1;
+}
+
+.summaryCellLabel {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-faint);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.summaryCellValue {
+  display: block;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.summaryFooter {
+  padding: 6px 9px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-faint);
+  background: rgba(255,255,255,0.015);
+}
+.summaryFooter strong { color: var(--text-dim); }
+.summaryFooter code  { font-family: var(--mono); color: var(--accent-bright); font-size: 11px; }
+
+/* selected rainfall source: one small badge + one short line */
+.sourceLine {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-top: 7px;
+  min-width: 0;
+}
+.sourceSub {
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--text-dim);
+  min-width: 0;
+}

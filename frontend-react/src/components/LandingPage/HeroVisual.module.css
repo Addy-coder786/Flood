@@ -1,0 +1,39 @@
+/* Isolated hero background visual -- houses the two integrated 21st.dev components. Sits behind
+   the hero copy (see LandingPage.module.css's z-index scale: this layer is z-index:1, hero text
+   is z-index:10), so it never competes with readability. */
+
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* KineticGrid: secondary environmental layer, kept subtle per the integration spec ("used
+   subtly... behind hero typography... keep opacity low"). The component itself is a full,
+   self-contained visual (own background fill + canvas), so opacity is applied to its container
+   rather than editing its internals. */
+.gridLayer {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+}
+
+/* GatewayFlow: primary hero visual (the converging particle-flow canvas). Rendered above the
+   grid layer, at a reduced opacity so the flow reads as atmosphere rather than dominating the
+   headline -- the component's own `opacity` prop already handles this per-particle/line. */
+.flowLayer {
+  position: absolute;
+  inset: 0;
+}
+
+/* ── Static fallback: error-boundary catch, and the prefers-reduced-motion composition ───── */
+.staticFallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 55%, rgba(122, 34, 49, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 50% 92%, rgba(59, 126, 168, 0.10) 0%, transparent 75%);
+}

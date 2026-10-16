@@ -1,0 +1,46 @@
+{
+ "n_nodes": 2321,
+ "n_segments": 2978,
+ "bad_node_index_segments": 0,
+ "coordinate_duplicate_node_count": 0,
+ "coordinate_duplicate_groups": 0,
+ "highway_tag_counts": {
+  "residential": 1712,
+  "secondary": 197,
+  "tertiary": 314,
+  "trunk": 116,
+  "primary": 246,
+  "service": 371,
+  "living_street": 21,
+  "unclassified": 1
+ },
+ "link_type_segments_present": {},
+ "directed_nodes": 2321,
+ "directed_edges": 5005,
+ "weakly_connected_components": 4,
+ "wcc_sizes_top10": [
+  2289,
+  22,
+  8,
+  2
+ ],
+ "strongly_connected_components": 81,
+ "scc_sizes_top10": [
+  2123,
+  31,
+  27,
+  22,
+  8,
+  6,
+  6,
+  6,
+  5,
+  4
+ ],
+ "isolated_nodes": 0,
+ "dangling_endpoints": 551,
+ "flyover_segment_count": 23,
+ "probe_origin_component": 0,
+ "probe_dest_component": 0,
+ "probe_same_component": true
+}

@@ -1,0 +1,313 @@
+{
+  "generated_at": "2026-10-10T08:37:35+00:00",
+  "tag": "SIMULATED",
+  "scenario": "cloudburst",
+  "run_id": "7b87619a4d",
+  "vehicle": "car",
+  "pairs": 150,
+  "seed": 7,
+  "dispatch_t_min": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    90,
+    120
+  ],
+  "counts": {
+    "cases": 1050,
+    "same_route": 536,
+    "arrival_unreachable": 342,
+    "current_unreachable": 295,
+    "current_invalid_at_arrival": 148,
+    "current_invalid_arrival_ok": 96
+  },
+  "examples": [
+    {
+      "origin_lonlat": [
+        72.855425,
+        19.024207
+      ],
+      "dest_lonlat": [
+        72.843045,
+        19.02427
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.2 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139110530_0",
+          "name": "N C Kelkar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 35.0,
+          "enter_t_min": 51.92,
+          "reason": "forecast depth 35 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.847476,
+        19.012707
+      ],
+      "dest_lonlat": [
+        72.835705,
+        19.015939
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 7 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+6.1 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139113098_1",
+          "name": "N C Kelkar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 30.4,
+          "enter_t_min": 49.35,
+          "reason": "forecast depth 30 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "1139181464_8",
+          "name": "Bhawani Shankar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 34.4,
+          "enter_t_min": 50.44,
+          "reason": "forecast depth 34 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "1139181464_7",
+          "name": "Bhawani Shankar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 37.9,
+          "enter_t_min": 50.64,
+          "reason": "forecast depth 38 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.834235,
+        19.011821
+      ],
+      "dest_lonlat": [
+        72.8503,
+        19.025819
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.2 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139181464_7",
+          "name": "Bhawani Shankar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 32.6,
+          "enter_t_min": 47.77,
+          "reason": "forecast depth 33 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.85149,
+        19.026263
+      ],
+      "dest_lonlat": [
+        72.842637,
+        19.027763
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 3 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.6 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1090197017_7",
+          "name": "Lakhamsi Nappu Road",
+          "status": "AT_RISK",
+          "depth_cm": 35.1,
+          "enter_t_min": 45.77,
+          "reason": "forecast depth 35 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "1443620248_16",
+          "name": "Lakhamasi Nappu Road",
+          "status": "AT_RISK",
+          "depth_cm": 33.2,
+          "enter_t_min": 45.84,
+          "reason": "forecast depth 33 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "1139110530_0",
+          "name": "N C Kelkar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 35.0,
+          "enter_t_min": 50.56,
+          "reason": "forecast depth 35 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.846147,
+        19.014212
+      ],
+      "dest_lonlat": [
+        72.842086,
+        19.031514
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.5 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139110530_0",
+          "name": "N C Kelkar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 30.5,
+          "enter_t_min": 47.98,
+          "reason": "forecast depth 30 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.846147,
+        19.014212
+      ],
+      "dest_lonlat": [
+        72.842086,
+        19.031514
+      ],
+      "dispatch_t_min": 60,
+      "summary": "The current-status route crosses 2 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.7 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139163618_9",
+          "name": "Lady Jamshedji Road",
+          "status": "AT_RISK",
+          "depth_cm": 30.2,
+          "enter_t_min": 65.86,
+          "reason": "forecast depth 30 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "1192073146_0",
+          "name": "",
+          "status": "AT_RISK",
+          "depth_cm": 30.2,
+          "enter_t_min": 66.09,
+          "reason": "forecast depth 30 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.855057,
+        19.011382
+      ],
+      "dest_lonlat": [
+        72.843289,
+        19.016563
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+0.9 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "150457720_1",
+          "name": "Tilak Road",
+          "status": "AT_RISK",
+          "depth_cm": 31.6,
+          "enter_t_min": 47.49,
+          "reason": "forecast depth 32 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.835781,
+        19.015234
+      ],
+      "dest_lonlat": [
+        72.85616,
+        19.014832
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 2 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+1.2 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139181464_7",
+          "name": "Bhawani Shankar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 32.6,
+          "enter_t_min": 46.93,
+          "reason": "forecast depth 33 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "150457720_1",
+          "name": "Tilak Road",
+          "status": "AT_RISK",
+          "depth_cm": 34.9,
+          "enter_t_min": 51.06,
+          "reason": "forecast depth 35 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.835781,
+        19.015234
+      ],
+      "dest_lonlat": [
+        72.85616,
+        19.014832
+      ],
+      "dispatch_t_min": 60,
+      "summary": "The current-status route crosses 3 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+1.7 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "1139181464_10",
+          "name": "Bhawani Shankar Marg",
+          "status": "AT_RISK",
+          "depth_cm": 30.2,
+          "enter_t_min": 63.77,
+          "reason": "forecast depth 30 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "1490565316_0",
+          "name": "Tilak Road Extension",
+          "status": "AT_RISK",
+          "depth_cm": 31.7,
+          "enter_t_min": 70.21,
+          "reason": "forecast depth 32 cm reaches the 30 cm vehicle limit"
+        },
+        {
+          "seg_id": "1490565313_0",
+          "name": "Ganesh Mandir Marg",
+          "status": "AT_RISK",
+          "depth_cm": 31.7,
+          "enter_t_min": 70.26,
+          "reason": "forecast depth 32 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    },
+    {
+      "origin_lonlat": [
+        72.833898,
+        19.023912
+      ],
+      "dest_lonlat": [
+        72.835177,
+        19.016792
+      ],
+      "dispatch_t_min": 45,
+      "summary": "The current-status route crosses 1 road(s) closed or at/over the vehicle limit by the time the vehicle reaches them; the arrival-aware route avoids them (+2.3 min).",
+      "blocked_at_arrival": [
+        {
+          "seg_id": "22849810_0",
+          "name": "Jambhekar Path",
+          "status": "AT_RISK",
+          "depth_cm": 32.6,
+          "enter_t_min": 45.0,
+          "reason": "forecast depth 33 cm reaches the 30 cm vehicle limit"
+        }
+      ]
+    }
+  ],
+  "caveat": "forecast and outcome are the same simulated run; this shows where the two methods disagree, not real-world accuracy"
+}

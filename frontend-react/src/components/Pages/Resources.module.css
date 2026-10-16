@@ -1,0 +1,120 @@
+/* Resources page (registry, responders, candidate shelters). Existing tokens from src/index.css only. */
+
+.list { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  padding: 10px 12px;
+  box-shadow: var(--shadow-card);
+}
+.cardHead { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); }
+.title { font-size: 13.5px; font-weight: 700; color: var(--text); min-width: 0; overflow-wrap: anywhere; }
+.rid { font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--text-dim); margin-right: 6px; }
+.meta { margin-top: 2px; font-size: 12px; color: var(--text-dim); line-height: 1.45; overflow-wrap: anywhere; }
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 6px; }
+.when { font-size: 11.5px; color: var(--text-faint); }
+
+/* occupancy */
+.bar { height: 6px; margin-top: 7px; border-radius: 999px; background: var(--bg-hover); overflow: hidden; }
+.fill { height: 100%; border-radius: 999px; background: var(--teal); transition: width var(--transition-base); }
+.fillWarn { background: var(--amber); }
+.fillFull { background: var(--danger-text); }
+.occText { margin-top: 3px; font-family: var(--mono); font-size: 11.5px; color: var(--text); font-variant-numeric: tabular-nums; }
+
+.commit {
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-left: 2px solid var(--accent-line);
+  border-radius: var(--radius-xs);
+  background: var(--accent-subtle);
+  font-size: 12px;
+  color: var(--text);
+}
+
+/* disclosures inside cards */
+.disclosure { margin-top: 6px; font-size: 12.5px; }
+.disclosure > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* forms */
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; margin-top: 8px; align-items: start; }
+.full { grid-column: 1 / -1; }
+.field { min-width: 0; }
+.field :global(.input), .field select, .field input { width: 100%; }
+.error { margin-top: 3px; font-size: 11.5px; font-weight: 600; color: var(--danger-text); }
+.hint { margin-top: 3px; font-size: 11.5px; color: var(--text-dim); line-height: 1.4; }
+.actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.textarea { min-height: 110px; resize: vertical; font-family: var(--mono); font-size: 12px; line-height: 1.45; }
+
+.checks { border: 0; display: flex; flex-wrap: wrap; gap: 2px 14px; }
+.checks label { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; min-height: 26px; }
+.checks input { accent-color: var(--accent); width: 15px; height: 15px; }
+
+/* segmented choice (radio group) */
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--border-control); border-radius: var(--radius-sm); overflow: hidden; }
+.seg label { position: relative; cursor: pointer; }
+.seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.seg span { display: inline-block; padding: 5px 11px; font-size: 12px; font-weight: 600; color: var(--text); }
+.seg label + label span { border-left: 1px solid var(--border-control); }
+.seg input:checked + span { background: var(--accent); color: var(--text-inverse); }
+.seg input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: -3px; }
+
+/* candidate steps */
+.stepper { list-style: none; display: flex; gap: 4px; margin: 8px 0 4px; }
+.step {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 4px 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-dim);
+  overflow-wrap: anywhere;
+}
+.stepDone { color: var(--accent); border-color: var(--border-accent); background: var(--accent-subtle); }
+.stepCurrent { color: var(--text); border-color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+.stepRejected { color: var(--danger-text); border-color: var(--danger-text); background: var(--danger-bg); }
+
+.depth {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.depth strong { font-family: var(--mono); font-size: 11.5px; }
+
+/* one-time link */
+.linkBox {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border: 1px dashed var(--border-accent);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.linkText { display: block; margin: 4px 0 6px; font-family: var(--mono); font-size: 11px; overflow-wrap: anywhere; user-select: all; color: var(--text); }
+.steps { margin: 4px 0 0 18px; }
+.steps li { margin-top: 2px; }
+
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-2); }
+.mono { font-family: var(--mono); font-size: 11.5px; }
+
+@media (max-width: 520px) {
+  .form { grid-template-columns: 1fr; }
+  .stepper { flex-wrap: wrap; }
+}

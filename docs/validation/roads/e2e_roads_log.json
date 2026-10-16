@@ -1,0 +1,38 @@
+{
+  "1 forecast status": "Complete",
+  "2 vehicle options": [
+    "V1 Fire brigade truck · truck, 60 cm limit · SIMULATED record",
+    "V2 Police truck · truck, 60 cm limit · SIMULATED record",
+    "car (30 cm limit) – not tracked",
+    "motorcycle (30 cm limit) – not tracked",
+    "ambulance (40 cm limit) – not tracked",
+    "truck (60 cm limit) – not tracked",
+    "pedestrian (60 cm limit) – not tracked"
+  ],
+  "2 preview text": "Candidate route\nCandidate route with lower modelled flood exposure at the expected arrival time.\nETA\n3.5 min\nDISTANCE\n1.26 km\nARRIVES\nT+3\nETA parts\nASSUMED ROAD SPEEDS\t3.5 min\ttravel time at speeds assumed by road type (15 km/h default)\nMODELLED FLOOD DELAY\t+0.0 min\t0 road(s) slowed by forecast water (Pregnolato et al. 2017 depth-speed curve; ASSUMED for this vehicle type); from a SIMULATED forecast\nUNKNOWN\tnot included\tno live traffic feed is configured; congestion is not included in this ETA\nForecast: SIMULATED\nClosures: OPERATIONS LOG\nTraffic: UNKNOWN\nVehicle status: SIMULATED\nStart trip with V1\n\nDecision support only. A route is a candidate with lower modelled flood exposure at the expected arrival time, never a guarantee of safety. Follow what you see on the ground and official instructions.",
+  "3 trip card": "TR2 · Hindmata Junction → Dadar TT Circle\nShown on map\nPlanned\n(current)\nAccepted\n(not yet)\nEn route\n(not yet)\nArrived\n(not yet)\nCompleted\n(not yet)\nVehicle\nV1 Fire brigade truck (truck)\nLocation\nNo GPS shared yet · position estimated from the plan\nETA at start\n3.5 min (arrive T+3) · traffic UNKNOWN\nRoute\nversion 1 · checked T+0: the remaining route is still the best feasible one\nOpen driver view\nCopy driver link\nRe-check route\nSimulate GPS (demo)\nRecord a stage for the driver, finish or abort",
+  "4 driver first screen": "A route is a candidate with lower modelled flood exposure, never a guarantee of safety. Follow what you see and official instructions.\n\nFloodNet – rescue trip\n\nNew trip – accept it to begin\n\nV1 Fire brigade truck\n\nNEXT\n\nHead east on Swami Gyan Jiwandas Marg\n\nfor 230 m\n\nThen: Turn left onto Dr Babasaheb Ambedkar Marg (Vincent Road)\n\nRead instructions aloud\nGoing to\n\nDadar TT Circle (Destination)\n\nFrom Hindmata Junction · to Dadar TT Circle · ETA at start 3 min (modelled; traffic not included)\n\nHazards ahead\n\nNone flagged at the last check. Watch the road.\n\nAfter that\nTurn left onto Dr Babasaheb Ambedkar Marg (Vincent Road) – 180 m\nKeep slight left onto Khodadad Circle – 80 m\nContinue onto Dr ",
+  "4 roads offered to report": [
+    "Choose a road ahead…",
+    "Swami Gyan Jiwandas Marg",
+    "Swami Gyan Jiwandas Marg",
+    "Swami Gyan Jiwandas Marg",
+    "Dr Babasaheb Ambedkar Marg (Vincent Road)",
+    "Dr Babasaheb Ambedkar Marg (Vincent Road)"
+  ],
+  "4 driver report result": [
+    "Recorded: Start trip.",
+    "Report sent. The dispatcher sees it, and the road is recorded as closed for route checks."
+  ],
+  "5 trip card with proposal": "TR2 · Hindmata Junction → Dadar TT Circle\nShown on map\nPlanned\n(done)\nAccepted\n(done)\nEn route\n(current)\nArrived\n(not yet)\nCompleted\n(not yet)\nVehicle\nV1 Fire brigade truck (truck)\nLocation\nNo GPS shared yet · position estimated from the plan\nETA at start\n3.5 min (arrive T+3) · traffic UNKNOWN\nRoute\nversion 1 · checked T+0: remaining route blocked for truck: Dr Babasaheb Ambedkar Marg (Vincent Road): CLOSED (confirmed closure F2 (received T+0 min, in force from T+0 min))\n⚠ Route change required\nP1 · T+0 · trigger: road_event\n\nremaining route blocked for truck: Dr Babasaheb Ambedkar Marg (Vincent Road): CLOSED (confirmed closure F2 (received T+0 min, in force from T+0 min))\n\nREMAINING ROUTE\tCURRENT\tPROPOSED\nARRIVAL (ASSUMED ROAD SPEEDS)\tT+3\tT+4\nARRIVAL WITH MODELLED FLOOD DELAY\tT+3\tT+4\nROADS CLOSED OR OVER THE LIMIT\t1\t0\nUNCERTAIN OR UNKNOWN ROADS\t0\t0\n\nCandidate route with lower modelled exposure — never a guarantee of safety.\n\nAccept and send to driver\nReject\nOpen driver view\nCopy driver link\nRe-check route\nSimulate GPS (demo)\nRecord a stage for the driver, finish or abort",
+  "6 driver sees route change": 1,
+  "7 trips kept after panel toggle": {
+    "before": 1,
+    "after": 1
+  },
+  "8 position after simulated fix": "Location\nGPS 1 s old (SIMULATED) · ±5 m · recorded 06:17:19 IST",
+  "9 driver final": "Trip completed",
+  "9 active trips on Roads after completion": 0,
+  "9 trips page finished list": "Finished trips (1)\noptional\nHide panel\nSH1\nSH2\nT1\nT2\n Leaflet | © OpenStreetMap contributors, © OpenStreetMap contributors (ODbL), MCGM GIS (Storm Water Drains, Manholes, Contours, Flooding Spots)\nSTREET FLOOD DEPTH\nClear\n 0–5 cm\nMinor\n 5–15 cm\nModerate\n 15–30 cm\nSevere\n 30–60 cm\nCritical\n ≥60 cm\nNo flooded stree",
+  "errors": []
+}

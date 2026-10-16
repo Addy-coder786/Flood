@@ -1,0 +1,32 @@
+# Vercel deployment manifest (repo root). Vercel reads THIS file to install the Python runtime dependencies of the
+# single FastAPI function and to find its entrypoint. Local development and tests still use backend/pyproject.toml
+# (which adds uvicorn, pytest and optional extras). Keep this list to what the running API imports:
+#   numpy, scipy, shapely, pyproj, networkx  -- the simulation, terrain, drainage and routing core
+#   fastapi, pydantic, httpx                  -- the API and upstream calls (IMD, ECMWF)
+#   Pillow                                    -- decoding the IMD Mumbai-Veravali SRI radar image (radar-derived source)
+# Deliberately NOT here: uvicorn (Vercel serves ASGI itself), pytest (tests), boto3 (AWS secret stores; on Vercel the
+# secrets are Vercel Environment Variables), h5py (IMERG, not enabled), pyswmm (offline validation only).
+[project]
+name = "floodnet-vercel"
+version = "0.1.0"
+description = "FloodNet - Vercel deployment of the FastAPI backend and the React frontend"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "shapely>=2.0",
+  "pyproj>=3.6",
+  "networkx>=3.2",
+  "fastapi>=0.141",
+  "pydantic>=2.6",
+  "httpx>=0.27",
+  "Pillow>=10.0",
+]
+
+[tool.vercel]
+entrypoint = "app:app"
+
+# Serve the React build (registered with app.frontend in backend/floodnet/api/main.py) from the CDN even though the
+# app has top-level CORS middleware; the frontend files need no middleware.
+[tool.vercel.fastapi.static]
+cdn = true

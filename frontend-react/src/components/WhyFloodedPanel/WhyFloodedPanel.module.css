@@ -1,0 +1,328 @@
+/* ── Why Flooded — selected segment explanation ───────── */
+.section {
+  padding: 10px 2px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hint {
+  margin-top: 7px;
+  padding: 12px;
+  border-radius: var(--radius-xs);
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed var(--border);
+  color: var(--text-faint);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.loading {
+  margin-top: 7px;
+  font-size: 11px;
+  color: var(--text-faint);
+  padding: 6px;
+}
+
+.errBox {
+  margin-top: 7px;
+  padding: 7px 9px;
+  border-radius: var(--radius-xs);
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.22);
+  color: #EF4444;
+  font-size: 11px;
+}
+
+.body { margin-top: 7px; }
+
+.headRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.segName {
+  font-weight: 700;
+  font-size: 12.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+/* ── Depth context data grid ──────────────────────────── */
+.depthContextRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 9px;
+  padding: 7px 9px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+}
+
+.depthContextItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.depthContextLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-faint);
+  font-weight: 700;
+}
+
+.depthContextVal {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.depthActive { color: var(--accent-bright); }
+.depthDry    { color: var(--text-faint); }
+
+/* ── AI narrative explanation box ────────────────────── */
+.explanationBox {
+  padding: 8px 11px;
+  border-radius: var(--radius-xs);
+  background: rgba(122,34,49,0.06);
+  border: 1px solid var(--accent-line);
+  margin-bottom: 10px;
+}
+.explanationTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 800;
+  color: var(--accent-bright);
+  margin-bottom: 4px;
+}
+.sentence {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ── Flood causation chain ────────────────────────────── */
+.chainHeading {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-faint);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* ── Contributor breakdown ────────────────────────────── */
+.contribList {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contrib {
+  position: relative;
+  padding: 7px 9px 7px 11px;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--border-strong);
+  border-radius: var(--radius-xs);
+  background: var(--bg-surface);
+  font-size: 11px;
+}
+.contribActive {
+  border-left-color: var(--accent);
+  background: var(--bg-elevated);
+}
+.contribMuted {
+  opacity: 0.62;
+  background: transparent;
+}
+
+.contribHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contribPhase {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent-bright);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-line);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.contribLabel {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}
+
+.contribChip {
+  margin-left: auto;
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 1px 4px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.chipAttributed {
+  color: var(--accent-bright);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-line);
+}
+.chipNeutral {
+  color: var(--text-faint);
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+}
+
+.contribSub {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  margin-top: 1px;
+}
+
+.contribHeadline {
+  margin-top: 4px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.contribRows {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contribRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.contribRowLabel {
+  color: var(--text-faint);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.contribRowVal {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.contribNote {
+  margin-top: 4px;
+  color: var(--text-faint);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Proximity disclaimer -- must stay visually prominent wherever nearest-node data is shown. */
+.proximityNote {
+  margin-top: 5px;
+  padding: 4px 6px;
+  border-radius: var(--radius-xs);
+  background: var(--amber-dim);
+  border: 1px solid rgba(184,135,74,0.38);
+  color: var(--text-dim);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ── Evidence toggle ──────────────────────────────────── */
+.evidenceToggleRow {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+.evidenceToggle {
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color var(--transition-fast);
+}
+.evidenceToggle:hover { color: var(--text-dim); }
+
+.evidenceTable {
+  margin-top: 5px;
+  padding: 6px 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.factRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+}
+.factLabel {
+  color: var(--text-faint);
+  font-size: 11px;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+.factValue {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  text-align: right;
+  font-size: 11px;
+}
+
+.evidenceNote {
+  margin-top: 3px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.refreshing {
+  margin-top: 5px;
+  font-size: 11px;
+  color: var(--text-faint);
+  font-style: italic;
+}

@@ -1,0 +1,41 @@
+{
+ "heavy CLOSED (before)": {
+  "max_cell_m": 2.82,
+  "max_cell_excl_flagged_m": 2.15,
+  "max_street_cm": 282.1,
+  "segs15": 1163,
+  "nodes": 190,
+  "surcharge_m3": 47498,
+  "outfall_m3": 168424,
+  "boundary_out_m3": 0,
+  "surface_m3": 334396,
+  "err_pct": -2.3e-12,
+  "runtime_s": 49.6
+ },
+ "heavy OPEN  (after)": {
+  "max_cell_m": 2.69,
+  "max_cell_excl_flagged_m": 2.15,
+  "max_street_cm": 264.0,
+  "segs15": 1104,
+  "nodes": 186,
+  "surcharge_m3": 45751,
+  "outfall_m3": 164624,
+  "boundary_out_m3": 40271,
+  "surface_m3": 297966,
+  "err_pct": -2.38e-12,
+  "runtime_s": 47.1
+ },
+ "heavy OPEN blocked70": {
+  "max_cell_m": 2.69,
+  "max_cell_excl_flagged_m": 2.15,
+  "max_street_cm": 265.5,
+  "segs15": 1197,
+  "nodes": 424,
+  "surcharge_m3": 124981,
+  "outfall_m3": 132748,
+  "boundary_out_m3": 42168,
+  "surface_m3": 327278,
+  "err_pct": -3.77e-12,
+  "runtime_s": 47.2
+ }
+}

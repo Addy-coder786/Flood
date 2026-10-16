@@ -1,0 +1,899 @@
+{
+ "tag": "SIMULATED replay; forecast and outcome are two FloodNet runs, not observations",
+ "forecast": "RainfallScenario(id='heavy', name='Heavy steady rain (50 mm/h x 2 h)', t_s=array([    0.,   300.,   600.,   900.,  1200.,  1500.,  1800.,  2100.,\n        2400.,  2700.,  3000.,  3300.,  3600.,  3900.,  4200.,  4500.,\n        4800.,  5100.,  5400.,  5700.,  6000.,  6300.,  6600.,  6900.,\n        7200.,  7500.,  7800.,  8100.,  8400.,  8700.,  9000.,  9300.,\n        9600.,  9900., 10200., 10500., 10800.]), intensity_mm_h=array([50., 50., 50., 50., 50., 50., 50., 50., 50., 50., 50., 50., 50.,\n       50., 50., 50., 50., 50., 50., 50., 50., 50., 50., 50.,  0.,  0.,\n        0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]), provenance=Provenance(tag=<Tag.SYNTHETIC: 'SYNTHETIC'>, source='floodnet.data.scenarios', note='design-style constant storm, invented for testing; not an observed event'), description='50 mm/h for 120 min then dry. SYNTHETIC design storm.', intensity_field_mm_h=None, field_grid=None) run f8b6b8ee3c",
+ "outcome": "RainfallScenario(id='july2005', name='26 July 2005 replay (Santacruz gauge, hourly)', t_s=array([    0.,   300.,   600.,   900.,  1200.,  1500.,  1800.,  2100.,\n        2400.,  2700.,  3000.,  3300.,  3600.,  3900.,  4200.,  4500.,\n        4800.,  5100.,  5400.,  5700.,  6000.,  6300.,  6600.,  6900.,\n        7200.,  7500.,  7800.,  8100.,  8400.,  8700.,  9000.,  9300.,\n        9600.,  9900., 10200., 10500., 10800.]), intensity_mm_h=array([100.2, 100.2, 100.2, 100.2, 100.2, 100.2, 100.2, 100.2, 100.2,\n       100.2, 100.2, 100.2, 190.3, 190.3, 190.3, 190.3, 190.3, 190.3,\n       190.3, 190.3, 190.3, 190.3, 190.3, 190.3,  90.3,  90.3,  90.3,\n        90.3,  90.3,  90.3,  90.3,  90.3,  90.3,  90.3,  90.3,  90.3,\n         0. ]), provenance=Provenance(tag=<Tag.REAL: 'REAL'>, source='Chitale Committee report (Fact Finding Committee on Mumbai Floods), section 2.9.6', note='IMD Santacruz manual measurement, 26 July 2005; peak 3-h window 14.30-17.30 IST = 100.2, 190.3, 90.3 mm; hourly resolution only (held constant within each hour); Santacruz is ~10 km north of the Dadar pilot - local intensity at the pilot is not known'), description='Peak 3 hours (14.30-17.30 IST) of the 26 July 2005 storm as measured at IMD Santacruz, transcribed from Chitale Committee report sec. 2.9.6. Hourly gauge values; total 380.8 mm.', intensity_field_mm_h=None, field_grid=None) run f0dee0f766",
+ "script": {
+  "replan_t_min": [
+   0,
+   10,
+   30,
+   60,
+   90,
+   120,
+   150
+  ],
+  "events": [
+   {
+    "t": 10,
+    "kind": "closure_on_underway",
+    "which": 1,
+    "note": "confirmed closure of the next road the second dispatched mission would enter after T+10"
+   },
+   {
+    "t": 30,
+    "kind": "vehicle_unavailable",
+    "vehicle_id": "V2",
+    "reason": "breakdown (SIMULATED)"
+   },
+   {
+    "t": 30,
+    "kind": "shelter_update",
+    "shelter_id": "SH1",
+    "occupancy": 80,
+    "reason": "reported full (SIMULATED)"
+   }
+  ],
+  "operator": "accepts and dispatches every proposal at each replan; a mission is COMPLETED when its planned completion time has passed (simulated world)",
+  "prediction_lead_min": [
+   5,
+   15,
+   30
+  ],
+  "prediction_vehicle": "truck"
+ },
+ "modes": {
+  "arrival": {
+   "mode": "arrival",
+   "steps": [
+    {
+     "t_min": 0,
+     "plan_version": 1,
+     "events": [],
+     "dispatched": 10,
+     "served": 0,
+     "committed": 210,
+     "unmet": 5,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [],
+     "inputs_response_event_ids": [],
+     "inputs_max_received_t_min": null,
+     "replan_ms": 2062.6
+    },
+    {
+     "t_min": 10,
+     "plan_version": 2,
+     "events": [
+      "closure C1 on Tilak Road (A2 would enter it at T+15.6)"
+     ],
+     "dispatched": 0,
+     "served": 0,
+     "committed": 210,
+     "unmet": 5,
+     "changes": [
+      {
+       "assignment_id": "A1",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A2",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A3",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A4",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A5",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A6",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A7",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A8",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A9",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A10",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      }
+     ],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [],
+     "inputs_max_received_t_min": 10,
+     "replan_ms": 317.5
+    },
+    {
+     "t_min": 30,
+     "plan_version": 3,
+     "events": [
+      "vehicle_unavailable V2: breakdown (SIMULATED)",
+      "shelter_update SH1: reported full (SIMULATED)"
+     ],
+     "dispatched": 3,
+     "served": 45,
+     "committed": 150,
+     "unmet": 20,
+     "changes": [
+      {
+       "assignment_id": "A3",
+       "change": "redirected",
+       "reason": "redirected from SH1 to SH2: SH1 has no room"
+      },
+      {
+       "assignment_id": "A5",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A6",
+       "change": "cancelled",
+       "reason": "vehicle V2 unavailable: breakdown (SIMULATED)"
+      },
+      {
+       "assignment_id": "A7",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A8",
+       "change": "cancelled",
+       "reason": "vehicle V2 unavailable: breakdown (SIMULATED)"
+      },
+      {
+       "assignment_id": "A9",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A10",
+       "change": "cancelled",
+       "reason": "vehicle V2 unavailable: breakdown (SIMULATED)"
+      }
+     ],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 440.1
+    },
+    {
+     "t_min": 60,
+     "plan_version": 4,
+     "events": [],
+     "dispatched": 0,
+     "served": 80,
+     "committed": 115,
+     "unmet": 20,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 192.9
+    },
+    {
+     "t_min": 90,
+     "plan_version": 5,
+     "events": [],
+     "dispatched": 0,
+     "served": 130,
+     "committed": 65,
+     "unmet": 20,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 133.9
+    },
+    {
+     "t_min": 120,
+     "plan_version": 6,
+     "events": [],
+     "dispatched": 0,
+     "served": 150,
+     "committed": 45,
+     "unmet": 20,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 100.1
+    },
+    {
+     "t_min": 150,
+     "plan_version": 7,
+     "events": [],
+     "dispatched": 0,
+     "served": 170,
+     "committed": 25,
+     "unmet": 20,
+     "changes": [
+      {
+       "assignment_id": "A12",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      }
+     ],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 56.9
+    }
+   ],
+   "road_events": [
+    {
+     "event_id": "C1",
+     "seg_id": "1239122778_0",
+     "kind": "closure",
+     "received_t_min": 10,
+     "applies_from_t_min": 10,
+     "source": "scripted replay (SIMULATED)",
+     "note": "confirmed closure of the next road the second dispatched mission would enter after T+10",
+     "source_tier": "OPERATOR",
+     "references": []
+    }
+   ],
+   "response_events": [
+    {
+     "kind": "vehicle_unavailable",
+     "vehicle_id": "V2",
+     "reason": "breakdown (SIMULATED)",
+     "received_t_min": 30,
+     "event_id": "E1"
+    },
+    {
+     "kind": "shelter_update",
+     "shelter_id": "SH1",
+     "occupancy": 80,
+     "reason": "reported full (SIMULATED)",
+     "received_t_min": 30,
+     "event_id": "E2"
+    }
+   ],
+   "replan_ms": [
+    2062.6,
+    317.5,
+    440.1,
+    192.9,
+    133.9,
+    100.1,
+    56.9
+   ],
+   "metrics": {
+    "missions_dispatched": 10,
+    "missions_completed_by_horizon": 8,
+    "missions_cancelled_by_planner": 3,
+    "people_served_by_horizon": 170,
+    "people_unmet_at_end": 20,
+    "legs_total": 20,
+    "legs_invalid_by_outcome": 9,
+    "missions_invalid_by_outcome": 5,
+    "closures_encountered": 0,
+    "known_closure_violations": 0,
+    "first_service_t_min": {
+     "S1": 1.6,
+     "S2": 28.1,
+     "S3": 89.0,
+     "S4": 162.5
+    },
+    "last_completion_t_min": 131.0,
+    "replans": 7,
+    "replan_ms_mean": 472.0,
+    "replan_ms_max": 2062.6,
+    "invariant_violations_total": 0,
+    "blocked_examples": [
+     {
+      "assignment_id": "A7",
+      "leg": "to_shelter",
+      "road": "L J Marg",
+      "enter_t_min": 77.56,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 65.5,
+      "planned_status": "UNCERTAIN",
+      "planned_depth_cm": 42.6
+     },
+     {
+      "assignment_id": "A7",
+      "leg": "to_shelter",
+      "road": "L J Marg",
+      "enter_t_min": 77.68,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 64.0,
+      "planned_status": "UNCERTAIN",
+      "planned_depth_cm": 42.6
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Lakhamasi Nappu Road",
+      "enter_t_min": 83.06,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 75.8,
+      "planned_status": "UNCERTAIN",
+      "planned_depth_cm": 51.4
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.02,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 87.9,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 38.2
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.18,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 80.2,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 34.9
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.37,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 66.7,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 26.6
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.53,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 64.1,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 28.8
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Tilak Road",
+      "enter_t_min": 85.47,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 66.5,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 31.0
+     }
+    ]
+   }
+  },
+  "current": {
+   "mode": "current",
+   "steps": [
+    {
+     "t_min": 0,
+     "plan_version": 1,
+     "events": [],
+     "dispatched": 10,
+     "served": 0,
+     "committed": 210,
+     "unmet": 5,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [],
+     "inputs_response_event_ids": [],
+     "inputs_max_received_t_min": null,
+     "replan_ms": 1961.8
+    },
+    {
+     "t_min": 10,
+     "plan_version": 2,
+     "events": [
+      "closure C1 on Tilak Road (A2 would enter it at T+15.6)"
+     ],
+     "dispatched": 0,
+     "served": 0,
+     "committed": 210,
+     "unmet": 5,
+     "changes": [
+      {
+       "assignment_id": "A1",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A2",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A3",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A4",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A5",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A6",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A7",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A8",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A9",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A10",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      }
+     ],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [],
+     "inputs_max_received_t_min": 10,
+     "replan_ms": 328.7
+    },
+    {
+     "t_min": 30,
+     "plan_version": 3,
+     "events": [
+      "vehicle_unavailable V2: breakdown (SIMULATED)",
+      "shelter_update SH1: reported full (SIMULATED)"
+     ],
+     "dispatched": 3,
+     "served": 45,
+     "committed": 150,
+     "unmet": 20,
+     "changes": [
+      {
+       "assignment_id": "A3",
+       "change": "redirected",
+       "reason": "redirected from SH1 to SH2: SH1 has no room"
+      },
+      {
+       "assignment_id": "A5",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A6",
+       "change": "cancelled",
+       "reason": "vehicle V2 unavailable: breakdown (SIMULATED)"
+      },
+      {
+       "assignment_id": "A7",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A8",
+       "change": "cancelled",
+       "reason": "vehicle V2 unavailable: breakdown (SIMULATED)"
+      },
+      {
+       "assignment_id": "A9",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      },
+      {
+       "assignment_id": "A10",
+       "change": "cancelled",
+       "reason": "vehicle V2 unavailable: breakdown (SIMULATED)"
+      }
+     ],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 445.5
+    },
+    {
+     "t_min": 60,
+     "plan_version": 4,
+     "events": [],
+     "dispatched": 0,
+     "served": 80,
+     "committed": 115,
+     "unmet": 20,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 169.8
+    },
+    {
+     "t_min": 90,
+     "plan_version": 5,
+     "events": [],
+     "dispatched": 0,
+     "served": 130,
+     "committed": 65,
+     "unmet": 20,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 117.8
+    },
+    {
+     "t_min": 120,
+     "plan_version": 6,
+     "events": [],
+     "dispatched": 0,
+     "served": 150,
+     "committed": 45,
+     "unmet": 20,
+     "changes": [],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 121.1
+    },
+    {
+     "t_min": 150,
+     "plan_version": 7,
+     "events": [],
+     "dispatched": 0,
+     "served": 170,
+     "committed": 25,
+     "unmet": 20,
+     "changes": [
+      {
+       "assignment_id": "A12",
+       "change": "re-routed",
+       "reason": "closures or forecast changed on the remaining legs"
+      }
+     ],
+     "invariant_violations": [],
+     "inputs_road_event_ids": [
+      "C1"
+     ],
+     "inputs_response_event_ids": [
+      "E1",
+      "E2"
+     ],
+     "inputs_max_received_t_min": 30,
+     "replan_ms": 65.2
+    }
+   ],
+   "road_events": [
+    {
+     "event_id": "C1",
+     "seg_id": "1239122778_0",
+     "kind": "closure",
+     "received_t_min": 10,
+     "applies_from_t_min": 10,
+     "source": "scripted replay (SIMULATED)",
+     "note": "confirmed closure of the next road the second dispatched mission would enter after T+10",
+     "source_tier": "OPERATOR",
+     "references": []
+    }
+   ],
+   "response_events": [
+    {
+     "kind": "vehicle_unavailable",
+     "vehicle_id": "V2",
+     "reason": "breakdown (SIMULATED)",
+     "received_t_min": 30,
+     "event_id": "E1"
+    },
+    {
+     "kind": "shelter_update",
+     "shelter_id": "SH1",
+     "occupancy": 80,
+     "reason": "reported full (SIMULATED)",
+     "received_t_min": 30,
+     "event_id": "E2"
+    }
+   ],
+   "replan_ms": [
+    1961.8,
+    328.7,
+    445.5,
+    169.8,
+    117.8,
+    121.1,
+    65.2
+   ],
+   "metrics": {
+    "missions_dispatched": 10,
+    "missions_completed_by_horizon": 8,
+    "missions_cancelled_by_planner": 3,
+    "people_served_by_horizon": 170,
+    "people_unmet_at_end": 20,
+    "legs_total": 20,
+    "legs_invalid_by_outcome": 9,
+    "missions_invalid_by_outcome": 5,
+    "closures_encountered": 0,
+    "known_closure_violations": 0,
+    "first_service_t_min": {
+     "S1": 1.6,
+     "S2": 28.1,
+     "S3": 89.0,
+     "S4": 162.5
+    },
+    "last_completion_t_min": 131.0,
+    "replans": 7,
+    "replan_ms_mean": 458.6,
+    "replan_ms_max": 1961.8,
+    "invariant_violations_total": 0,
+    "blocked_examples": [
+     {
+      "assignment_id": "A7",
+      "leg": "to_shelter",
+      "road": "L J Marg",
+      "enter_t_min": 77.56,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 65.5,
+      "planned_status": "UNCERTAIN",
+      "planned_depth_cm": 42.6
+     },
+     {
+      "assignment_id": "A7",
+      "leg": "to_shelter",
+      "road": "L J Marg",
+      "enter_t_min": 77.68,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 64.0,
+      "planned_status": "UNCERTAIN",
+      "planned_depth_cm": 42.6
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Lakhamasi Nappu Road",
+      "enter_t_min": 83.06,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 75.8,
+      "planned_status": "UNCERTAIN",
+      "planned_depth_cm": 51.4
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.02,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 87.9,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 38.2
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.18,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 80.2,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 34.9
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.37,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 66.7,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 26.6
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Sir Bhalchandra Road",
+      "enter_t_min": 84.53,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 64.1,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 28.8
+     },
+     {
+      "assignment_id": "A9",
+      "leg": "to_settlement",
+      "road": "Tilak Road",
+      "enter_t_min": 85.47,
+      "outcome_status": "AT_RISK",
+      "outcome_depth_cm": 66.5,
+      "planned_status": "USABLE",
+      "planned_depth_cm": 31.0
+     }
+    ]
+   }
+  }
+ },
+ "prediction": {
+  "vehicle": "truck",
+  "vehicle_limit_cm": 60.0,
+  "replan_t_min": [
+   0,
+   10,
+   30,
+   60,
+   90,
+   120,
+   150
+  ],
+  "lead_min": [
+   5,
+   15,
+   30
+  ],
+  "segments": 2978,
+  "unknown_cases_excluded": 660,
+  "arrival_aware": {
+   "hits": 620,
+   "misses": 5280,
+   "false_alarms": 0,
+   "correct_passable": 53000,
+   "cases": 58900,
+   "accuracy": 0.9104,
+   "probability_of_detection": 0.1051,
+   "false_alarm_ratio": 0.0
+  },
+  "current_status": {
+   "hits": 465,
+   "misses": 5435,
+   "false_alarms": 0,
+   "correct_passable": 53000,
+   "cases": 58900,
+   "accuracy": 0.9077,
+   "probability_of_detection": 0.0788,
+   "false_alarm_ratio": 0.0
+  },
+  "outcome_blocking_cases": 5900,
+  "share_of_blocking_flagged_incl_uncertain": {
+   "arrival_aware": 0.4178,
+   "current_status": 0.3383
+  }
+ },
+ "comparison": {
+  "people_served_by_horizon": {
+   "arrival_aware": 170,
+   "current_status": 170
+  },
+  "people_unmet_at_end": {
+   "arrival_aware": 20,
+   "current_status": 20
+  },
+  "missions_dispatched": {
+   "arrival_aware": 10,
+   "current_status": 10
+  },
+  "legs_invalid_by_outcome": {
+   "arrival_aware": 9,
+   "current_status": 9
+  },
+  "missions_invalid_by_outcome": {
+   "arrival_aware": 5,
+   "current_status": 5
+  },
+  "closures_encountered": {
+   "arrival_aware": 0,
+   "current_status": 0
+  },
+  "known_closure_violations": {
+   "arrival_aware": 0,
+   "current_status": 0
+  },
+  "last_completion_t_min": {
+   "arrival_aware": 131.0,
+   "current_status": 131.0
+  },
+  "replan_ms_mean": {
+   "arrival_aware": 472.0,
+   "current_status": 458.6
+  },
+  "invariant_violations_total": {
+   "arrival_aware": 0,
+   "current_status": 0
+  },
+  "response_delay_min": {
+   "S1": 0.0,
+   "S2": 0.0,
+   "S3": 0.0,
+   "S4": 0.0
+  }
+ },
+ "same_run": false,
+ "generated_at": "2026-10-10T21:42:18+00:00"
+}

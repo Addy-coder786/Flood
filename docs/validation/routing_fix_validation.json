@@ -1,0 +1,72 @@
+{
+ "peak_frame_t_min": 60.0,
+ "peak_segments_ge_15cm": 707,
+ "routable_core_fraction": 0.9146919431279621,
+ "pairs": [
+  {
+   "label": "PAIR 1 (original failing probe, deepest segment at peak)",
+   "origin": [
+    72.836,
+    19.0091018
+   ],
+   "dest": [
+    72.8477608,
+    19.0091018
+   ],
+   "dry_reachable": true,
+   "dry_length_m": 3919.0033640458105,
+   "wet_reachable": false,
+   "wet_length_m": null,
+   "avoided_segments": 9
+  },
+  {
+   "label": "PAIR 2 (bbox SW corner to NE corner)",
+   "origin": [
+    72.838,
+    19.013
+   ],
+   "dest": [
+    72.852,
+    19.027
+   ],
+   "dry_reachable": true,
+   "dry_length_m": 3090.323539139484,
+   "wet_reachable": true,
+   "wet_length_m": 3778.4282963067003,
+   "avoided_segments": 8
+  },
+  {
+   "label": "PAIR 3 (moderately flooded segment '686100687_4')",
+   "origin": [
+    72.8427557,
+    19.0113632
+   ],
+   "dest": [
+    72.85075570000001,
+    19.0113632
+   ],
+   "dry_reachable": true,
+   "dry_length_m": 1129.4268894072004,
+   "wet_reachable": true,
+   "wet_length_m": 1225.9963328335007,
+   "avoided_segments": 2
+  },
+  {
+   "label": "PAIR 4 (E: destination node fully surrounded by flooded real segments -> must be honestly unreachable)",
+   "origin": [
+    72.836,
+    19.0091018
+   ],
+   "dest": [
+    72.8477608,
+    19.0091018
+   ],
+   "dry_reachable": null,
+   "dry_length_m": null,
+   "wet_reachable": false,
+   "wet_length_m": null,
+   "avoided_segments": 1
+  }
+ ],
+ "all_checks_passed": true
+}

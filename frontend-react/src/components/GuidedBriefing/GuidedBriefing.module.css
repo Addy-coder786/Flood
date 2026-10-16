@@ -1,0 +1,154 @@
+/* Guided Briefing launcher — a small, fixed control on the dashboard.
+   Sits above the forecast timeline and clear of the left/right panels; deliberately compact so it never
+   competes with operational content. Colours come from the existing tokens only. */
+
+.launcher {
+  position: absolute;    /* inside the map stage (D-37 shell), never over the sidebar or the page panel */
+  right: 12px;
+  bottom: 132px;         /* clears the ForecastTimeline bar */
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  max-width: min(320px, calc(100vw - 32px));
+}
+
+.btnRow {
+  display: flex;
+  gap: 5px;
+  align-items: stretch;
+}
+
+.startBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--text-inverse);
+  border: 1px solid var(--accent);
+  box-shadow: 0 6px 18px rgba(122, 34, 49, 0.22);
+  cursor: pointer;
+  transition: filter 140ms ease, opacity 140ms ease;
+}
+.startBtn:hover:not(:disabled) { filter: brightness(1.08); }
+.startBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--bg-active);
+  color: var(--text-dim);
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+.playGlyph { font-size: 11px; line-height: 1; }
+
+.langToggle {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease;
+}
+.langToggle:hover { background: var(--bg-hover); color: var(--text); }
+
+.langRow {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-glass);
+}
+
+.langBtn {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease;
+}
+.langBtn:hover { background: var(--bg-hover); color: var(--text); }
+
+.langBtnActive {
+  background: var(--accent-subtle);
+  border-color: var(--border-accent);
+  color: var(--accent);
+}
+
+.hint {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--text-faint);
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+/* On narrow screens the left panel collapses over this area — move the launcher to the bottom-centre
+   strip so it stays reachable without covering the timeline controls. */
+@media (max-width: 900px) {
+  .launcher {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 96px;
+    align-items: center;
+  }
+}
+
+/* Voice state shown inside the briefing callout: what is ACTUALLY producing sound right now.
+   'browser' is surfaced distinctly from the neural voice so the fallback is never passed off as the
+   premium voice, and 'off' states plainly that the visual briefing continues without audio. */
+.voiceState {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.voiceState[data-tone='on']     { color: var(--accent); }
+.voiceState[data-tone='paused'] { color: var(--text-dim); }
+.voiceState[data-tone='off']    { color: var(--text-faint); }
+
+.voiceState[data-tone='on'] > span:first-child {
+  animation: voice-pulse 1.5s ease-in-out infinite;
+}
+@keyframes voice-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voiceState[data-tone='on'] > span:first-child { animation: none; }
+}
+
+/* Demo Story: the secondary launcher, same shape, quieter fill so Guided Briefing stays primary. */
+.storyBtn {
+  background: rgba(255, 252, 245, 0.92);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.storyBtn:hover:not(:disabled) {
+  background: #fff;
+}

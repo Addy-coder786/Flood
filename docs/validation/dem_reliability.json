@@ -1,0 +1,163 @@
+{
+ "tolerance_m": 3.0,
+ "radius_m": 250.0,
+ "min_depth_m": 0.25,
+ "n_depressions_total": 268,
+ "n_depressions_flagged": 7,
+ "n_cells_flagged": 407,
+ "pct_of_grid_flagged": 0.654,
+ "provenance": {
+  "tag": "ESTIMATED",
+  "source": "floodnet.terrain.pits.dem_reliability_mask",
+  "note": "cells in interior closed depressions whose bottom lies >3.0 m below the lowest surveyed MCGM manhole ground level within 250.0 m; DEM NOT modified"
+ },
+ "flagged": [
+  {
+   "n_cells": 195,
+   "area_m2": 19500.0,
+   "volume_m3": 95513.15402984619,
+   "max_depth_below_spill_m": 11.441778182983398,
+   "bottom_z_m": 16.14130210876465,
+   "spill_elev_m": 27.583080291748047,
+   "touches_grid_edge": false,
+   "bbox_j": [
+    1,
+    21
+   ],
+   "bbox_i": [
+    12,
+    30
+   ],
+   "label": 1,
+   "local_min_manhole_ground_m": 27.224000930786133,
+   "bottom_below_local_manholes_m": 11.08,
+   "n_manholes_within_radius": 37
+  },
+  {
+   "n_cells": 156,
+   "area_m2": 15600.0,
+   "volume_m3": 90744.29721832275,
+   "max_depth_below_spill_m": 11.999626159667969,
+   "bottom_z_m": 18.200000762939453,
+   "spill_elev_m": 30.199626922607422,
+   "touches_grid_edge": false,
+   "bbox_j": [
+    174,
+    186
+   ],
+   "bbox_i": [
+    79,
+    100
+   ],
+   "label": 203,
+   "local_min_manhole_ground_m": 29.621000289916992,
+   "bottom_below_local_manholes_m": 11.42,
+   "n_manholes_within_radius": 20
+  },
+  {
+   "n_cells": 22,
+   "area_m2": 2200.0,
+   "volume_m3": 5237.090301513672,
+   "max_depth_below_spill_m": 3.0,
+   "bottom_z_m": 26.600000381469727,
+   "spill_elev_m": 29.600000381469727,
+   "touches_grid_edge": false,
+   "bbox_j": [
+    117,
+    121
+   ],
+   "bbox_i": [
+    14,
+    19
+   ],
+   "label": 131,
+   "local_min_manhole_ground_m": 29.766000747680664,
+   "bottom_below_local_manholes_m": 3.17,
+   "n_manholes_within_radius": 8
+  },
+  {
+   "n_cells": 8,
+   "area_m2": 800.0,
+   "volume_m3": 5162.933731079102,
+   "max_depth_below_spill_m": 10.143678665161133,
+   "bottom_z_m": 23.110464096069336,
+   "spill_elev_m": 33.25414276123047,
+   "touches_grid_edge": false,
+   "bbox_j": [
+    97,
+    99
+   ],
+   "bbox_i": [
+    218,
+    221
+   ],
+   "label": 116,
+   "local_min_manhole_ground_m": 30.790000915527344,
+   "bottom_below_local_manholes_m": 7.68,
+   "n_manholes_within_radius": 48
+  },
+  {
+   "n_cells": 9,
+   "area_m2": 900.0,
+   "volume_m3": 3815.328598022461,
+   "max_depth_below_spill_m": 7.578086853027344,
+   "bottom_z_m": 22.399999618530273,
+   "spill_elev_m": 29.978086471557617,
+   "touches_grid_edge": false,
+   "bbox_j": [
+    174,
+    176
+   ],
+   "bbox_i": [
+    106,
+    110
+   ],
+   "label": 204,
+   "local_min_manhole_ground_m": 28.299999237060547,
+   "bottom_below_local_manholes_m": 5.9,
+   "n_manholes_within_radius": 2
+  },
+  {
+   "n_cells": 9,
+   "area_m2": 900.0,
+   "volume_m3": 2892.6904678344727,
+   "max_depth_below_spill_m": 3.6591358184814453,
+   "bottom_z_m": 28.399999618530273,
+   "spill_elev_m": 32.05913543701172,
+   "touches_grid_edge": false,
+   "bbox_j": [
+    89,
+    92
+   ],
+   "bbox_i": [
+    230,
+    233
+   ],
+   "label": 114,
+   "local_min_manhole_ground_m": 32.5260009765625,
+   "bottom_below_local_manholes_m": 4.13,
+   "n_manholes_within_radius": 20
+  },
+  {
+   "n_cells": 8,
+   "area_m2": 800.0,
+   "volume_m3": 1821.8542098999023,
+   "max_depth_below_spill_m": 3.0006046295166016,
+   "bottom_z_m": 25.3360595703125,
+   "spill_elev_m": 28.3366641998291,
+   "touches_grid_edge": false,
+   "bbox_j": [
+    245,
+    247
+   ],
+   "bbox_i": [
+    48,
+    51
+   ],
+   "label": 258,
+   "local_min_manhole_ground_m": 28.51300048828125,
+   "bottom_below_local_manholes_m": 3.18,
+   "n_manholes_within_radius": 25
+  }
+ ]
+}

@@ -1,0 +1,860 @@
+{
+ "summary": {
+  "scenario": "heavy",
+  "horizon_min": 180,
+  "blockage": "none",
+  "grid": {
+   "x0": 271954.5822948819,
+   "y0": 2103161.087494358,
+   "res": 10.0,
+   "nx": 244,
+   "ny": 255,
+   "crs": "EPSG:32643"
+  },
+  "max_depth_m": 2.821,
+  "cells_over_1m": 135,
+  "cells_over_0_5m": 1051,
+  "boundary_cells_over_0_5m": 45,
+  "boundary_share_of_final_surface_volume_pct": 2.41,
+  "mass_balance": {
+   "rain_in_m3": 622199.9999999994,
+   "surface_stored_m3": 334396.33243457164,
+   "network_stored_m3": 435.5024182776268,
+   "outfall_out_m3": 168424.16912540427,
+   "infiltration_m3": 0.0,
+   "error_m3": -1.1583324521780014e-08,
+   "error_pct": -2.301676369524409e-12,
+   "abstraction_m3": 118943.99602175748,
+   "runoff_in_m3": 503256.00397824193
+  },
+  "runtime_s": 37.9,
+  "surcharging_nodes_any_frame": 196,
+  "flooded_segments_over_15cm": 929
+ },
+ "cells": [
+  {
+   "rank": 1,
+   "j": 19,
+   "i": 14,
+   "x": 272099.58,
+   "y": 2103356.09,
+   "lon": 72.83495,
+   "lat": 19.010173,
+   "ground_z_m": 19.067,
+   "max_depth_m": 2.821,
+   "t_max_min": 180,
+   "neighbourhood_5x5_z": [
+    [
+     null,
+     null,
+     null,
+     null,
+     19.16
+    ],
+    [
+     null,
+     null,
+     null,
+     18.95,
+     19.96
+    ],
+    [
+     null,
+     null,
+     19.07,
+     null,
+     null
+    ],
+    [
+     26.99,
+     21.0,
+     19.91,
+     null,
+     null
+    ],
+    [
+     28.02,
+     25.88,
+     27.25,
+     27.4,
+     null
+    ]
+   ],
+   "neighbourhood_rows_j": [
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "neighbourhood_cols_i": [
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "is_building_cell": false,
+   "adjacent_to_building": true,
+   "on_grid_boundary": false,
+   "lower_than_all_open_neighbours": false,
+   "nearest_node": {
+    "id": "2172030306",
+    "dist_m": 56.7,
+    "ground_lev_m": 27.442,
+    "dtm_z_at_node_cell_m": 27.381,
+    "dtm_minus_ground_lev_m": -0.061,
+    "is_outfall": false
+   },
+   "nearest_road": {
+    "seg_id": "1478739236_0",
+    "name": "(service)",
+    "dist_m": 4.2
+   },
+   "nearest_flooding_spot": {
+    "name": "Parel Station East J B Road, Elphinstone East/W",
+    "active": true,
+    "dist_m": 104.2
+   },
+   "depression": {
+    "spill_elev_m": 27.4,
+    "spill_cell": [
+     23,
+     14
+    ],
+    "spill_on_boundary": false,
+    "n_cells_below_spill": 6,
+    "area_m2": 600.0,
+    "volume_m3": 2430.9085845947266,
+    "bottom_cell": [
+     19,
+     14
+    ],
+    "bottom_z_m": 19.067,
+    "max_fill_depth_m": 8.333
+   },
+   "contours_within_30m": {
+    "count": 1080,
+    "n_at_or_below_cell_z_plus_0_2": 59,
+    "height_range_m": 9.6,
+    "heights": [
+     18.6,
+     18.8,
+     19.0,
+     19.2,
+     19.4,
+     19.6,
+     19.8,
+     20.0,
+     20.2,
+     20.4,
+     20.6,
+     20.8,
+     21.0,
+     21.2,
+     21.4,
+     21.6,
+     21.8,
+     22.0,
+     22.2,
+     22.4,
+     22.6,
+     22.8,
+     23.0,
+     23.2,
+     23.4,
+     23.6,
+     23.8,
+     24.0,
+     24.2,
+     24.4,
+     24.6,
+     24.8,
+     25.0,
+     25.2,
+     25.4,
+     25.6,
+     25.8,
+     26.0,
+     26.2,
+     26.4,
+     26.6,
+     26.8,
+     27.0,
+     27.2,
+     27.4,
+     27.6,
+     27.8,
+     28.0,
+     28.2
+    ]
+   },
+   "verdict": "genuine depression",
+   "reasons": [
+    "contours within 30 m bracket the cell (18.60-28.20); closed depression of 6 cells / 2431 m3 below spill 27.40",
+    "adjacent to OSM building cells (no-flow faces reduce the outlets of this cell)"
+   ]
+  },
+  {
+   "rank": 2,
+   "j": 245,
+   "i": 51,
+   "x": 272469.58,
+   "y": 2105616.09,
+   "lon": 72.838199,
+   "lat": 19.030624,
+   "ground_z_m": 25.8,
+   "max_depth_m": 2.689,
+   "t_max_min": 150,
+   "neighbourhood_5x5_z": [
+    [
+     28.36,
+     28.4,
+     28.4,
+     28.4,
+     28.34
+    ],
+    [
+     28.4,
+     28.4,
+     28.16,
+     null,
+     null
+    ],
+    [
+     28.17,
+     null,
+     25.8,
+     null,
+     28.35
+    ],
+    [
+     null,
+     null,
+     null,
+     28.53,
+     null
+    ],
+    [
+     null,
+     null,
+     28.8,
+     28.66,
+     28.43
+    ]
+   ],
+   "neighbourhood_rows_j": [
+    243,
+    244,
+    245,
+    246,
+    247
+   ],
+   "neighbourhood_cols_i": [
+    49,
+    50,
+    51,
+    52,
+    53
+   ],
+   "is_building_cell": false,
+   "adjacent_to_building": true,
+   "on_grid_boundary": false,
+   "lower_than_all_open_neighbours": true,
+   "nearest_node": {
+    "id": "2172054508",
+    "dist_m": 40.7,
+    "ground_lev_m": 28.864,
+    "dtm_z_at_node_cell_m": 28.96,
+    "dtm_minus_ground_lev_m": 0.096,
+    "is_outfall": true
+   },
+   "nearest_road": {
+    "seg_id": "789123542_0",
+    "name": "Pandurang Naik Marg",
+    "dist_m": 20.6
+   },
+   "nearest_flooding_spot": {
+    "name": "Shivaji Park Road No 2 (Delete)",
+    "active": false,
+    "dist_m": 402.2
+   },
+   "depression": {
+    "spill_elev_m": 28.4,
+    "spill_cell": [
+     242,
+     50
+    ],
+    "spill_on_boundary": false,
+    "n_cells_below_spill": 2,
+    "area_m2": 200.0,
+    "volume_m3": 283.83121490478516,
+    "bottom_cell": [
+     245,
+     51
+    ],
+    "bottom_z_m": 25.8,
+    "max_fill_depth_m": 2.6
+   },
+   "contours_within_30m": {
+    "count": 313,
+    "n_at_or_below_cell_z_plus_0_2": 31,
+    "height_range_m": 3.6,
+    "heights": [
+     25.2,
+     25.4,
+     25.6,
+     25.8,
+     26.0,
+     26.2,
+     26.4,
+     26.6,
+     26.8,
+     27.0,
+     27.2,
+     27.4,
+     27.6,
+     27.8,
+     28.0,
+     28.2,
+     28.4,
+     28.6,
+     28.8
+    ]
+   },
+   "verdict": "ambiguous",
+   "reasons": [
+    "contour support present but the depression is tiny (1-2 cells) or no contour point at/below the cell level",
+    "adjacent to OSM building cells (no-flow faces reduce the outlets of this cell)"
+   ]
+  },
+  {
+   "rank": 3,
+   "j": 8,
+   "i": 20,
+   "x": 272159.58,
+   "y": 2103246.09,
+   "lon": 72.835533,
+   "lat": 19.009186,
+   "ground_z_m": 16.364,
+   "max_depth_m": 2.456,
+   "t_max_min": 180,
+   "neighbourhood_5x5_z": [
+    [
+     27.91,
+     27.78,
+     22.19,
+     17.83,
+     18.05
+    ],
+    [
+     27.59,
+     23.71,
+     17.85,
+     17.73,
+     19.31
+    ],
+    [
+     27.31,
+     18.95,
+     16.36,
+     21.35,
+     null
+    ],
+    [
+     21.09,
+     16.14,
+     21.07,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     21.4,
+     null,
+     null
+    ]
+   ],
+   "neighbourhood_rows_j": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "neighbourhood_cols_i": [
+    18,
+    19,
+    20,
+    21,
+    22
+   ],
+   "is_building_cell": false,
+   "adjacent_to_building": true,
+   "on_grid_boundary": false,
+   "lower_than_all_open_neighbours": false,
+   "nearest_node": {
+    "id": "2172030109",
+    "dist_m": 110.1,
+    "ground_lev_m": 27.531,
+    "dtm_z_at_node_cell_m": null,
+    "dtm_minus_ground_lev_m": null,
+    "is_outfall": false
+   },
+   "nearest_road": {
+    "seg_id": "1478739231_0",
+    "name": "(service)",
+    "dist_m": 5.0
+   },
+   "nearest_flooding_spot": {
+    "name": "Parel Station East J B Road, Elphinstone East/W",
+    "active": true,
+    "dist_m": 21.1
+   },
+   "depression": {
+    "spill_elev_m": 17.845,
+    "spill_cell": [
+     7,
+     21
+    ],
+    "spill_on_boundary": false,
+    "n_cells_below_spill": 1,
+    "area_m2": 100.0,
+    "volume_m3": 148.14586639404297,
+    "bottom_cell": [
+     8,
+     20
+    ],
+    "bottom_z_m": 16.364,
+    "max_fill_depth_m": 1.481
+   },
+   "contours_within_30m": {
+    "count": 1368,
+    "n_at_or_below_cell_z_plus_0_2": 75,
+    "height_range_m": 12.6,
+    "heights": [
+     15.4,
+     15.6,
+     15.8,
+     16.0,
+     16.2,
+     16.4,
+     16.6,
+     16.8,
+     17.0,
+     17.2,
+     17.4,
+     17.6,
+     17.8,
+     18.0,
+     18.2,
+     18.4,
+     18.6,
+     18.8,
+     19.0,
+     19.2,
+     19.4,
+     19.6,
+     19.8,
+     20.0,
+     20.2,
+     20.4,
+     20.6,
+     20.8,
+     21.0,
+     21.2,
+     21.4,
+     21.6,
+     21.8,
+     22.0,
+     22.2,
+     22.4,
+     22.6,
+     22.8,
+     23.0,
+     23.2,
+     23.4,
+     23.6,
+     23.8,
+     24.0,
+     24.2,
+     24.4,
+     24.6,
+     24.8,
+     25.0,
+     25.2,
+     25.4,
+     25.6,
+     25.8,
+     26.0,
+     26.2,
+     26.4,
+     26.6,
+     26.8,
+     27.0,
+     27.2,
+     27.4,
+     27.6,
+     27.8,
+     28.0
+    ]
+   },
+   "verdict": "ambiguous",
+   "reasons": [
+    "contour support present but the depression is tiny (1-2 cells) or no contour point at/below the cell level",
+    "adjacent to OSM building cells (no-flow faces reduce the outlets of this cell)"
+   ]
+  },
+  {
+   "rank": 4,
+   "j": 10,
+   "i": 17,
+   "x": 272129.58,
+   "y": 2103266.09,
+   "lon": 72.835246,
+   "lat": 19.009363,
+   "ground_z_m": 22.464,
+   "max_depth_m": 2.353,
+   "t_max_min": 180,
+   "neighbourhood_5x5_z": [
+    [
+     27.9,
+     27.8,
+     27.8,
+     27.31,
+     18.95
+    ],
+    [
+     27.87,
+     27.8,
+     28.0,
+     21.09,
+     16.14
+    ],
+    [
+     28.03,
+     25.01,
+     22.46,
+     null,
+     null
+    ],
+    [
+     28.17,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "neighbourhood_rows_j": [
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "neighbourhood_cols_i": [
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "is_building_cell": false,
+   "adjacent_to_building": true,
+   "on_grid_boundary": false,
+   "lower_than_all_open_neighbours": false,
+   "nearest_node": {
+    "id": "2172030105",
+    "dist_m": 110.1,
+    "ground_lev_m": 27.585,
+    "dtm_z_at_node_cell_m": 27.58,
+    "dtm_minus_ground_lev_m": -0.005,
+    "is_outfall": false
+   },
+   "nearest_road": {
+    "seg_id": "635527305_9",
+    "name": "Bhausaheb Todankar Marg",
+    "dist_m": 1.8
+   },
+   "nearest_flooding_spot": {
+    "name": "Parel Station East J B Road, Elphinstone East/W",
+    "active": true,
+    "dist_m": 20.9
+   },
+   "depression": {
+    "spill_elev_m": 27.802,
+    "spill_cell": [
+     8,
+     17
+    ],
+    "spill_on_boundary": false,
+    "n_cells_below_spill": 3,
+    "area_m2": 300.0,
+    "volume_m3": 813.2841110229492,
+    "bottom_cell": [
+     10,
+     17
+    ],
+    "bottom_z_m": 22.464,
+    "max_fill_depth_m": 5.339
+   },
+   "contours_within_30m": {
+    "count": 901,
+    "n_at_or_below_cell_z_plus_0_2": 493,
+    "height_range_m": 14.8,
+    "heights": [
+     15.4,
+     15.6,
+     15.8,
+     16.0,
+     16.2,
+     16.4,
+     16.6,
+     16.8,
+     17.0,
+     17.2,
+     17.4,
+     17.6,
+     17.8,
+     18.0,
+     18.2,
+     18.4,
+     18.6,
+     18.8,
+     19.0,
+     19.2,
+     19.4,
+     19.6,
+     19.8,
+     20.0,
+     20.2,
+     20.4,
+     20.6,
+     20.8,
+     21.0,
+     21.2,
+     21.4,
+     21.6,
+     21.8,
+     22.0,
+     22.2,
+     22.4,
+     22.6,
+     22.8,
+     23.0,
+     23.2,
+     23.4,
+     23.6,
+     23.8,
+     24.0,
+     24.2,
+     24.4,
+     24.6,
+     24.8,
+     25.0,
+     25.2,
+     25.4,
+     25.6,
+     25.8,
+     26.0,
+     26.2,
+     26.4,
+     26.6,
+     26.8,
+     27.0,
+     27.2,
+     27.4,
+     27.6,
+     27.8,
+     28.0,
+     28.2,
+     28.4,
+     28.6,
+     28.8,
+     29.0,
+     29.2,
+     29.4,
+     29.6,
+     29.8,
+     30.0,
+     30.2
+    ]
+   },
+   "verdict": "genuine depression",
+   "reasons": [
+    "contours within 30 m bracket the cell (15.40-30.20); closed depression of 3 cells / 813 m3 below spill 27.80",
+    "adjacent to OSM building cells (no-flow faces reduce the outlets of this cell)"
+   ]
+  },
+  {
+   "rank": 5,
+   "j": 180,
+   "i": 85,
+   "x": 272809.58,
+   "y": 2104966.09,
+   "lon": 72.841504,
+   "lat": 19.024792,
+   "ground_z_m": 18.201,
+   "max_depth_m": 2.18,
+   "t_max_min": 180,
+   "neighbourhood_5x5_z": [
+    [
+     23.22,
+     26.85,
+     27.25,
+     24.14,
+     24.08
+    ],
+    [
+     23.42,
+     19.78,
+     19.14,
+     19.45,
+     19.24
+    ],
+    [
+     19.39,
+     18.88,
+     18.2,
+     null,
+     null
+    ],
+    [
+     19.14,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "neighbourhood_rows_j": [
+    178,
+    179,
+    180,
+    181,
+    182
+   ],
+   "neighbourhood_cols_i": [
+    83,
+    84,
+    85,
+    86,
+    87
+   ],
+   "is_building_cell": false,
+   "adjacent_to_building": true,
+   "on_grid_boundary": false,
+   "lower_than_all_open_neighbours": true,
+   "nearest_node": {
+    "id": "2172057005",
+    "dist_m": 104.4,
+    "ground_lev_m": 29.831,
+    "dtm_z_at_node_cell_m": 29.843,
+    "dtm_minus_ground_lev_m": 0.012,
+    "is_outfall": false
+   },
+   "nearest_road": {
+    "seg_id": "788447291_4",
+    "name": "(service)",
+    "dist_m": 20.6
+   },
+   "nearest_flooding_spot": {
+    "name": "D L Vaidya Marg (Tackled)",
+    "active": false,
+    "dist_m": 89.7
+   },
+   "depression": {
+    "spill_elev_m": 19.391,
+    "spill_cell": [
+     181,
+     83
+    ],
+    "spill_on_boundary": false,
+    "n_cells_below_spill": 3,
+    "area_m2": 300.0,
+    "volume_m3": 194.86427307128906,
+    "bottom_cell": [
+     180,
+     85
+    ],
+    "bottom_z_m": 18.201,
+    "max_fill_depth_m": 1.19
+   },
+   "contours_within_30m": {
+    "count": 629,
+    "n_at_or_below_cell_z_plus_0_2": 37,
+    "height_range_m": 9.2,
+    "heights": [
+     18.2,
+     18.4,
+     18.6,
+     18.8,
+     19.0,
+     19.2,
+     19.4,
+     19.6,
+     19.8,
+     20.0,
+     20.2,
+     20.4,
+     20.6,
+     20.8,
+     21.0,
+     21.2,
+     21.4,
+     21.6,
+     21.8,
+     22.0,
+     22.2,
+     22.4,
+     22.6,
+     22.8,
+     23.0,
+     23.2,
+     23.4,
+     23.6,
+     23.8,
+     24.0,
+     24.2,
+     24.4,
+     24.6,
+     24.8,
+     25.0,
+     25.2,
+     25.4,
+     25.6,
+     25.8,
+     26.0,
+     26.2,
+     26.4,
+     26.6,
+     26.8,
+     27.0,
+     27.2,
+     27.4
+    ]
+   },
+   "verdict": "genuine depression",
+   "reasons": [
+    "contours within 30 m bracket the cell (18.20-27.40); closed depression of 3 cells / 195 m3 below spill 19.39",
+    "adjacent to OSM building cells (no-flow faces reduce the outlets of this cell)"
+   ]
+  }
+ ]
+}

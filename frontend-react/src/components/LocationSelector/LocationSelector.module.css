@@ -1,0 +1,190 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.triggerBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  text-align: left;
+}
+.triggerBtn:hover, .triggerBtnOpen {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.pinIcon {
+  font-size: 14px;
+  flex: 0 0 auto;
+  color: var(--accent);
+}
+.triggerText {
+  display: flex;
+  flex-direction: column;
+}
+.triggerCity {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-dim);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.triggerArea {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.chevron {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
+/* Popover */
+.popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 320px;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-raised);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: popIn 0.15s ease-out;
+}
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.popoverHead {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+.popoverTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-dim);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.searchWrap {
+  position: relative;
+}
+.searchInput {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+.searchInput:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.areaList {
+  padding: 8px;
+  max-height: 240px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg-elevated);
+}
+.listLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-faint);
+  font-weight: 700;
+  padding: 4px 6px;
+}
+.areaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s ease;
+}
+.areaItem:hover {
+  background: var(--bg-hover);
+}
+.areaItemActive {
+  background: var(--accent-subtle);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+.areaItemHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.areaName {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+.areaItemActive .areaName {
+  color: var(--accent);
+}
+.areaStatus {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: #22C55E;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(34, 197, 94, 0.10);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+.areaZone {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.areaDesc {
+  font-size: 11px;
+  color: var(--text-faint);
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.popoverFooter {
+  padding: 9px 12px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+}
+.coverageNote {
+  font-size: 11px;
+  color: var(--text-faint);
+  line-height: 1.4;
+}
+.coverageNote b {
+  color: var(--text);
+}
+
+.triggerBtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

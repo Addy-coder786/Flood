@@ -1,0 +1,91 @@
+/* ── Top context bar (DECISIONS D-37) ────────────────────────────────────────── */
+.topbar {
+  grid-area: top;
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: 0 var(--space-5);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  z-index: 1050;
+  min-width: 0;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+}
+.group + .group { padding-left: var(--space-5); border-left: 1px solid var(--border); }
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.value { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+.valueText {
+  font-size: 12.5px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+.decision {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.code { font-family: var(--mono); font-size: 12px; }
+.incident { color: var(--synthetic-text); font-weight: 600; }
+
+.pill {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-control);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--bg-surface);
+  white-space: nowrap;
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--real); }
+.pill_busy .dot { background: var(--accent); animation: pulse 1.2s ease-in-out infinite; }
+.pill_bad { color: var(--danger-text); border-color: rgba(163, 30, 48, 0.45); background: var(--danger-bg); }
+.pill_bad .dot { background: var(--sev-critical); }
+.pill_stale { background: var(--amber-dim); border-color: rgba(184, 135, 74, 0.6); }
+.pill_stale .dot { background: var(--amber); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill_busy .dot { animation: none; }
+}
+
+@media (max-width: 1280px) {
+  .topbar { gap: var(--space-3); padding: 0 var(--space-3); }
+  .group + .group { padding-left: var(--space-3); }
+  .valueText { max-width: 170px; }
+}
+@media (max-width: 1100px) {
+  .group:nth-of-type(4) { display: none; }   /* run id: least important at narrow widths */
+}
+
+/* Narrow screens (D-47): only the menu, decision time and status stay in the bar; nothing scrolls sideways. */
+:global([data-layout='narrow']) .optional { display: none; }
+:global([data-layout='narrow']) .group + .group { padding-left: var(--space-3); }

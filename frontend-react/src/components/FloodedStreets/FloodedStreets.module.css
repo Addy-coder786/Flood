@@ -1,0 +1,100 @@
+/* ── Flooded Streets list ─────────────────────────────── */
+.section {
+  padding: 12px 2px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.count {
+  font-family: var(--mono);
+  /* --text-faint is ~3.0:1 on the ivory panel; this is a value the operator reads, so use --text-dim (~5.8:1). */
+  color: var(--text-dim);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.empty {
+  margin-top: 9px;
+  padding: 12px;
+  border-radius: var(--radius-xs);
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed var(--border);
+  color: var(--text-dim);
+  font-size: 11px;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  margin: 7px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 9px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  text-align: left;
+  appearance: none;
+  font-size: 11.5px;
+  color: var(--text-dim);
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+.row:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+}
+/* `.row` sets appearance:none and lives inside an overflow:hidden rail, so give it an explicit,
+   inset focus ring that cannot be clipped by the rail. Matches the app's .btn:focus-visible accent. */
+.row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.rowSelected {
+  background: var(--accent-subtle);
+  border-color: var(--accent-line);
+}
+
+.barFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(122,34,49, 0.06);
+  pointer-events: none;
+  z-index: 0;
+  transition: width 0.3s ease;
+}
+.rowSelected .barFill { background: rgba(122,34,49, 0.12); }
+
+.rank {
+  position: relative;
+  z-index: 1;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  width: 17px;
+  flex: 0 0 auto;
+}
+
+.name {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+.rowSelected .name { color: var(--accent-bright); }

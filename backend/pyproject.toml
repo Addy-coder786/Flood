@@ -1,0 +1,47 @@
+[project]
+name = "floodnet"
+version = "0.1.0"
+description = "FloodNet Urban Flood Nowcasting - Mumbai pilot"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "shapely>=2.0",
+  "pyproj>=3.6",
+  "networkx>=3.2",
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "httpx>=0.27",
+  "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+# Test-only. Install with: pip install -e "./backend[dev,radar]"
+dev = ["pytest>=8.0"]
+swmm = ["pyswmm>=2.0"]
+# GPM IMERG granules are HDF5. Only IMERGSatelliteProvider needs this; without it that provider reports
+# ProviderUnavailable naming the missing package rather than failing obscurely at import time.
+imerg = ["h5py>=3.10"]
+# The IMD Mumbai-Veravali SRI product is a GIF image; only IMDVeravaliSRIImageProvider needs Pillow to read it.
+radar = ["Pillow>=10.0"]
+# Only for IMD_TOKEN_PROVIDER=aws-secretsmanager / aws-ssm (token from AWS instead of a file or env var).
+aws = ["boto3>=1.34"]
+# Live operations (DECISIONS D-44): subscriber phone numbers are encrypted at rest with Fernet. Without it the
+# subscriber endpoints refuse to store a number rather than storing it in clear.
+ops = ["cryptography>=43"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["floodnet*"]
+
+[tool.setuptools.package-data]
+"floodnet.rainfall" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "live: opt-in tests that call a real external API (e.g. IMD); skipped unless real credentials are configured",
+]

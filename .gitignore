@@ -1,0 +1,37 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+# node
+node_modules/
+frontend-react/dist/
+# large raw caches (keep the MCGM network snapshot; ignore bulky fetches)
+data/raw/osm/*.pbf
+# secrets -- never commit real credentials; see .env.example
+.env
+# os
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+
+# Official IMD radar images kept locally for tests only -- IMD reuse/redistribution terms are unconfirmed.
+backend/tests/fixtures/local/
+# Radar decode validation sheets (derived from IMD images; same reason)
+data/interim/radar_validation/
+data/interim/radar_frames/
+data/interim/last_good_rainfall/
+
+# local demo server logs
+backend/uvicorn-8000.log*
+
+.vercel
+.env*
+
+# stray git output file
+/-files --others --exclude-standard
+# live-operations runtime database (incidents, subscribers, audit log) -- local state, never committed
+data/interim/ops.sqlite3*

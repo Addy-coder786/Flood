@@ -1,0 +1,230 @@
+/* ── Forecast timeline instrument ────────────────────── */
+.bar {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+  height: 108px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border);
+  border-top-color: rgba(255,255,255,0.65);
+  box-shadow: var(--shadow-panel);
+}
+
+.playBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #FFFFFF;
+  box-shadow: 0 0 14px rgba(122,34,49,0.32);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.playBtn:hover:not(:disabled) {
+  transform: scale(1.06);
+  box-shadow: 0 0 22px rgba(122,34,49,0.45);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.topRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 11px;
+  gap: 10px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.titleText {
+  color: var(--text-faint);
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.interpretationText {
+  color: var(--text-dim);
+  font-weight: 500;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.legendWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.legendBarSample {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  background: rgba(148,163,184,0.45);
+}
+
+.legendLineSample {
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--accent);
+}
+
+.peakBadge {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-bright);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-line);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.rainSummary {
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.chartWrap {
+  position: relative;
+  height: 42px;
+  margin-top: 2px;
+}
+.chart {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Future shade — a light warm tint dimming the not-yet-reached portion of the timeline */
+.futureShade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(43,33,24,0.05);
+  pointer-events: none;
+  border-left: 1px dashed rgba(43,33,24,0.14);
+}
+
+.slider {
+  width: 100%;
+  margin: 4px 0 0;
+  accent-color: var(--accent);
+  height: 4px;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background: rgba(43,33,24,0.12);
+  border-radius: 2px;
+  height: 3px;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(122,34,49,0.50);
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.ticksRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1px;
+  margin-top: 1px;
+}
+.tick {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  transition: color 0.12s ease;
+}
+.tickActive {
+  color: var(--accent-bright);
+  font-weight: 700;
+}
+
+.clock {
+  flex: 0 0 auto;
+  width: 105px;
+  text-align: right;
+  padding-left: 12px;
+  border-left: 1px solid var(--border);
+}
+.clockValue {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent-bright);
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(122,34,49,0.30);
+}
+.clockUnit {
+  font-size: 11px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-top: 3px;
+}
+
+.empty {
+  color: var(--text-faint);
+  font-size: 11.5px;
+  padding-top: 14px;
+  text-align: center;
+}

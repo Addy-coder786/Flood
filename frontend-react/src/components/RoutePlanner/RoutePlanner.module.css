@@ -1,0 +1,366 @@
+/* ── Route planner section ────────────────────────────── */
+.section {
+  padding: 10px 2px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.field { margin-top: 9px; }
+.field:first-of-type { margin-top: 0; }
+
+/* ── FROM/TO location search ─────────────────────────── */
+.searchWrap {
+  position: relative;
+}
+.searchDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-raised);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 2px;
+}
+.searchItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 6px 8px;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+.searchItem:hover {
+  background: var(--bg-hover);
+}
+.searchItemName {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+.searchItemContext {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+.selectedCaption {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.hint {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-faint);
+  line-height: 1.4;
+}
+
+.buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+.buttons .btn:last-child { flex: 0 0 auto; }
+
+.errBox {
+  margin-top: 8px;
+  padding: 7px 9px;
+  border-radius: var(--radius-xs);
+  background: rgba(239,68,68,0.10);
+  border: 1px solid rgba(239,68,68,0.25);
+  color: #EF4444;
+  font-size: 11px;
+}
+
+.pickStatus {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 7px 9px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+}
+
+/* ── ROUTE UNSAFE alert ───────────────────────────────── */
+.alertUnsafe {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-xs);
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.25);
+  border-left: 3px solid #EF4444;
+}
+.alertHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.alertBadge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #EF4444;
+  text-transform: uppercase;
+}
+.alertTime {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-faint);
+}
+.alertBody {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+
+/* ── ROUTE SAFE result ────────────────────────────────── */
+.resultBox {
+  margin-top: 10px;
+  padding: 11px 13px;
+  border-radius: var(--radius-xs);
+  background: rgba(34,197,94,0.07);
+  border: 1px solid rgba(34,197,94,0.22);
+  border-left: 3px solid #22C55E;
+}
+.resultHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(34,197,94,0.15);
+}
+.safeBadge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #22C55E;
+  text-transform: uppercase;
+}
+.decisionRule {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+.resultRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding: 4px 0;
+  border-top: 1px solid rgba(34,197,94,0.09);
+  font-size: 11px;
+}
+.resultRow:first-of-type { border-top: none; }
+
+.resultLabel {
+  color: var(--text-faint);
+  flex: 0 0 auto;
+  font-size: 11px;
+}
+.resultValue {
+  color: var(--text);
+  font-family: var(--mono);
+  text-align: right;
+  font-size: 11px;
+  font-weight: 600;
+}
+.avoidedList {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+.trafficNote {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-faint);
+}
+.trafficNote strong {
+  color: var(--text-dim);
+}
+
+/* ── route alternatives (safest/fastest/balanced) ────── */
+.candidateCard {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 6px;
+  padding: 7px 9px;
+  border-radius: var(--radius-xs);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+.candidateCard:first-of-type { margin-top: 0; }
+.candidateCard:hover {
+  border-color: rgba(34,197,94,0.35);
+}
+.candidateCardSelected {
+  background: rgba(34,197,94,0.10);
+  border-color: #22C55E;
+}
+.candidateLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+}
+.candidateMetrics {
+  margin-top: 2px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.candidateTimeSafety {
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+/* ── stale alternatives (computed for a different timestep than the dashboard) ─────────
+   Amber, not red: the result is not wrong, it is just out of date. Deliberately distinct
+   from .resultBox's fresh green so a stale panel can never be mistaken for a current one. */
+.resultBoxStale {
+  background: rgba(245,158,11,0.07);
+  border-color: rgba(245,158,11,0.28);
+  border-left-color: #F59E0B;
+}
+.resultBoxStale .resultHeader {
+  border-bottom-color: rgba(245,158,11,0.20);
+}
+.resultBoxStale .candidateCard:hover {
+  border-color: rgba(245,158,11,0.40);
+}
+.resultBoxStale .candidateCardSelected {
+  background: rgba(245,158,11,0.10);
+  border-color: #F59E0B;
+}
+.staleBadge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #B45309;
+  text-transform: uppercase;
+}
+.staleTime {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #B45309;
+}
+.staleNotice {
+  margin: 0 0 8px;
+  padding: 7px 9px;
+  border-radius: var(--radius-xs);
+  background: rgba(245,158,11,0.11);
+  border: 1px solid rgba(245,158,11,0.30);
+  color: var(--text-dim);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.staleNotice strong {
+  color: #B45309;
+}
+.staleNotice em {
+  font-style: normal;
+  font-family: var(--mono);
+  color: var(--text);
+}
+.candidateMetricsStale {
+  color: var(--text-faint);
+}
+
+/* ORIGIN -> DESTINATION and the A/B flood-exposure comparison (values straight from /api/route) */
+.odRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 0;
+}
+.odEnd {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.odArrow { color: var(--accent); flex: 0 0 auto; }
+
+.compare {
+  margin: 8px 0 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+.compareRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2px 8px;
+  padding: 6px 8px;
+  font-size: 11px;
+}
+.compareRow + .compareRow { border-top: 1px solid var(--border); }
+.compareRowOn { background: rgba(31, 138, 76, 0.06); }
+.compareName { font-weight: 700; color: var(--text); }
+.compareMeta { font-family: var(--mono); color: var(--text-dim); text-align: right; }
+.expo { grid-column: 1 / -1; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.3px; }
+.expo_high { color: var(--sev-critical); }
+.expo_mod { color: #b45309; }
+.expo_low { color: #1f8a4c; }
+.compareWhy {
+  padding: 6px 8px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.headRow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.capBadge { cursor: help; flex: 0 0 auto; }
+
+/* a route result always names its forecast time; an older one offers a one-click update */
+.snapshotBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 6px 0;
+  padding: 5px 8px;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(180, 83, 9, 0.35);
+  background: rgba(180, 83, 9, 0.07);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: #92400e;
+}
+.snapshotBtn {
+  border: 1px solid rgba(180, 83, 9, 0.45);
+  background: #fff;
+  color: #92400e;
+  border-radius: 999px;
+  padding: 2px 9px;
+  font: inherit;
+  cursor: pointer;
+}
+.snapshotBtn:disabled { opacity: 0.6; cursor: default; }

@@ -1,0 +1,50 @@
+{
+  "laptop first screen": {
+    "h1": "FLOODNET",
+    "heroTop": 61,
+    "heroBottom": 900,
+    "demoTop": 900,
+    "vh": 900,
+    "overflow": false,
+    "navs": 1
+  },
+  "laptop after Explore Forecast": {
+    "demoTop": 60,
+    "scrollY": 840
+  },
+  "laptop story stage text": "SEE IT WORK · DEMO SCENARIO\n\nFrom the first rain to a reviewed alert\n\ni\nReal pilot roads and terrain; the storm, closure, team and alert are a scripted DEMO. Student prototype — not an official warning service.\n\nDEMO SCENARIO — NOT LIVE DATA\n\nRoads: OpenStreet",
+  "guided tour button": 1,
+  "after Enter Control Centre url": "http://localhost:5173/static/dashboard#/overview",
+  "laptop overflow after scroll": false,
+  "laptop_1366 first screen": {
+    "h1": "FLOODNET",
+    "heroTop": 61,
+    "heroBottom": 796,
+    "demoTop": 796,
+    "vh": 768,
+    "overflow": false,
+    "navs": 1
+  },
+  "laptop_1366 after Explore Forecast": {
+    "demoTop": 60,
+    "scrollY": 736
+  },
+  "laptop_1366 story stage text": "SEE IT WORK · DEMO SCENARIO\n\nFrom the first rain to a reviewed alert\n\ni\nReal pilot roads and terrain; the storm, closure, team and alert are a scripted DEMO. Student prototype — not an official warning service.\n\nDEMO SCENARIO — NOT LIVE DATA\n\nRoads: OpenStreet",
+  "laptop_1366 overflow after scroll": false,
+  "phone first screen": {
+    "h1": "FLOODNET",
+    "heroTop": 57,
+    "heroBottom": 871,
+    "demoTop": 871,
+    "vh": 844,
+    "overflow": false,
+    "navs": 1
+  },
+  "phone after Explore Forecast": {
+    "demoTop": 60,
+    "scrollY": 811
+  },
+  "phone story stage text": "SEE IT WORK · DEMO SCENARIO\n\nFrom the first rain to a reviewed alert\n\ni\nReal pilot roads and terrain; the storm, closure, team and alert are a scripted DEMO. Student prototype — not an official warning service.\n\nDEMO SCENARIO — NOT LIVE DATA\n\nRoads: OpenStreet",
+  "phone overflow after scroll": false,
+  "errors": []
+}

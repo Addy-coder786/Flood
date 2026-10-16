@@ -1,0 +1,187 @@
+/* Sits exactly over the Leaflet map (which stays mounted underneath), below the side panels and header. */
+.root {
+  position: absolute;
+  inset: 0;
+  z-index: 500;
+  background: #e9edf0;
+  overflow: hidden;
+}
+
+.canvasHost {
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+}
+.canvasHost:active { cursor: grabbing; }
+.canvasHost canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+
+.state {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: center;
+  padding: 0 24px;
+}
+.linkBtn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ---- geographic labels (OSM) + flood-spot pins, positioned per frame by lib/terrain3d/labels.js ---------------- */
+/* Below the terrain key (z 3) and the elevation readout (z 4); never intercepts the orbit controls. */
+.overlay { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  font-family: var(--font);
+  color: #2f2821;
+  line-height: 1.15;
+  will-change: transform;
+  /* thin cream halo: readable on the relief shading without a panel behind the text */
+  text-shadow:
+    0 0 2px rgba(250, 246, 238, 0.95), 0 0 2px rgba(250, 246, 238, 0.95),
+    0 0 4px rgba(250, 246, 238, 0.85), 0 1px 3px rgba(250, 246, 238, 0.7);
+}
+.primary {                                  /* suburb: Dadar West, Matunga East */
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2a231c;
+}
+.locality {                                 /* neighbourhood: Shivaji Park, Wadala Village, Naigaon */
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #3a322a;
+}
+.junction {                                 /* King's Circle, Khodadad Circle */
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #4a4037;
+}
+.road {                                     /* trunk / primary road names, along the road */
+  font-size: 9.5px;
+  font-weight: 500;
+  font-style: italic;
+  color: #5a4f45;
+  opacity: 0.92;
+}
+.landmark {                                 /* stations, parks, stadium */
+  font-size: 10px;
+  font-weight: 500;
+  color: #4d443b;
+  opacity: 0.92;
+}
+.station::before {                          /* small rail mark, no badge */
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 4px 1px 0;
+  border-radius: 1px;
+  background: #5a4f45;
+  box-shadow: 0 0 0 1.5px rgba(250, 246, 238, 0.9);
+  vertical-align: middle;
+}
+
+.pin {                                      /* MCGM known flooding spot: same colours as the 2D map */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.85);
+  border: 2px solid #d97706;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.85);
+  will-change: transform;
+}
+.pinInactive { background: rgba(245, 158, 11, 0.2); }
+
+/* compact terrain key, in the same slot as the 2D depth legend */
+.panel {
+  position: absolute;
+  left: 330px;
+  bottom: 134px;
+  z-index: 3;
+  width: 232px;
+  padding: 9px 12px 10px;
+  font-size: 10.5px;
+  color: var(--text-dim);
+  background: var(--bg-glass);
+}
+.panelTitle {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.ramp { height: 7px; border-radius: 4px; border: 1px solid var(--border); }
+.rampLabels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 9px;
+  margin: 3px 0 7px;
+}
+.row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 5px; }
+.rowLabel { min-width: 0; }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.segBtn {
+  border: 0;
+  background: transparent;
+  padding: 2px 8px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.segBtnOn { background: var(--accent); color: #fff; }
+.resetBtn {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.resetBtn:hover, .linkBtn:hover { background: #fff; }
+.segBtn:focus-visible, .resetBtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.probe {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(29, 29, 31, 0.86);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+  .panel { left: 12px; bottom: 140px; width: 210px; }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FloodNet — Urban Flood Nowcasting (Mumbai pilot)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <div>
+        <div class="brand-title">Urban Flood Nowcasting  <span class="muted">Urban Flood Nowcasting</span></div>
+        <div class="brand-sub" id="pilot-name">Loading pilot…</div>
+      </div>
+    </div>
+    <div id="status-bar" class="status" hidden></div>
+    <div id="data-mode" class="badge badge-unknown">connecting…</div>
+  </header>
+
+  <div id="map"></div>
+
+  <!-- LEFT: controls -->
+  <aside id="left" class="panel">
+    <section>
+      <h3>Scenario</h3>
+      <select id="scenario"><option>loading…</option></select>
+      <div id="scenario-desc" class="hint"></div>
+      <label>Blockage
+        <select id="blockage">
+          <option value="none">None (all drains clear)</option>
+          <option value="fraction">All drains 50% blocked</option>
+          <option value="random">Random 30% of drains at 60%</option>
+          <option value="near">Near hotspot: 90% within 300 m</option>
+        </select>
+      </label>
+      <div id="near-hint" class="hint" hidden>Shift+click the map to move the blockage centre.</div>
+      <div class="row">
+        <button id="run" class="primary">Run simulation</button>
+        <button id="compare">Compare NORMAL vs BLOCKED</button>
+      </div>
+      <div id="run-info" class="hint"></div>
+    </section>
+
+    <section>
+      <h3>Layers</h3>
+      <div id="layers" class="layers"></div>
+      <label class="slider-row">Terrain opacity
+        <input type="range" id="terrain-opacity" min="0" max="1" step="0.05" value="0.45">
+      </label>
+      <label class="slider-row">Depth opacity
+        <input type="range" id="depth-opacity" min="0" max="1" step="0.05" value="0.6">
+      </label>
+      <div class="legend">
+        <div class="legend-title">Street severity (cm)</div>
+        <span class="sw" style="background:#8a94a6"></span>clear &lt;5
+        <span class="sw" style="background:#ffd23f"></span>minor 5–15
+        <span class="sw" style="background:#ff8c1a"></span>moderate 15–30
+        <span class="sw" style="background:#ff3b3b"></span>severe 30–60
+        <span class="sw" style="background:#8b0000"></span>critical ≥60
+      </div>
+    </section>
+
+    <section>
+      <h3>Route planner</h3>
+      <div class="hint">Click map twice: origin then destination (or type below).</div>
+      <div class="row">
+        <input id="origin" placeholder="origin lon,lat">
+        <input id="dest" placeholder="dest lon,lat">
+      </div>
+      <div class="row">
+        <select id="vehicle">
+          <option value="car">Car</option>
+          <option value="ambulance">Ambulance</option>
+          <option value="motorcycle">Motorcycle</option>
+          <option value="truck">Truck</option>
+        </select>
+        <button id="route" class="primary">Find flood-safe route</button>
+        <button id="route-clear" title="Clear">✕</button>
+      </div>
+      <div id="route-out" class="hint"></div>
+    </section>
+  </aside>
+
+  <!-- RIGHT: readouts -->
+  <aside id="right" class="panel">
+    <section>
+      <h3>Now <span id="now-t" class="muted">t = 0 min</span></h3>
+      <div class="tiles">
+        <div class="tile"><div class="k">Rain</div><div class="v" id="ro-rain">–</div><div class="u">mm/h</div></div>
+        <div class="tile"><div class="k">Max depth</div><div class="v" id="ro-depth">–</div><div class="u">cm</div></div>
+        <div class="tile"><div class="k">Surcharging</div><div class="v" id="ro-nodes">–</div><div class="u">nodes</div></div>
+        <div class="tile"><div class="k">Flooded</div><div class="v" id="ro-segs">–</div><div class="u">segments ≥15 cm</div></div>
+      </div>
+    </section>
+    <section>
+      <h3>Top-5 deepest streets</h3>
+      <ol id="top5" class="top5"><li class="muted">run a simulation</li></ol>
+    </section>
+    <section>
+      <h3>Max depth vs time <span id="spark-legend" class="muted"></span></h3>
+      <svg id="spark" viewBox="0 0 300 90" preserveAspectRatio="none"></svg>
+      <div id="compare-out" class="hint"></div>
+    </section>
+    <section>
+      <details id="prov">
+        <summary><h3>Provenance</h3></summary>
+        <table id="prov-table"><tbody></tbody></table>
+      </details>
+    </section>
+    <footer class="foot">Prototype — simplified physics; depths carry terrain and parameter uncertainty; not an operational warning.</footer>
+  </aside>
+
+  <!-- BOTTOM: timeline -->
+  <div id="bottom" class="panel">
+    <button id="play" title="Play/pause">▶</button>
+    <div class="tl">
+      <svg id="rain-chart" viewBox="0 0 720 60" preserveAspectRatio="none"></svg>
+      <input type="range" id="time" min="0" max="180" step="5" value="0">
+    </div>
+    <div id="time-label" class="time-label">0 min</div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+/* ============================================================
+   FloodNet Design System — Elegant Luxury (municipal command centre)
+   Visual direction: warm ivory canvas · editorial typography ·
+   deep burgundy primary accent · muted ochre secondary accent ·
+   restrained shadows · subtle borders. The map is the most
+   colourful surface; flood severity keeps its own semantic ramp
+   (green=safe, amber=watch, orange=severe, red=critical, blue=water)
+   independent of this brand palette -- see the Severity/Provenance
+   sections below, deliberately not reskinned to burgundy/ochre.
+
+   Primary palette:
+     --bg-app      #F7F2E9  warm ivory canvas
+     --bg-elevated #FFFFFF  panel surface
+     --accent      #7A2231  deep burgundy
+     --accent-2    #B8874A  muted ochre / cream accent
+   ============================================================ */
+
+:root {
+  /* ── Surfaces ─────────────────────────────────────────── */
+  --bg-app:      #F7F2E9;
+  --bg-panel:    rgba(255, 253, 248, 0.90);
+  --bg-elevated: #FFFFFF;
+  --bg-surface:  #FBF7EF;
+  --bg-hover:    #F1E8D8;
+  --bg-active:   #E9DBC0;
+  --bg-input:    #FFFFFF;
+
+  /* ── Glass / blur surfaces ──────────────────────────────
+     Readability rule: if map labels remain legible THROUGH a panel, it's too transparent. Dense,
+     text-heavy panels (scenario controls, right-rail tabs, header, timeline) use --bg-glass at
+     near-opaque 0.95 -- glass adds depth (blur + soft shadow + subtle border), not an opacity problem.
+     --bg-glass-compact (0.80) is for small, low-text map overlays only (legend swatch, tooltips). ── */
+  --bg-glass:         rgba(255, 253, 248, 0.95);
+  --bg-glass-compact: rgba(255, 253, 248, 0.80);
+  --bg-glass-subtle:  rgba(255, 253, 248, 0.88);
+  --border-glass:     rgba(43, 33, 24, 0.09);
+  --blur-glass:       blur(20px);
+  --shadow-glass:     0 8px 32px rgba(58, 32, 20, 0.10), 0 1px 0 rgba(255,255,255,0.7) inset;
+
+  /* ── Borders ─────────────────────────────────────────── */
+  --border:        rgba(43, 33, 24, 0.10);
+  --border-strong: rgba(43, 33, 24, 0.20);
+  --border-accent: rgba(122, 34, 49, 0.32);
+  /* Boundary of inputs, selects and secondary buttons: 3:1 on ivory (WCAG 1.4.11). --border stays for dividers. */
+  --border-control: rgba(43, 33, 24, 0.50);
+
+  /* ── Primary accent: deep burgundy ───────────────────── */
+  --accent:         #7A2231;
+  --accent-dim:     #5E1926;
+  --accent-bright:  #9B3247;
+  --accent-glow:    rgba(122, 34, 49, 0.16);
+  --accent-subtle:  rgba(122, 34, 49, 0.08);
+  --accent-line:    rgba(122, 34, 49, 0.35);
+
+  /* ── Secondary accents: muted ochre / cream ──────────── */
+  --teal:        #9C7A3C;
+  --teal-subtle: rgba(156, 122, 60, 0.12);
+  --amber:       #B8874A;
+  --amber-dim:   rgba(184, 135, 74, 0.16);
+
+  /* ── Text (warm charcoal on ivory) ────────────────────── */
+  --text:        #2B2118;
+  --text-dim:    #6E6255;
+  --text-faint:  #756A5E;   /* was #9C9184 (2.77:1); same hue darkened to 4.7:1 on ivory (D-37) */
+  --text-inverse:#FFFFFF;
+
+  /* ── Severity ramp (5 / 15 / 30 / 60 cm thresholds) -- flood
+     semantics, deliberately independent of the brand accent ── */
+  --sev-clear:    #6B7280;
+  --sev-minor:    #C99A1E;
+  --sev-moderate: #D9731F;
+  --sev-severe:   #D9731F;
+  --sev-critical: #C4273D;
+  /* Text variants (same hue, darkened to 4.5:1+) for severity words and badges; the ramp above stays for map
+     strokes and swatches. */
+  --sev-minor-text:    #866714;
+  --sev-moderate-text: #A45717;
+  --sev-critical-text: #B0233A;
+
+  /* ── Provenance colours -- data-trust semantics, also kept
+     independent of the brand accent ──────────────────────── */
+  --real:          #1F8A4C;
+  --estimated:     #2563A8;
+  --synthetic:     #B8874A;
+  --demonstration: #8B5FB0;
+  --real-text:      #1C7B44;   /* REAL as text: same hue as --real, 4.75:1 on ivory */
+  --synthetic-text: #8A6536;   /* SYNTHETIC / SIM as text */
+  --danger-text:    #A31E30;   /* error text (NoticeBanner pair) */
+  --danger-bg:      #FFF5F4;
+  --nwp:           #8B5FB0;
+
+  /* ── Typography ──────────────────────────────────────── */
+  /* --font stays sans-serif for the dense operational UI (9-13px labels/metrics/badges) -- serif at that
+     size hurts legibility. --font-display (serif, editorial) is for large headline/hero text only (landing
+     page hero, section titles), where "editorial typography" reads as premium without costing legibility. */
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, system-ui, sans-serif;
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+  --mono: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Consolas, 'Courier New', monospace;
+
+  /* ── Radii ───────────────────────────────────────────── */
+  --radius-xs: 3px;
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* ── Shadows (soft, warm-tinted, restrained per Phase 8) ─ */
+  --shadow-panel:  0 4px 20px rgba(58, 32, 20, 0.08), 0 1px 0 rgba(255,255,255,0.6) inset;
+  --shadow-card:   0 2px 10px rgba(58, 32, 20, 0.06), 0 1px 0 rgba(255,255,255,0.5) inset;
+  --shadow-raised: 0 8px 28px rgba(58, 32, 20, 0.12), 0 1px 0 rgba(255,255,255,0.6) inset;
+  --shadow-glow:   0 0 16px rgba(122, 34, 49, 0.16);
+
+  /* ── Blur ────────────────────────────────────────────── */
+  --blur-panel: blur(20px);
+
+  /* ── Spacing ─────────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* ── Transitions ─────────────────────────────────────── */
+  --transition-fast: 100ms ease;
+  --transition-base: 160ms ease;
+}
+
+/* ================================================================ reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+body {
+  background: var(--bg-app);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* overflow-x hidden only — landing page needs vertical scroll */
+  overflow-x: hidden;
+}
+button, select, input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+button { cursor: pointer; }
+a { color: var(--accent); }
+
+/* ================================================================ scrollbars */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(43, 33, 24, 0.16);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ================================================================ glass panel */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border);
+  border-top-color: rgba(255,255,255,0.65);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glass);
+}
+
+/* ================================================================ buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-control);
+  background: var(--bg-surface);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+.btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.btn:disabled {
+  opacity: 0.55;
+  color: var(--text-dim);
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #FFFFFF;
+  box-shadow: 0 0 14px rgba(122,34,49,0.22);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-bright);
+  border-color: var(--accent-bright);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(122,34,49,0.32);
+}
+.btn-block { width: 100%; }
+.btn-danger {
+  background: var(--danger-bg);
+  border-color: rgba(163, 30, 48, 0.45);
+  color: var(--danger-text);
+}
+.btn-danger:hover:not(:disabled) {
+  background: #FDE8E6;
+}
+
+/* ================================================================ form fields */
+.field-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-dim);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+select,
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='tel'],
+input[type='search'],
+.input {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border-control);
+  color: var(--text);
+  font-size: 13px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+}
+select {
+  padding-right: 26px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%236E6255' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+}
+/* Visible focus on every control (WCAG 2.4.7 / 1.4.11): a 2 px burgundy outline, 9:1 on ivory. */
+select:focus-visible, input:focus-visible, textarea:focus-visible, [role='tab']:focus-visible,
+a:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+select:focus, input:focus { border-color: var(--accent); }
+select option { background: #FFFFFF; color: var(--text); }
+
+/* ================================================================ panel heading */
+.panel-heading {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-dim);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-3);
+}
+
+/* ================================================================ tag badges */
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+  font-size: 10.5px;
+  font-weight: 700;
+  font-family: var(--mono);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.tag-REAL        { background: rgba(31, 138, 76, 0.08);  color: var(--real-text); border: 1px solid rgba(31,138,76,0.30); }
+.tag-ESTIMATED   { background: rgba(37, 99, 168, 0.10);  color: #2563A8; border: 1px solid rgba(37,99,168,0.30); }
+.tag-SYNTHETIC   { background: rgba(184, 135, 74, 0.10); color: var(--synthetic-text); border: 1px solid rgba(184,135,74,0.40); }
+.tag-DEMONSTRATION { background: rgba(139, 95, 176, 0.12); color: #7A4A9C; border: 1px solid rgba(139,95,176,0.32); }
+.tag-NWP         { background: rgba(139, 95, 176, 0.12);  color: #7A4A9C; border: 1px solid rgba(139,95,176,0.32); }
+.tag-RADAR       { background: rgba(196, 39, 61, 0.09);  color: #A11F33; border: 1px solid rgba(196,39,61,0.30); }
+.tag-UNKNOWN     { background: rgba(43, 33, 24, 0.05);    color: var(--text-faint); border: 1px solid var(--border); }
+
+/* ================================================================ severity badges */
+.sev-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.sev-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+/* ================================================================ section divider */
+.section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: var(--space-3) 0;
+}
+
+/* ================================================================ scroll utility */
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ================================================================ keyframes */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes blink-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+@keyframes progress-drain {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(122,34,49,0.16); }
+  50%       { box-shadow: 0 0 22px rgba(122,34,49,0.32); }
+}
+@keyframes grid-drift {
+  0%   { transform: translateY(0px); }
+  100% { transform: translateY(40px); }
+}
+
+/* ================================================================ kinetic grid bg (landing/non-map areas) */
+.kinetic-grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(122,34,49,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122,34,49,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-drift 12s linear infinite;
+  z-index: 0;
+}
+
+/* ================================================================ atmospheric vignette */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(58,32,20,0.10) 100%);
+  z-index: 1;
+}
+
+/* ================================================================ guided tour: map feature highlight
+   Applied by MapView's guided-tour command effect to an EXISTING Leaflet layer's SVG element, so a briefing
+   can draw attention to a real street segment or drainage node without changing its data-driven colour,
+   the current selection, or layer visibility. Purely additive and removed when the briefing moves on. */
+.tour-highlight {
+  stroke: var(--accent) !important;
+  stroke-width: 7 !important;
+  stroke-opacity: 1 !important;
+  filter: drop-shadow(0 0 5px rgba(122, 34, 49, 0.55));
+  animation: tour-feature-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes tour-feature-pulse {
+  0%, 100% { stroke-opacity: 1; }
+  50%      { stroke-opacity: 0.55; }
+}
+
+/* ================================================================ media / reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .tour-highlight { animation: none !important; }
+}
+
+/* Response planner map markers (MISC-04 Phase 2) */
+.resp-marker { position: relative; }
+.resp-marker-square { width: 14px; height: 14px; margin: 2px; background: var(--c); border: 2px solid #fff; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,.35); }
+.resp-marker-tri { width: 0; height: 0; margin: 1px 2px; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 15px solid var(--c); filter: drop-shadow(0 1px 1px rgba(0,0,0,.4)); }
+.resp-marker-label { position: absolute; left: 18px; top: 0; font: 600 10px/1 var(--font); color: #111827; background: rgba(255,255,255,.85); padding: 1px 3px; border-radius: 3px; white-space: nowrap; }
+
+/* Visually hidden, still read by screen readers. */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

@@ -1,0 +1,145 @@
+/* ── Map canvas ──────────────────────────────────────── */
+.mapEl {
+  position: absolute;
+  inset: 0;
+  background: #EFE9DC;
+}
+
+.mapEl :global(.leaflet-container) {
+  background: #EFE9DC;
+  font-family: var(--font);
+}
+
+/* Soft vignette -- just enough to focus the eye toward centre, never dark enough to obscure map content */
+.mapEl::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 500;
+  background: radial-gradient(circle at 50% 50%, transparent 72%, rgba(58, 32, 20, 0.08) 100%);
+}
+
+/* A very light, warm-neutral tint keeps the OSM basemap from clashing with the ivory UI chrome, without
+   darkening or recolouring it the way the previous dark/blue filter did -- the map stays a normal, legible,
+   familiar basemap (Phase 8/9: map is the most colourful surface; UI chrome must not fight it). */
+.mapEl :global(.leaflet-tile-pane) {
+  filter: saturate(0.92) brightness(1.02);
+}
+
+/* Attribution — minimal, light */
+.mapEl :global(.leaflet-control-attribution) {
+  background: rgba(255, 253, 248, 0.80) !important;
+  color: var(--text-faint);
+  font-size: 11px;
+  border-top-left-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+.mapEl :global(.leaflet-control-attribution a) {
+  color: var(--text-faint);
+}
+
+/* Tooltips — light glass surface */
+.mapEl :global(.leaflet-tooltip) {
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  box-shadow: var(--shadow-card);
+  font-size: 11px;
+  padding: 7px 11px;
+  line-height: 1.5;
+}
+.mapEl :global(.leaflet-tooltip)::before {
+  display: none;
+}
+.mapEl :global(.leaflet-tooltip b) {
+  color: var(--accent-bright);
+  font-family: var(--mono);
+}
+
+/* Route markers */
+.mapEl :global(.route-marker) {
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+.mapEl :global(.route-marker-inner) {
+  width: 26px;
+  height: 26px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.55);
+  border: 2px solid rgba(255,255,255,0.15);
+}
+.mapEl :global(.route-marker-inner span) {
+  transform: rotate(45deg);
+  font-weight: 800;
+  font-size: 11px;
+  color: #FFFFFF;
+}
+
+/* Surcharging node pulse */
+.mapEl :global(.node-pulse) {
+  animation: surcharge-pulse 1.2s ease-in-out infinite;
+}
+@keyframes surcharge-pulse {
+  0%, 100% { stroke-opacity: 0.95; stroke-width: 2px; }
+  50%       { stroke-opacity: 0.18; stroke-width: 9px; }
+}
+
+/* ── Flood depth legend ───────────────────────────────── */
+.legend {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 900;
+  padding: 9px 13px;
+  font-size: 11px;
+  color: var(--text-dim);
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  pointer-events: none;
+}
+.legendTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+.legendSwatch {
+  width: 14px;
+  height: 7px;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
+
+.legendEmpty {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 600;
+  color: #1f8a4c;
+}
+
+/* Route legend (D-49): shown under the depth legend while a trip preview or a selected trip is on the map. */
+.routeLegend { margin-top: 8px; padding-top: 7px; border-top: 1px solid var(--border); }
+.routeLegend svg { flex: 0 0 auto; }

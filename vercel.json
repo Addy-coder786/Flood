@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
+  "buildCommand": "cd frontend-react && npm ci && VITE_BASE=/ npm run build",
+  "regions": [
+    "bom1"
+  ],
+  "functions": {
+    "app.py": {
+      "maxDuration": 300,
+      "excludeFiles": "{frontend-react/node_modules/**,frontend-react/src/**,frontend-react/public/**,**/site-packages/*/tests/**,**/site-packages/*/*/tests/**,.env,.env.*}"
+    }
+  },
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

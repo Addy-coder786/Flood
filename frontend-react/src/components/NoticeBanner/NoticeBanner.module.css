@@ -1,0 +1,33 @@
+/* Dark notice banner — floated pill above map */
+.banner {
+  position: absolute;
+  top: 56px; /* clears the pipeline story strip */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1200;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  max-width: 60vw;
+  text-align: center;
+  animation: slideIn 0.2s ease-out;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.error {
+  background: rgba(255, 245, 244, 0.95);
+  border: 1px solid rgba(196, 39, 61, 0.35);
+  color: #A31E30;
+  box-shadow: 0 4px 20px rgba(196, 39, 61, 0.14);
+}
+.info {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+  box-shadow: var(--shadow-raised);
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translate(-50%, -8px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
